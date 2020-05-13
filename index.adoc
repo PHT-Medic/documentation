@@ -64,7 +64,41 @@ Access to the repository `library/nginx` is then controlled via the `library` pr
 Figure 1 shows that repositories and actual container image are losely coupled.
 This allows to simply create new repositories by referencing an already
 existing image with an already existing repository.
-In Harbor, this operation is called `retag`. 
+In Harbor, this operation is called `retag`.
+Copying images between repositories (and hence projects) is a crucial feature in the PHT,
+since this allows to let a train conceptionally travel from one Station to another.
+Such a train can now be understood as a series of `retag` operations.
+
+We are not done with creating on Harbor project for each Train Station.
+Two more projects need to be introduced:
+
+* One for introducting new images to the system. We will call this `pht_incoming` here.
+* One for allowing images leave the system. This will be called `pht_outgoing`.
+
+For the stations: `station1`, `station2`, and `station3` with the train name `my-train`,
+we would get the following picture:
+
+.Series of retag operations
+image::retag.drawio.svg[Embedded,800]
+
+As a consequence, we now distinguish between three types of projects (pht_incoming, pht_outgoing, and
+the ones for the Stations).
+
+We will make one further extension to this concept.
+In principle, trains can visit a Station multiple times. This gives
+rise to multiple so-called _iterations_:
+
+.Series of retag operations with multiple iterations
+image::retag-multiple.drawio.svg[Embedded,800]
+
+In Figure 3, each station is visited three times, so we have three iterations.
+
+WARNING: Repositories always reference one image.
+         Image from one iteration are being overwritten by
+         images of the next iteration. 
+
+Each Train Station node in this retag-graph like in Figure 3 is called a
+_train stop_ or _stop_ in short.
 
 The PHT requires the ability to conceptionally copy images from one tenant (Harbor project)
 to another. Harbor allows this with the `retag` operation.
@@ -72,88 +106,141 @@ Now, the PHT aims to automate this process to implement conceptional routes that
 travel from one Train Station to another.
 For this, we need two furher components:
 
-* A format to declaratively describe such 
+* A format to declaratively describe such routes
+* An algorithm / piece of software which interprets these routes, builds an internal model of the state of
+  the world and perform the retag operations accordingly
 
+The following Section introduces `Routes` as a concept for declaring retag Operations.
 
 == Routes
 
+A `Route` is an object which declaratively describes which Harbor project an image goes through.
+We will write Routes as JSON objects.
+An example of a route is as follows:
 
-
-
-This is a paragraph with a *bold* word and an _italicized_ word.
-
-This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
-
-=== Second level heading
-
-.Unordered list title
-* list item 1
-** nested list item
-*** nested nested list item 1
-*** nested nested list item 2
-* list item 2
-
-This is a paragraph.
-
-.Example block title
-====
-Content in an example block is subject to normal substitutions.
-====
-
-.Sidebar title
-****
-Sidebars contain aside text and are subject to normal substitutions.
-****
-
-==== Third level heading
-
-[#id-for-listing-block]
-.Listing block title
+.example_route.json
+[source,json]
 ----
-Content in a listing block is subject to verbatim substitutions.
-Listing block content is commonly used to preserve code input.
+{
+  "harborProjects": [
+    "pht_station_1",
+    "pht_station_2",
+    "pht_station_3"
+  ],
+  "repositorySuffix": "busybox",
+  "periodic": true,
+  "maxNumberOfStops": 10
+}
 ----
 
-===== Fourth level heading
+The individual fields are explained in the following table:
 
-.Table title
 |===
-|Column heading 1 |Column heading 2
+|Route Field | JSON Type |  Description | Required
 
-|Column 1, row 1
-|Column 2, row 1
+| `harborProjects`
+| `array of string`
+| Harbor projects that are part of this route. Values must be unique.
+| yes
 
-|Column 1, row 2
-|Column 2, row 2
+| `repositorySuffix`
+| `string`
+| Repositories in Harbor having this suffix are subject to this route
+| yes
+
+| `periodic`
+| `boolean`
+| If true, the  
+| no, default is `false`
+
+| `maxNumberOfStops`
+| `integer`
+| Max number of stops this route can have.
+| no, if absent, value is unlimited
+
 |===
 
-====== Fifth level heading
+NOTE: The schema of the train Routes is https://gitlab.com/PersonalHealthTrain/implementations/germanmii/common/schema/-/blob/v0.1.0/Route.schema.json[published separately].  
 
-[quote, firstname lastname, movie title]
-____
-I am a block quote or a prose excerpt.
-I am subject to normal substitutions.
-____
 
-[verse, firstname lastname, poem title and more]
-____
-I am a verse block.
-  Indents and endlines are preserved in verse blocks.
-____
 
-== First level heading
 
-TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning.
 
-// I am a comment and won't be rendered.
 
-. ordered list item
-.. nested ordered list item
-. ordered list item
+// This is a paragraph with a *bold* word and an _italicized_ word.
 
-The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>
+// This is another paragraph.footnote:[I am footnote text and will be displayed at the bottom of the article.]
 
-== First level heading
+// === Second level heading
 
-This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual].
-This is an attribute reference {quick-uri}[which links this text to the Asciidoctor Quick Reference Guide].
+// .Unordered list title
+// * list item 1
+// ** nested list item
+// *** nested nested list item 1
+// *** nested nested list item 2
+// * list item 2
+
+// This is a paragraph.
+
+// .Example block title
+// ====
+// Content in an example block is subject to normal substitutions.
+// ====
+
+// .Sidebar title
+// ****
+// Sidebars contain aside text and are subject to normal substitutions.
+// ****
+
+// ==== Third level heading
+
+// [#id-for-listing-block]
+// .Listing block title
+// ----
+// Content in a listing block is subject to verbatim substitutions.
+// Listing block content is commonly used to preserve code input.
+// ----
+
+// ===== Fourth level heading
+
+// .Table title
+// |===
+// |Column heading 1 |Column heading 2
+
+// |Column 1, row 1
+// |Column 2, row 1
+
+// |Column 1, row 2
+// |Column 2, row 2
+// |===
+
+// ====== Fifth level heading
+
+// [quote, firstname lastname, movie title]
+// ____
+// I am a block quote or a prose excerpt.
+// I am subject to normal substitutions.
+// ____
+
+// [verse, firstname lastname, poem title and more]
+// ____
+// I am a verse block.
+//   Indents and endlines are preserved in verse blocks.
+// ____
+
+// == First level heading
+
+// TIP: There are five admonition labels: Tip, Note, Important, Caution and Warning.
+
+// // I am a comment and won't be rendered.
+
+// . ordered list item
+// .. nested ordered list item
+// . ordered list item
+
+// The text at the end of this sentence is cross referenced to <<_third_level_heading,the third level heading>>
+
+// == First level heading
+
+// This is a link to the https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual].
+// This is an attribute reference {quick-uri}[which links this text to the Asciidoctor Quick Reference Guide].
