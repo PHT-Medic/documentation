@@ -1,4 +1,4 @@
-#PHT Public Documentation
+# PHT Public Documentation
 *** 
 *Author:* Felix Bötte  
 *Created:* 15/04/2021  
@@ -8,7 +8,7 @@ The following will be an outline to provide detailed explanations about the step
 to be done for the execution of each feature. These explanations should help the user understand how to use 
 a feature and allow easy setup with no to little preknowledge. 
 ***
-##Table of Contents
+## Table of Contents
 1. Station Setup
 2. Usage of the UI
 3. User Creation
@@ -18,22 +18,22 @@ a feature and allow easy setup with no to little preknowledge.
 7. Usability Offline-Tool
 ***
 
-##1. Station Setup
+## 1. Station Setup
 
-###Station 
+### Station 
 A station is the essential access point to patient data of the PHT.
 It is based on apache airflow and allows persistent and monitored execution of trains.
 The airflow web interface allows the manual execution of trains and access to log files.
 
-###Deployment
+### Deployment
 In order to operate your own station, please follow the instructions within the readme
 of the [station-repository](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/airflow-rest-api/-/tree/mg)
 
-###Installation
+### Installation
 
 Here is a short summary of some relevant steps for the station-setup. 
 
-####Specify Public- / Private Key
+#### Specify Public- / Private Key
 
 Each station requires a public and private key pair. In order to deploy a station generate
 your own pair with the Offline-Tool as outlined in step 7 or use your existing keypair. 
@@ -62,13 +62,13 @@ services:
             - STATION_ID=X
 ```
 
-####Specify Sation ID
+#### Specify Sation ID
 
 Each station requires a pseudo identifier also seen as *STATION_ID* above. This can be arbitrary,
 but has to match with the corresponding *STATION_ID* in the UI. The ID has to be defined similiar to the Private- / Public Keys
 in the *docker-compose.yml* file, e.g. above. 
 
-####Environments
+#### Environments
 
 A station can have global envs to specify certain trains. 
 Editing entries within the *docker-compose.yml* file requires a restart with:
@@ -80,7 +80,7 @@ $ docker compose up -d
 ```
 
 
-####Run Trains
+#### Run Trains
 
 After you successfully installed the station, go the the aiflow interface, using http://localhost:8080/.
 
@@ -103,29 +103,29 @@ After you successfully installed the station, go the the aiflow interface, using
 
 
 ***
-##2. Usage of UI
+## 2. Usage of UI
 
 
 ***
-##3. User Creation
+## 3. User Creation
 
 
 ***
-##4. Train Proposals
-
-
-
-***
-##5. Train Submissions
+## 4. Train Proposals
 
 
 
 ***
-##6. Train Execution
+## 5. Train Submissions
 
 
 
 ***
-##7. Usability Offline-Tool
+## 6. Train Execution
+
+
+
+***
+## 7. Usability Offline-Tool
 
 
