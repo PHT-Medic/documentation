@@ -1,7 +1,7 @@
 # PHT Public Documentation
 *** 
 *Author:* Felix Bötte  
-*Created:* 15/04/2021  
+*Created:* xx/04/2021  
 *Version:* 1.0.1  
 ***
 The following will be an outline to provide detailed explanations about the steps which need
@@ -9,21 +9,110 @@ to be done for the execution of each feature. These explanations should help the
 a feature and allow easy setup with no to little preknowledge. 
 ***
 ## Table of Contents
-1. Station Setup
-2. Usage of the UI
-3. User Creation
-4. Train Proposals
-5. Train Submissions
-6. Train Execution
-7. Usability Offline-Tool
+1. Usage of UI - Train Proposals
+2. User Creation
+3. Station Setup
+4. Run Trains
+5. Usage of Offline-Tool
 ***
 
-## 1. Station Setup
+
+## 1. Usage of UI - Train Proposals
+
+### User Interface
+The user interface is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
+to interact with the PHT. Its main tasks are to administrate stations and train proposals,
+but also to submit analysis and receive encrypted results.
+
+### Train Proposal
+
+1. Add User Keys in the setting section and press "Change" to save your public keys
+in Vault.
+
+   <br/><br/>
+   ![alt text](./images/ui_images/1step.png)
+   <br/><br/>
+
+2. To add a new proposal go on the left navigation bar and select the "Proposal" section
+
+   * You can generate a sample text with the "Test Data" button
+   * Station authorities can approve or reject the train now.
+   
+   <br/><br/>
+   ![alt text](./images/ui_images/2step.png)
+   <br/><br/>
+
+3. To add a new train go on the left navigation bar and select "Trains" where you can choose
+   your train type and specify the Proposal.
+
+   <br/><br/>
+   ![alt text](./images/ui_images/3step.png)
+   <br/><br/>
+
+4. Now you can select the stations to execute the train on and specify a query (json valid)
+   that is used to retireve data from the corresponding FHIR-server.
+
+   <br/><br/>
+   ![alt text](./images/ui_images/4step.png)
+   <br/><br/>
+   
+5. Now upload you analysis code (entrypoint.py)
+
+   * Disable “Directory mode” before uploading file
+   * Press the “Hochladen” button
+   * Toggle right switch to the appearing entrypoint.py-file to select it
+   * Specify the programming language
+   * Press "Next"
+   
+   <br/><br/>
+   ![alt text](./images/ui_images/5step.png)
+   <br/><br/>
+   
+6. Now press "Generate Hash" and copy the hash to the Offline Tool to sign 
+   it with your private key. Paste the signature from the Offline Tool to the "Signed Has"
+   box and press "Next". You will get a response from the UI that the train building process began.
+   
+   
+   <br/><br/>
+   ![alt text](./images/ui_images/6step.png)
+   <br/><br/>
+
+7. Now go back to your initial proposal and press "Build".
+   Then refresh the Page and press "Run" again. 
+   
+   <br/><br/>
+   ![alt text](./images/ui_images/7step.png)
+   <br/><br/>
+   
+   <br/><br/>
+   ![alt text](./images/ui_images/8step.png)
+   <br/><br/>
+   
+8. After each specified station has successfully executed the train,
+encrypted results key can be downloaded on the same "Proposal" page. 
+   There then will be a "Download" button available. 
+    <br/><br/>
+   
+9. In order to execute the train and setup a station by yourself, follow the next subsection of 
+ station setup and train execution with an Apace Airflow instance.
+***
+
+## 2. User Creation
+
+
+***
+
+## 3. Station Setup
 
 ### Station 
 A station is the essential access point to patient data of the PHT.
 It is based on apache airflow and allows persistent and monitored execution of trains.
 The airflow web interface allows the manual execution of trains and access to log files.
+  <br/><br/>
+After one followed the steps described before of submissing your own train the following
+steps will be the execution of the train in the corresponding station. In subsection ["Run Trains"](#Run Trains)
+will be a description of how to operate the Apache-Airflow station instance to execute trains.
+
 
 ### Deployment
 In order to operate your own station, please follow the instructions within the readme
@@ -31,7 +120,7 @@ of the [station-repository](https://gitlab.com/PersonalHealthTrain/implementatio
 
 ### Installation
 
-Here is a short summary of some relevant steps for the station-setup. 
+Here is a short summary of some relevant steps for the station-setup: 
 
 #### Specify Public- / Private Key
 
@@ -80,14 +169,18 @@ $ docker compose up -d
 ```
 
 
-#### Run Trains
+## 4. Run Trains
 
+In order to execute a train that was specified already in the UI you need to have an Apache Airflow instance
+deployed as outlined in the previous subsection.
 After you successfully installed the station, go the the aiflow interface, using http://localhost:8080/.
 
 1. Turn on the "run_train" DAG
+   <br/><br/>
+   ![alt text](./images/station_img/1step.png)
+   <br/><br/>
 2. Press "Trigger DAG"
 3. Specify the DAG configs (example below)
-    * 
 
 ```json
 {
@@ -97,33 +190,23 @@ After you successfully installed the station, go the the aiflow interface, using
 }
 ```
 
+   <br/><br/>
+   ![alt text](./images/station_img/2step.png)
+   <br/><br/>
+
 4. During execution you can refresh the station status
 5. Log files can be accessed during execution of each process
-6. After successful execution the rebased image is pushed back and labeled "pht_next" to be processed by the Train Router
+   
+   <br/><br/>
+   ![alt text](./images/station_img/4step.png)
+   <br/><br/>
+   
+6. After successful execution the rebased image is pushed back and labeled "pht_next" to be processed by the Train Router. All nodes on the DAG should be green after a successfull execution
 
-
-***
-## 2. Usage of UI
-
-
-***
-## 3. User Creation
-
-
-***
-## 4. Train Proposals
-
-
-
-***
-## 5. Train Submissions
-
-
-
-***
-## 6. Train Execution
-
-
+   <br/><br/>
+   ![alt text](./images/station_img/6step.png)
+   <br/><br/>
+   
 
 ***
 ## 7. Usability Offline-Tool
