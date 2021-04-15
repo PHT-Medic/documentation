@@ -30,7 +30,9 @@ but also to submit analysis and receive encrypted results.
 in Vault.
 
    <br/><br/>
-   ![alt text](./images/ui_images/1step.png)
+   
+   ![alt text](./images/ui_images/1step.png){ width=50% height=50% }
+   
    <br/><br/>
 
 2. To add a new proposal go on the left navigation bar and select the "Proposal" section
@@ -99,6 +101,60 @@ encrypted results key can be downloaded on the same "Proposal" page.
 
 ## 2. User Creation
 
+The feature of creating users is restricted to the ones with admin access to the UI.
+1. If you have an admin status you will see at the top left bar a second button next to "Settings" called "Admin".
+
+   <br/><br/>
+   ![alt text](./images/user_creation_images/1step.png)
+   <br/><br/>
+
+
+2. To add a new user go to "Users" on the left side navigation bar
+
+    * Specify a name of the new user
+    * Specify an initial password
+    * Specify an email adress
+
+   <br/><br/>
+   ![alt text](./images/user_creation_images/2step.png)
+   <br/><br/>
+
+   
+3. To add a customised role for one of the users go to "Roles" on the left side navigation bar
+
+   * Specify a role name
+   * Specify a provider role ID
+   
+   <br/><br/>
+   ![alt text](./images/user_creation_images/3step.png)
+   <br/><br/>
+   
+4. After creating a role you can choose the permissions you want to give the  corresponding role.
+A user needs at least the permission "stationEmployee" to run trains
+
+   <br/><br/>
+   ![alt text](./images/user_creation_images/4step.png)
+   <br/><br/>
+   
+5. A general overview over the selection of permissions you can select "Permissions" on the left side 
+navigation bar
+   
+   <br/><br/>
+   ![alt text](./images/user_creation_images/5step.png)
+   <br/><br/>
+   
+6. Finally, to create and manage realms, one can also move to the left side navigation bar and select "Realms".
+
+   <br/><br/>
+   ![alt text](./images/user_creation_images/6step.png)
+   <br/><br/>
+   
+7. Specify the name and the ID for the realm. The chosen realm ID can be seen on the list of all realms. 
+The ID is required to match between the deployment of the station.
+
+   <br/><br/>
+   ![alt text](./images/user_creation_images/7step.png)
+   <br/><br/>
 
 ***
 
