@@ -19,11 +19,11 @@ a feature and allow easy setup with no to little preknowledge.
 
 ## 1. Usage of UI - Train Proposals
 
-In the following section you will learn how to use the user interface to create and submit your
-own analysis-trains.
+In the following section you will find an in-depth guide on how to use the user interface (UI) to create and submit your
+own analysis-trains over one or more stations.
 
 ### User Interface
-The user interface is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
+The UI is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
 to interact with the PHT. Its main tasks are the administration of stations and train proposals
 but also the submission of analysis-trains and consequentially receiving encrypted results.
 
