@@ -31,7 +31,7 @@ in Vault.
 
    <br/><br/>
    
-   ![alt text](./images/ui_images/1step.png)
+   ![Security Settings](./images/ui_images/1step.png)
    
    <br/><br/>
 
@@ -41,21 +41,21 @@ in Vault.
    * Station authorities can approve or reject the train now.
    
    <br/><br/>
-   ![alt text](./images/ui_images/2step.png)
+   ![Proposals](./images/ui_images/2step.png)
    <br/><br/>
 
 3. To add a new train go on the left navigation bar and select "Trains" where you can choose
    your train type and specify the Proposal.
 
    <br/><br/>
-   ![alt text](./images/ui_images/3step.png)
+   ![Train Creation](./images/ui_images/3step.png)
    <br/><br/>
 
 4. Now you can select the stations to execute the train on and specify a query (json valid)
    that is used to retireve data from the corresponding FHIR-server.
 
    <br/><br/>
-   ![alt text](./images/ui_images/4step.png)
+   ![Train Creation_2](./images/ui_images/4step.png)
    <br/><br/>
    
 5. Now upload you analysis code (entrypoint.py)
@@ -67,7 +67,7 @@ in Vault.
    * Press "Next"
    
    <br/><br/>
-   ![alt text](./images/ui_images/5step.png)
+   ![Train Creation_3](./images/ui_images/5step.png)
    <br/><br/>
    
 6. Now press "Generate Hash" and copy the hash to the Offline Tool to sign 
@@ -76,18 +76,18 @@ in Vault.
    
    
    <br/><br/>
-   ![alt text](./images/ui_images/6step.png)
+   ![Train Creation_4](./images/ui_images/6step.png)
    <br/><br/>
 
 7. Now go back to your initial proposal and press "Build".
    Then refresh the Page and press "Run" again. 
    
    <br/><br/>
-   ![alt text](./images/ui_images/7step.png)
+   ![Build Train](./images/ui_images/7step.png)
    <br/><br/>
    
    <br/><br/>
-   ![alt text](./images/ui_images/8step.png)
+   ![Run Train](./images/ui_images/8step.png)
    <br/><br/>
    
 8. After each specified station has successfully executed the train (see Section 4: "Run Trains"),
@@ -105,7 +105,7 @@ The feature of creating users is restricted to the ones with admin access to the
 1. If you have an admin status you will see at the top left bar a second button next to "Settings" called "Admin".
 
    <br/><br/>
-   ![alt text](./images/user_creation_images/1step.png)
+   ![UI Overview](./images/user_creation_images/1step.png)
    <br/><br/>
 
 
@@ -116,7 +116,7 @@ The feature of creating users is restricted to the ones with admin access to the
     * Specify an email adress
 
    <br/><br/>
-   ![alt text](./images/user_creation_images/2step.png)
+   ![User Creation](./images/user_creation_images/2step.png)
    <br/><br/>
 
    
@@ -126,34 +126,34 @@ The feature of creating users is restricted to the ones with admin access to the
    * Specify a provider role ID
    
    <br/><br/>
-   ![alt text](./images/user_creation_images/3step.png)
+   ![User Roles](./images/user_creation_images/3step.png)
    <br/><br/>
    
 4. After creating a role you can choose the permissions you want to give the  corresponding role.
 A user needs at least the permission "stationEmployee" to run trains
 
    <br/><br/>
-   ![alt text](./images/user_creation_images/4step.png)
+   ![User Roles_2](./images/user_creation_images/4step.png)
    <br/><br/>
    
 5. A general overview over the selection of permissions you can select "Permissions" on the left side 
 navigation bar
    
    <br/><br/>
-   ![alt text](./images/user_creation_images/5step.png)
+   ![User Permissions](./images/user_creation_images/5step.png)
    <br/><br/>
    
 6. Finally, to create and manage realms, one can also move to the left side navigation bar and select "Realms".
 
    <br/><br/>
-   ![alt text](./images/user_creation_images/6step.png)
+   ![Realms](./images/user_creation_images/6step.png)
    <br/><br/>
    
 7. Specify the name and the ID for the realm. The chosen realm ID can be seen on the list of all realms. 
 The ID is required to match between the deployment of the station.
 
    <br/><br/>
-   ![alt text](./images/user_creation_images/7step.png)
+   ![Realms_2](./images/user_creation_images/7step.png)
    <br/><br/>
 
 ***
@@ -233,7 +233,7 @@ After you successfully installed the station, go the the aiflow interface, using
 
 1. Turn on the "run_train" DAG
    <br/><br/>
-   ![alt text](./images/station_images/1step.png)
+   ![Airflow Run Train](./images/station_images/1step.png)
    <br/><br/>
 2. Press "Trigger DAG"
 3. Specify the DAG configs (example below)
@@ -247,20 +247,20 @@ After you successfully installed the station, go the the aiflow interface, using
 ```
 
    <br/><br/>
-   ![alt text](./images/station_images/2step.png)
+   ![Airflow DAG](./images/station_images/2step.png)
    <br/><br/>
 
 4. During execution you can refresh the station status
 5. Log files can be accessed during execution of each process
    
    <br/><br/>
-   ![alt text](./images/station_images/4step.png)
+   ![Airflow Logs](./images/station_images/4step.png)
    <br/><br/>
    
 6. After successful execution the rebased image is pushed back and labeled "pht_next" to be processed by the Train Router. All nodes on the DAG should be green after a successfull execution
 
    <br/><br/>
-   ![alt text](./images/station_images/6step.png)
+   ![Airflow Status DAG](./images/station_images/6step.png)
    <br/><br/>
    
 7. Now your corresponding train that you created in the UI is ready and results can be 
@@ -280,13 +280,13 @@ and install it on your local computer.
 2. From the opening Page select "Security Values"
 
    <br/><br/>
-   ![alt text](./images/offline_tool_images/1step.png)
+   ![Offline Tool Start](./images/offline_tool_images/1step.png)
    <br/><br/>
 
 3. Select "Generate private and public key"
    
    <br/><br/>
-   ![alt text](./images/offline_tool_images/22step.png)
+   ![Offline Tool Security Values](./images/offline_tool_images/22step.png)
    <br/><br/>
 
 
@@ -305,7 +305,7 @@ and install it on your local computer.
 7. Proceed to paste the signature into the train-wizard to continue train submission
 
    <br/><br/>
-   ![alt text](./images/offline_tool_images/2step.png)
+   ![Offline Tool Security Values_2](./images/offline_tool_images/2step.png)
    <br/><br/>
    
 
@@ -319,14 +319,14 @@ and install it on your local computer.
    previous step)
    
    <br/><br/>
-   ![alt text](./images/offline_tool_images/extra.png)
+   ![Offline Tool Secure Addition](./images/offline_tool_images/extra.png)
    <br/><br/>
    
 6. Press "Decrypt"
 7. Now in the right textfield appears the decypted count query
 
    <br/><br/>
-   ![alt text](./images/offline_tool_images/5step.png)
+   ![Offline Tool Secure Addition_2](./images/offline_tool_images/5step.png)
    <br/><br/>
 
 
@@ -341,7 +341,7 @@ and install it on your local computer.
 7. Select your Private Key (the one used for the train submission in the UI)
 
    <br/><br/>
-   ![alt text](./images/offline_tool_images/4step.png)
+   ![Offline Tool Model Page](./images/offline_tool_images/4step.png)
    <br/><br/>
    
 8. Select the models on the left list-box that you wish to decrypt.
