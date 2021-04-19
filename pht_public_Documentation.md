@@ -4,8 +4,8 @@
 *Created:* xx/04/2021  
 *Version:* 1.0.1  
 ***
-The following will be an outline to provide detailed explanations about the steps which need
-to be done for the execution of each feature. These explanations should help the user understand how to use 
+The following will be a documentation to provide detailed explanations about the steps which need
+to be done for the execution of each feature. These explanations are helping the user understand how to use 
 a feature and allow easy setup with no to little preknowledge. 
 ***
 ## Table of Contents
@@ -21,8 +21,8 @@ a feature and allow easy setup with no to little preknowledge.
 
 ### User Interface
 The user interface is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
-to interact with the PHT. Its main tasks are to administrate stations and train proposals,
-but also to submit analysis and receive encrypted results.
+to interact with the PHT. Its main tasks are the administration of stations and train proposals
+but also the submission of analysis-trains and consequentially receiving encrypted results.
 
 ### Train Proposal
 
@@ -52,17 +52,17 @@ in Vault.
    <br/><br/>
 
 4. Now you can select the stations to execute the train on and specify a query (json valid)
-   that is used to retireve data from the corresponding FHIR-server.
+   that is used to retrieve data from the corresponding FHIR-server.
 
    <br/><br/>
    ![Train Creation_2](./images/ui_images/4step.png)
    <br/><br/>
    
-5. Now upload you analysis code (entrypoint.py)
+5. Now upload your analysis code (entrypoint.py)
 
    * Disable “Directory mode” before uploading file
    * Press the “Hochladen” button
-   * Toggle right switch to the appearing entrypoint.py-file to select it
+   * Toggle the right switch to the appearing entrypoint.py-file to select it
    * Specify the programming language
    * Press "Next"
    
@@ -70,8 +70,8 @@ in Vault.
    ![Train Creation_3](./images/ui_images/5step.png)
    <br/><br/>
    
-6. Now press "Generate Hash" and copy the hash to the Offline Tool to sign 
-   it with your private key. Paste the signature from the Offline Tool to the "Signed Has"
+6. Now press ["Generate Hash"](#sign-hash) and copy the hash to the Offline Tool to sign 
+   it with your private key. Paste the signature from the Offline Tool to the "Signed Hash"
    box and press "Next". You will get a response from the UI that the train building process began.
    
    
@@ -92,16 +92,16 @@ in Vault.
    
 8. After each specified station has successfully executed the train (see Section 4: "Run Trains"),
 encrypted results key can be downloaded on the same "Proposal" page. 
-   There then will be a "Download" button available. 
+   You can use the "Download" button to do so. 
     <br/><br/>
    
-9. In order to execute the train and setup a station by yourself, follow the next subsection of 
- station setup and train execution with an Apace Airflow instance.
+9. In order to execute the train and do the station setup by yourself, follow the next subsection of 
+ station setup and the train execution with an Apache Airflow instance.
 ***
 
 ## 2. User Creation
 
-The feature of creating users is restricted to the ones with admin access to the UI.
+The feature of creating users is restricted to users with admin access to the UI.
 1. If you have an admin status you will see at the top left bar a second button next to "Settings" called "Admin".
 
    <br/><br/>
