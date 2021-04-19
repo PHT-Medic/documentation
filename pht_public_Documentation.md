@@ -31,7 +31,7 @@ in Vault.
 
    <br/><br/>
    
-   ![alt text](./images/ui_images/1step.png){ width=50% height=50% }
+   ![alt text](./images/ui_images/1step.png)
    
    <br/><br/>
 
@@ -90,7 +90,7 @@ in Vault.
    ![alt text](./images/ui_images/8step.png)
    <br/><br/>
    
-8. After each specified station has successfully executed the train,
+8. After each specified station has successfully executed the train (see Section 4: "Run Trains"),
 encrypted results key can be downloaded on the same "Proposal" page. 
    There then will be a "Download" button available. 
     <br/><br/>
@@ -233,7 +233,7 @@ After you successfully installed the station, go the the aiflow interface, using
 
 1. Turn on the "run_train" DAG
    <br/><br/>
-   ![alt text](./images/station_img/1step.png)
+   ![alt text](./images/station_images/1step.png)
    <br/><br/>
 2. Press "Trigger DAG"
 3. Specify the DAG configs (example below)
@@ -247,24 +247,105 @@ After you successfully installed the station, go the the aiflow interface, using
 ```
 
    <br/><br/>
-   ![alt text](./images/station_img/2step.png)
+   ![alt text](./images/station_images/2step.png)
    <br/><br/>
 
 4. During execution you can refresh the station status
 5. Log files can be accessed during execution of each process
    
    <br/><br/>
-   ![alt text](./images/station_img/4step.png)
+   ![alt text](./images/station_images/4step.png)
    <br/><br/>
    
 6. After successful execution the rebased image is pushed back and labeled "pht_next" to be processed by the Train Router. All nodes on the DAG should be green after a successfull execution
 
    <br/><br/>
-   ![alt text](./images/station_img/6step.png)
+   ![alt text](./images/station_images/6step.png)
+   <br/><br/>
+   
+7. Now your corresponding train that you created in the UI is ready and results can be 
+downloaded 
+***
+## 5. Usage Offline-Tool
+
+The Offline Tool is a python (PyQt5) application with GUI to decrypt results,
+manage keys and sign hashes locally during the submission process of a train.
+   <br/><br/>
+First of download the binaries for your operating system from [https://pht.medic.uni-tuebingen.de/](https://pht.medic.uni-tuebingen.de/)
+and install it on your local computer.
+
+### Create Keys
+
+1. Start the application
+2. From the opening Page select "Security Values"
+
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/1step.png)
+   <br/><br/>
+
+3. Select "Generate private and public key"
+   
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/22step.png)
+   <br/><br/>
+
+
+4. Specify the directory where the keys should be saved
+5. Specify the name of the key-pair
+6. The public key needs to be stored in the UI to create trains
+
+### Sign Hash 
+
+1. Start the application
+2. From the opening Page select "Security Values"
+3. Press "Select private key" and choose matching private key to the public key stored in the UI
+4. Paste hash from train wizard (UI) into left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation has occured)
+5. Press "Sign"
+6. Press "Copy" to copy the signed hash to clipboard
+7. Proceed to paste the signature into the train-wizard to continue train submission
+
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/2step.png)
    <br/><br/>
    
 
-***
-## 7. Usability Offline-Tool
+### Homomorphic Decryption
+
+1. Start the application
+2. From the opening Page select "Secure Addition"
+3. Generate key-pair (Public & Private Key for Homomorphic Decryption)
+4. Select the corresponding Private Key (identical to 3. step of hash signing)
+5. Copy your encrypted number into the text field (encrypted number is found in the decrypted results from the
+   previous step)
+   
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/extra.png)
+   <br/><br/>
+   
+6. Press "Decrypt"
+7. Now in the right textfield appears the decypted count query
+
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/5step.png)
+   <br/><br/>
 
 
+### Decrypt results
+
+1. After executing train the UI download the results to your local machine
+2. Extract the folder and extract results and the train_config.json
+3. Start the application
+4. From the opening Page select "Model Page"
+5. Select the path to the encrypted result directory (where you extracted the results before)
+6. Select the train_config.json
+7. Select your Private Key (the one used for the train submission in the UI)
+
+   <br/><br/>
+   ![alt text](./images/offline_tool_images/4step.png)
+   <br/><br/>
+   
+8. Select the models on the left list-box that you wish to decrypt.
+If a file is selected, it will appear in the right box.
+9. Press "Decrypt selected models".
+10. You can move to the corresponding directory with the decrypted results by pressing
+"Show decrypted files"
