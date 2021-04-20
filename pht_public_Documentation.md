@@ -4,8 +4,8 @@
 *Created:* xx/04/2021  
 *Version:* 1.0.1  
 ***
-The following will be an outline to provide detailed explanations about the steps which need
-to be done for the execution of each feature. These explanations should help the user understand how to use 
+The following will be a documentation to provide detailed explanations about the steps which need
+to be done for the execution of each feature. These explanations are helping the user understand how to use 
 a feature and allow easy setup with no to little preknowledge. 
 ***
 ## Table of Contents
@@ -19,10 +19,13 @@ a feature and allow easy setup with no to little preknowledge.
 
 ## 1. Usage of UI - Train Proposals
 
+In the following section you will find an in-depth guide on how to use the user interface (UI) to create and submit your
+own analysis-trains over one or more stations.
+
 ### User Interface
-The user interface is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
-to interact with the PHT. Its main tasks are to administrate stations and train proposals,
-but also to submit analysis and receive encrypted results.
+The UI is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
+to interact with the PHT. Its main tasks are the administration of stations and train proposals
+but also the submission of analysis-trains and consequentially receiving encrypted results.
 
 ### Train Proposal
 
@@ -52,17 +55,17 @@ in Vault.
    <br/><br/>
 
 4. Now you can select the stations to execute the train on and specify a query (json valid)
-   that is used to retireve data from the corresponding FHIR-server.
+   that is used to retrieve data from the corresponding FHIR-server.
 
    <br/><br/>
    ![Train Creation_2](./images/ui_images/4step.png)
    <br/><br/>
    
-5. Now upload you analysis code (entrypoint.py)
+5. Now upload your analysis code (entrypoint.py)
 
    * Disable “Directory mode” before uploading file
    * Press the “Hochladen” button
-   * Toggle right switch to the appearing entrypoint.py-file to select it
+   * Toggle the right switch to the appearing entrypoint.py-file to select it
    * Specify the programming language
    * Press "Next"
    
@@ -70,8 +73,8 @@ in Vault.
    ![Train Creation_3](./images/ui_images/5step.png)
    <br/><br/>
    
-6. Now press "Generate Hash" and copy the hash to the Offline Tool to sign 
-   it with your private key. Paste the signature from the Offline Tool to the "Signed Has"
+6. Now press ["Generate Hash"](#sign-hash) and copy the hash to the Offline Tool to sign 
+   it with your private key. Paste the signature from the Offline Tool to the "Signed Hash"
    box and press "Next". You will get a response from the UI that the train building process began.
    
    
@@ -92,16 +95,16 @@ in Vault.
    
 8. After each specified station has successfully executed the train (see Section 4: "Run Trains"),
 encrypted results key can be downloaded on the same "Proposal" page. 
-   There then will be a "Download" button available. 
+   You can use the "Download" button to do so. 
     <br/><br/>
    
-9. In order to execute the train and setup a station by yourself, follow the next subsection of 
- station setup and train execution with an Apace Airflow instance.
+9. In order to execute the train and do the station setup by yourself, follow the next subsection of 
+ station setup and the train execution with an Apache Airflow instance.
 ***
 
 ## 2. User Creation
 
-The feature of creating users is restricted to the ones with admin access to the UI.
+The feature of creating users is restricted to users with admin access to the UI.
 1. If you have an admin status you will see at the top left bar a second button next to "Settings" called "Admin".
 
    <br/><br/>
@@ -136,7 +139,7 @@ A user needs at least the permission "stationEmployee" to run trains
    ![User Roles_2](./images/user_creation_images/4step.png)
    <br/><br/>
    
-5. A general overview over the selection of permissions you can select "Permissions" on the left side 
+5. A general overview over the selection of permissions: You can select "Permissions" on the left side 
 navigation bar
    
    <br/><br/>
@@ -161,13 +164,13 @@ The ID is required to match between the deployment of the station.
 ## 3. Station Setup
 
 ### Station 
-A station is the essential access point to patient data of the PHT.
-It is based on apache airflow and allows persistent and monitored execution of trains.
-The airflow web interface allows the manual execution of trains and access to log files.
+A station is an essential access point to patient data of the PHT.
+It is based on Apache Airflow and allows persistent and monitored executions of trains.
+The airflow web interface allows for the manual execution of trains and access to log files.
   <br/><br/>
 After one followed the steps described before of submissing your own train the following
 steps will be the execution of the train in the corresponding station. In subsection ["Run Trains"](#Run Trains)
-will be a description of how to operate the Apache-Airflow station instance to execute trains.
+you can find a description on how to operate the Apache-Airflow station instance to execute trains.
 
 
 ### Deployment
@@ -207,7 +210,7 @@ services:
             - STATION_ID=X
 ```
 
-#### Specify Sation ID
+#### Specify Station ID
 
 Each station requires a pseudo identifier also seen as *STATION_ID* above. This can be arbitrary,
 but has to match with the corresponding *STATION_ID* in the UI. The ID has to be defined similiar to the Private- / Public Keys
@@ -268,16 +271,16 @@ downloaded
 ***
 ## 5. Usage Offline-Tool
 
-The Offline Tool is a python (PyQt5) application with GUI to decrypt results,
+The Offline Tool is a Python (PyQt5) application with a GUI to decrypt results,
 manage keys and sign hashes locally during the submission process of a train.
    <br/><br/>
-First of download the binaries for your operating system from [https://pht.medic.uni-tuebingen.de/](https://pht.medic.uni-tuebingen.de/)
+First, download the binaries for your operating system from [https://pht.medic.uni-tuebingen.de/](https://pht.medic.uni-tuebingen.de/)
 and install it on your local computer.
 
 ### Create Keys
 
 1. Start the application
-2. From the opening Page select "Security Values"
+2. From the opening page select "Security Values"
 
    <br/><br/>
    ![Offline Tool Start](./images/offline_tool_images/1step.png)
@@ -298,8 +301,8 @@ and install it on your local computer.
 
 1. Start the application
 2. From the opening Page select "Security Values"
-3. Press "Select private key" and choose matching private key to the public key stored in the UI
-4. Paste hash from train wizard (UI) into left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation has occured)
+3. Press "Select private key" and choose the matching private key to the public key stored in the UI
+4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation has occured)
 5. Press "Sign"
 6. Press "Copy" to copy the signed hash to clipboard
 7. Proceed to paste the signature into the train-wizard to continue train submission
@@ -312,7 +315,7 @@ and install it on your local computer.
 ### Homomorphic Decryption
 
 1. Start the application
-2. From the opening Page select "Secure Addition"
+2. From the opening page select "Secure Addition"
 3. Generate key-pair (Public & Private Key for Homomorphic Decryption)
 4. Select the corresponding Private Key (identical to 3. step of hash signing)
 5. Copy your encrypted number into the text field (encrypted number is found in the decrypted results from the
@@ -335,7 +338,7 @@ and install it on your local computer.
 1. After executing train the UI download the results to your local machine
 2. Extract the folder and extract results and the train_config.json
 3. Start the application
-4. From the opening Page select "Model Page"
+4. From the opening page select "Model Page"
 5. Select the path to the encrypted result directory (where you extracted the results before)
 6. Select the train_config.json
 7. Select your Private Key (the one used for the train submission in the UI)
@@ -348,4 +351,4 @@ and install it on your local computer.
 If a file is selected, it will appear in the right box.
 9. Press "Decrypt selected models".
 10. You can move to the corresponding directory with the decrypted results by pressing
-"Show decrypted files"
+"Show decrypted files".
