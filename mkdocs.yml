@@ -5,7 +5,7 @@ theme:
     - navigation.tracking
     - navigation.expand
 
-site_dir: ./site
+site_dir: public
 
 nav:
   - Home: index.md
