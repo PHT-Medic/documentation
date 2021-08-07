@@ -5,6 +5,8 @@ theme:
     - navigation.tracking
     - navigation.expand
 
+site_dir: ./site
+
 nav:
   - Home: index.md
   - User Guide:
