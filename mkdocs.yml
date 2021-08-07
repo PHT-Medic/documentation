@@ -1,0 +1,7 @@
+site_name: PHT Documentation
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - User Interface: user_interface.md
