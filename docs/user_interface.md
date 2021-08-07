@@ -1,5 +1,5 @@
 # User Interface
-The UI is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
+The UI is the central control interface [pht-ui.personalhealthtrain.de](https://pht-ui.personalhealthtrain.de)
 to interact with the PHT. Its main tasks are the administration of stations and train proposals
 but also the submission of analysis-trains and consequently receiving encrypted results.
 
@@ -13,18 +13,35 @@ but also the submission of analysis-trains and consequently receiving encrypted 
 
 
 ### User
-After signing in for the first time
+
+
 
 #### Registering/Updating a public key
+After signing in for the first time register a public in the UI (Vault). 
+Under Settings and Keys a public key can be uploaded from disk or pasted into the displayed form.
+The form accepts hex and PEM encoded RSA public keys.  
+Clicke the save changes button to update the public key associated with your account.
+
+
+![Security Settings](images/ui_images/1step.png)
 
 
 ## Proposals
 
-In the following section you will find an in-depth guide on how to use the user interface (UI) to create and submit your
-own analysis-trains over one or more stations.
+Proposal are an organizational unit in the PHT, a proposal represents the collaboration between different participants
+in regard to a specific research or analysis project.  
+It contains an initial risk assessment as well as a high level description of the requested data.
+
+!!! todo 
+    update the screenshots
 
 
-### Train Proposal
+
+### Creating a new Proposal
+
+
+### Accepting an incoming proposal
+
 
 1. Add User Keys in the setting section and press "Change" to save your public keys
 in Vault.

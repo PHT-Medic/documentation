@@ -9,11 +9,14 @@ site_dir: public
 
 nav:
   - Home: index.md
+  - Introduction: introduction.md
   - User Guide:
     - User Interface: user_interface.md
-    - Creating Trains: trains.md
     - Offline Tool: offline_tool.md
     - Station: station.md
+    - Trains: trains.md
+
+
 
 markdown_extensions:
   - admonition
