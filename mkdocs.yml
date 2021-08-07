@@ -1,7 +1,17 @@
-site_name: PHT Documentation
+site_name: PHT Documentation & User Guide
 theme:
   name: material
+  features:
+    - navigation.tracking
+    - navigation.expand
 
 nav:
   - Home: index.md
-  - User Interface: user_interface.md
+  - User Guide:
+    - User Interface: user_interface.md
+    - Creating Trains: trains.md
+    - Offline Tool: offline_tool.md
+    - Station: station.md
+
+markdown_extensions:
+  - admonition

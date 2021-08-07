@@ -1,12 +1,28 @@
-## User Interface
+# User Interface
 The UI is the central control interface [pht-ui.personalhealthtrain.de](pht-ui.personalhealthtrain.de)
 to interact with the PHT. Its main tasks are the administration of stations and train proposals
-but also the submission of analysis-trains and consequentially receiving encrypted results.
+but also the submission of analysis-trains and consequently receiving encrypted results.
 
-## Usage of UI - Train Proposals
+
+## Account Configuration
+
+
+### Station
+
+#### Registering/Updating a public key
+
+
+### User
+After signing in for the first time
+
+#### Registering/Updating a public key
+
+
+## Proposals
 
 In the following section you will find an in-depth guide on how to use the user interface (UI) to create and submit your
 own analysis-trains over one or more stations.
+
 
 ### Train Proposal
 
