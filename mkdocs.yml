@@ -9,7 +9,7 @@ site_dir: public
 
 nav:
   - Home: index.md
-  - Introduction: introduction.md
+  - Concepts: concepts.md
   - User Guide:
     - User Interface: user_interface.md
     - Offline Tool: offline_tool.md

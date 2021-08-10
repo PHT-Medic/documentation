@@ -1,17 +1,22 @@
-## Personal Health Train
+# Personal Health Train
 !!! warning
     Under construction. This documentation is not complete.
 
 
-Open source container based secure distributed analysis platform.
-
+Documentation and [User Guide](user_interface.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
+For more information you can als visit our [website](https://personalhealthtrain.de/).
 ## Repositories
-Multiple repositories are part of the PHT. These can be roughly separated into 
+Multiple repositories are part of the PHT. These can be roughly separated into central components managed by the PHT Team
+and hosted by the UKT and local components which are executed either by a user or by participating stations.  
+All public repositories related to the PHT can be found on our [gitlab](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture),
+with the major repositories being briefly introduced and categorized in the following sections.
+
 
 ### Central Components
 - **Web UI** - [https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/web-ui/central]()
 - **Train Builder** - [https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-builder]()
 - **Train Router** - [https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-router-py]()
+- **Train Container Library** - [https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-container-library]()
 
 
 ### Local Components
@@ -28,7 +33,7 @@ The container registry provided by the [Harbor project](https://goharbor.io/) is
 platform of the PHT. Trains are defined as images which are distributed between the participants private harbor projects.
 
 ### Vault
-For securely storing sensitive user or train data as key-value pairs. We utilize [Vault](https://www.vaultproject.io/)
+For securely storing sensitive user or train data as key-value pairs we utilize [Vault](https://www.vaultproject.io/)
 by Hashicorp as secret storage for our central services.
 
 ### Apache Airflow

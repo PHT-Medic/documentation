@@ -1,4 +1,4 @@
-# Introduction
+## Introduction
 
 ![Overview](images/process_images/pht_overview.png)
 
