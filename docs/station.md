@@ -15,11 +15,12 @@ installed. For the default installation to work the ports `8080` and `5432` need
 
 
 ### Install with docker-compose
+Clone the repository  
+```shell
+git clone https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/station.git
+```
 
-1. Clone the repository   
-   `git clone https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/station.git`
-
-2. Navigate into the cloned project `cd station` and edit the `.env` file with your local configuration.
+1. Navigate into the cloned project `cd station` and edit the `.env` file with your local configuration.
     - `FHIR_ADDRESS` the address of the default fhir server connected to the station (this can also be configured per train)
     - `FHIR_USER` username to authenticate against the FHIR server using Basic Auth
     - `FHIR_PW` password for Basic Auth
@@ -33,8 +34,8 @@ installed. For the default installation to work the ports `8080` and `5432` need
     - `AIRFLOW_USER` admin user to be created for the airflow instance 
     - `AIRFLOW_PW` password for the airflow admin user
 
-3. Bring up the project by running `docker-compose up -d`
-4. Check the logs for any errors while bringing up the project `docker-compose logs`
+2. Bring up the project by running `docker-compose up -d`
+3. Check the logs for any errors while bringing up the project `docker-compose logs`
 
 
 ## Getting started with Airflow
@@ -75,6 +76,27 @@ to the name of the task and selection Log in the pop-up window that appears.
 If there are any errors stacktraces can be found in these logs, as well as any other output of the tasks (stdout, stderr)
 
 ![Airflow UI task log details](images/station_images/task_log_details.png)
+
+### Running a train
+
+To execute a train that is available for your station, trigger the `run_train` DAG, with configuration options specifying
+the train image to be pulled from harbor and executed as well as additional environment variables or volumes. A template
+train configuration is displayed below. 
+
+```json
+{
+  "repository": "<HARBOR-REGISTRY>/<STATION_ID>/<TRAIN-IMAGE>",
+  "tag": "latest",
+  "env": {"FHIR_ADDRESS": "<FHIR-ADRESS>","FHIR_USER": "<ID>","FHIR_PW": "<PSW>"}
+}
+```
+
+Replace the placeholders with the values of the train image to execute, and other
+variables with the values corresponding to the stations configuration and paste it into the configuration form shown in 
+the following image.
+
+![Airflow trigger run train](images/station_images/trigger_run_train.png)
+
 
 
 

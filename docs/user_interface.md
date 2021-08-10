@@ -11,10 +11,12 @@ but also the submission of analysis-trains and consequently receiving encrypted 
 
 #### Registering/Updating a public key
 
+#### Setting/Updating harbor username and password
+
+#### Updating the Station ID
+
 
 ### User
-
-
 
 #### Registering/Updating a public key
 After signing in for the first time register a public in the UI (Vault). 
