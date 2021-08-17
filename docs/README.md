@@ -1,7 +1,8 @@
 # PHT Public Documentation
 *** 
 *Author:* Felix Bötte  
-*Created:* xx/04/2021  
+*Created:* 17/08/2021
+*Editor:* Michael Graf, Marius Herr
 *Version:* 1.0.1
 ***
 The following will be a documentation to provide detailed explanations about the steps which need

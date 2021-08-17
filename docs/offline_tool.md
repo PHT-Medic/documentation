@@ -1,7 +1,7 @@
 # PHT Offline Tool
 
-The Offline Tool is a Python (PyQt5) application with a GUI to decrypt results,
-manage keys and sign hashes locally during the submission process of a train.
+The Offline Tool is a Python (PyQt5) application with a GUI to sign hashes locally during the submission process of a train.
+After successfull execution, it is used to decrypt downloaded results and key management.
 
 
 ## Installation

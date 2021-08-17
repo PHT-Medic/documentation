@@ -34,27 +34,31 @@ Proposal are an organizational unit in the PHT, a proposal represents the collab
 in regard to a specific research or analysis project.  
 It contains an initial risk assessment as well as a high level description of the requested data.
 
-!!! todo 
-    update the screenshots
+![Proposal overview](images/ui_images/proposal.png)
 
 
 
 ### Creating a new Proposal
-
+Specify a train proposal by entering the required information, such each side can approve the analysis.
+![Proposal create](images/ui_images/proposal_create.png)
 
 ### Accepting an incoming proposal
+Within the incoming section of each station, a station authority can independently decide to comment, approve or reject
+a study proposal for analysis. In order to do such, click on the proposal menu on the right side of the corresponding proposal.
+![Proposal create](images/ui_images/proposal_approve.png)
 
 
-1. Add User Keys in the setting section and press "Change" to save your public keys
+## Train submission
+1.If it is your first train submission, you need to add User Keys in the setting section and press "Change" to save your public keys
 in Vault.
 
    <br/><br/>
    
    ![Security Settings](images/ui_images/1step.png)
-   
+
    <br/><br/>
 
-2. To add a new proposal go on the left navigation bar and select the "Proposal" section
+2. If you have already created a train proposal you can skip this step. If you haven't you can do such by clicking on the left navigation bar and select the "Proposal" section
 
    * You can generate a sample text with the "Test Data" button
    * Station authorities can approve or reject the train now.
