@@ -15,32 +15,33 @@ and install it on your local computer.
 2. From the opening page select "Security Values"
 
    <br/><br/>
-   ![Offline Tool Start](images/offline_tool_images/1step.png)
+   ![Offline Tool Start](images/offline_tool_images/start.png)
    <br/><br/>
 
 3. Select "Generate private and public key"
    
    <br/><br/>
-   ![Offline Tool Security Values](images/offline_tool_images/22step.png)
+   ![Offline Tool Security Values](images/offline_tool_images/1step.png)
    <br/><br/>
 
 
 4. Specify the directory where the keys should be saved
 5. Specify the name of the key-pair
-6. The public key needs to be stored in the UI to create trains
+6. Select a password for your private key
+7. The public key needs to be stored in the UI to create trains
 
 ## Sign Hash 
 
 1. Start the application
 2. From the opening Page select "Security Values"
 3. Press "Select private key" and choose the matching private key to the public key stored in the UI
-4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation has occured)
+4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation of the algorithm has occured)
 5. Press "Sign"
 6. Press "Copy" to copy the signed hash to clipboard
 7. Proceed to paste the signature into the train-wizard to continue train submission
 
    <br/><br/>
-   ![Offline Tool Security Values_2](images/offline_tool_images/2step.png)
+   ![Offline Tool Security Values_2](images/offline_tool_images/sign.png)
    <br/><br/>
    
 
@@ -82,5 +83,5 @@ and install it on your local computer.
 8. Select the models on the left list-box that you wish to decrypt.
 If a file is selected, it will appear in the right box.
 9. Press "Decrypt selected models".
-10. You can move to the corresponding directory with the decrypted results by pressing
-"Show decrypted files".
+10. You can go to the corresponding directory with the decrypted results by pressing
+"Show decrypted files". The results are saved on your local machine and you are responsible protecting those.

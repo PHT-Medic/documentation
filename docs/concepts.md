@@ -23,10 +23,13 @@ example, genomics pipelines or deep-learning algorithms – analytics methods th
 distributed queries or simple statistics.
 
 ## Terminology
-PHT - Personal Health Train
-Registry - Service to distribute trains
-Stations - hospitals hosting a station to provide trains controlled and secure access to patient data.
-Trains - docker containers containing algorithm, train logic and software dependencies
+|Term| Explanation|
+|:------:|:------:|
+|IAM|Identity and Access management|
+|PHT | Personal Health Train|
+| Registry | Service to distribute trains|
+| Stations |hospitals hosting a station to provide trains controlled and secure access to patient data|
+| Trains | docker containers containing algorithm, train logic and software dependencies|
 
 !!! todo
 Extend with abbreviations
@@ -36,20 +39,20 @@ Extend with abbreviations
 ![Architecture](images/process_images/pht_services.png)
 
 ### Central Services
-1. User Interface - Self developed service in Vue.js for proposal and train submission, downloading of results
-2. Message Broker - RabbitMQ, for consuming and publishing events between services 
-3. Train Builder - Self developed service in Python to build valid trains
-4. Container Registry - Harbor, an open-source container registry providing trains to stations
-5. Train Router - Self developed Python service to move trains between projects accordingly to the route
-6. Result Service - Vue.js self developed service, to extract encrypted results
-7. Secret Storage - Based on Hashicorps Vault a service to store securely public keys of users and routes of trains
-8. Train Images - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
+* User Interface - Self developed service in Vue.js for proposal and train submission, downloading of results
+* Message Broker - RabbitMQ, for consuming and publishing events between services 
+* Train Builder - Self developed service in Python to build valid trains
+* Container Registry - Harbor, an open-source container registry providing trains to stations
+* Train Router - Self developed Python service to move trains between projects accordingly to the route
+* Result Service - Vue.js self developed service, to extract encrypted results
+* Secret Storage - Based on Hashicorps Vault a service to store securely public keys of users and routes of trains
+* Train Images - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
 
 ### Local Services
-1. Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.
-2. Airflow - Apache Airflow is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
-3. Station IAM - Identity and Access management system (based on Keycloak) to manage users of one hospital
-4. Offline Tool - Self developed GUI to create key pairs and decrypt results locally.
+* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.
+* Airflow - Apache Airflow is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
+* Station IAM - Identity and Access management system (based on Keycloak) to manage users of one hospital
+* Offline Tool - Self developed GUI to create key pairs and decrypt results locally.
 ## Security
 Add link to paper. Security Protocol with train building, pre_run, and post_run protocol.
 
