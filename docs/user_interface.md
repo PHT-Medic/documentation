@@ -22,8 +22,9 @@ In order to have permissions to change public keys or harbor credentials the use
 
 ![Security Settings](images/ui_images/harbor_station.png)
 #### Updating the Station ID
-!!! warning
-   Please don't change the id, if you do not rebuild the station with the new id.
+!!! warning 
+    Please don't change the id, if you do not rebuild the station with the new id.
+
 1. Within the admin area (top left), you need select **Realms** within the left navigation.
 2. Select the Station you want to edit
 3. In *General* the id of the station can be changed.
