@@ -2,9 +2,8 @@
 !!! warning
     Under construction. This documentation is not complete.
 
-
 Documentation and [User Guide](user_interface.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
-For more information about the PHT you can also visit our [website](https://personalhealthtrain.de/).
+For more information about the PHT team, projects and collaborations you can also visit our [website](https://personalhealthtrain.de/).
 
 ## Repositories
 Multiple repositories are part of the PHT. These can be roughly separated into central components managed by the PHT Team
