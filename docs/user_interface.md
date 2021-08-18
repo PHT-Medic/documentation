@@ -8,13 +8,25 @@ but also the submission of analysis-trains and consequently receiving encrypted 
 
 
 ### Station
-
+In order to have permissions to change public keys or harbor credentials the user needs permissions of a **Station Authority**.
 #### Registering/Updating a public key
-
+1. Within the admin area (top left), you need select **Realms** within the left navigation.
+2. Select the Station you want to edit
+3. In *General* the public key can be entered. Please don't change the id, if you do not rebuild the station with a new id.
+   
+![Security Settings](images/ui_images/pk_station.png)
 #### Setting/Updating harbor username and password
+1. Within the admin area (top left), you need select **Realms** within the left navigation.
+2. Select the Station you want to edit
+3. In *Harbor* the credentials, project name and path can be modified - webhooks for API communication can be tested.
 
+![Security Settings](images/ui_images/harbor_station.png)
 #### Updating the Station ID
-
+!!! warning
+   Please don't change the id, if you do not rebuild the station with the new id.
+1. Within the admin area (top left), you need select **Realms** within the left navigation.
+2. Select the Station you want to edit
+3. In *General* the id of the station can be changed.
 
 ### User
 
