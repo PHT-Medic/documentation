@@ -33,9 +33,9 @@ git clone https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difut
     - `STATION_PRIVATE_KEY_PATH` path to the private key on the local filesystem that will be mounted as a volume
     - `AIRFLOW_USER` admin user to be created for the airflow instance 
     - `AIRFLOW_PW` password for the airflow admin user
-
-2. Bring up the project by running `docker-compose up -d`
-3. Check the logs for any errors while bringing up the project `docker-compose logs`
+2. Create a volume for the station with ```docker volume create --name=pg_pht_station```
+3. Bring up the project by running `docker-compose up -d`
+4. Check the logs for any errors while bringing up the project `docker-compose logs`
 
 
 ## Getting started with Airflow
