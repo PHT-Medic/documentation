@@ -127,7 +127,7 @@ string and returning the full resources returned by the server.
 {
   "query": "Patient?gender=male",
   "data": {
-    "output_format": "raw",
+    "output_format": "json",
     "filename": "patients.json"
   }
 }

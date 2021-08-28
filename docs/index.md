@@ -56,7 +56,8 @@ A user within the central user interface has always to be associated to a statio
 We in Tübingen use [Keycloak](https://hub.docker.com/r/jboss/keycloak/) for our user management.
 
 
-### Credits
+## Credits
 [Icons](https://www.flaticon.com/)
+[Icons](https://www.freepik.com)
 
 
