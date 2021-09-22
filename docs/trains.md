@@ -133,6 +133,8 @@ string and returning the full resources returned by the server.
 }
 ```
 
+Trains must contain
+
 
 #### Advanced Example
 To define more complex queries, including resource chaining and additional variable `has` inside the query object
