@@ -1,7 +1,8 @@
+[![docs](https://github.com/PHT-Medic/documentation/actions/workflows/deploy_docs.yml/badge.svg)](https://github.com/PHT-Medic/documentation/actions/workflows/deploy_docs.yml)
 # PHT Documentation
 
-This repository contains markdown files and images to be compiled into the PHT Documentation and User guide
-on [readthedocs.org](https://readthedocs.org/)
+This repository contains markdown files and images to be compiled into the PHT Documentation and User guide hosted
+on [Github pages](pht-medic.github.io/documentation/)
 
 ## Contributing
 
