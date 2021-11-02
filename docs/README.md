@@ -15,9 +15,9 @@ a feature and allow easy setup with no to little preknowledge.
 3. Station Setup
 4. Run Trains
 5. Usage of Offline-Tool
+6. Live CORD Demo page
 ***
 
-test
 
 ## Usage of UI - Train Proposals
 
