@@ -6,8 +6,8 @@ After successfull execution, it is used to decrypt downloaded results and key ma
 
 ## Installation
 
-First, download the binaries for your operating system from [https://pht.medic.uni-tuebingen.de/](https://pht.medic.uni-tuebingen.de/)
-and install it on your local computer.
+First, download the binaries for your operating system from [https://github.com/PHT-Medic/offline-tool/releases](https://github.com/PHT-Medic/offline-tool/releases)
+and install it based on your OS on your local computer.
 
 ## Create Keys
 
