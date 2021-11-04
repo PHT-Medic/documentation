@@ -2,7 +2,7 @@
 # PHT Documentation
 
 This repository contains markdown files and images to be compiled into the PHT Documentation and User guide hosted
-on [Github pages](pht-medic.github.io/documentation/)
+on our [github pages documentation](https://pht-medic.github.io/documentation/)
 
 ## Contributing
 
