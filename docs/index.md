@@ -15,17 +15,17 @@ with the major repositories being briefly introduced and categorized in the foll
 ### Central Components
 | Service        | Repository link |
 |:-------------:|:-------------:|
-| **Web UI**      | [PersonalHealthTrain/implementations/germanmii/difuture/web-ui/central](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/web-ui/central) |
-| **Train Builder**      | [PersonalHealthTrain/implementations/germanmii/difuture/train-builder](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-builder)      |
-| **Train Router** | [PersonalHealthTrain/implementations/germanmii/difuture/train-router-py](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-router-py)      |
-| **Train Container Library**|  [PersonalHealthTrain/implementations/germanmii/difuture/train-container-library](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/train-container-library)|
+| **Web UI**      | [PHT medDIC/central-ui.git](https://github.com/PHT-Medic/central-ui.git) |
+| **Train Builder**      | [PHT medDIC//train-builder](https://github.com/PHT-Medic/central-train-builder.git)      |
+| **Train Router** | [PHT medDIC/train-router-py](https://github.com/PHT-Medic/central-train-router.git)      |
+| **Train Container Library**|  [PHT medDIC/train-container-library](https://github.com/PHT-Medic/train-container-library.git)|
 
 
 ### Local Components
 | Service        | Repository link |
 |:-------------:|:-------------:|
-|**Station** | [PersonalHealthTrain/implementations/germanmii/difuture/station/station](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/station)|
-|**Offline Tool** | [PersonalHealthTrain/implementations/germanmii/difuture/pht-offline-tool](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/pht-offline-tool)|
+|**Station** | [PHT medDIC/station](https://github.com/PHT-Medic/station)|
+|**Offline Tool** | [PHT medDIC/pht-offline-tool](https://github.com/PHT-Medic/offline-tool.git)|
 
 
 ## Third Party Services
@@ -57,7 +57,6 @@ We in Tübingen use [Keycloak](https://hub.docker.com/r/jboss/keycloak/) for our
 
 
 ## Credits
-[Icons](https://www.flaticon.com/)
-[Icons](https://www.freepik.com)
+Icons used from [flaticon](https://www.flaticon.com/) and [freepik](https://www.freepik.com)
 
 
