@@ -218,9 +218,9 @@ names(stratified_wide)[names(stratified_wide)== "gender"] <- "gender"
 g <- ggplot(stratified_wide,aes(x=Count,y=ageG,fill=gender))
 g + geom_bar(stat="identity")
 ````
-You can find more demo trains within our cord-demo [repository](https://github.com/PHT-Medic/cord-pht-demo/blob/master/R)
+You can find more demo trains within our cord-demo [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/R)
 #### Python code
-This code can be downloaded from this [repository](https://github.com/PHT-Medic/cord-pht-demo/blob/master/Python/minimal_demo.py).
+This code can be downloaded from this [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
 An advantage to use Python is the use of our secure count possibilities, based paillier cryptosystem.
 ```` python
 import os
