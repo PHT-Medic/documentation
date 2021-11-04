@@ -1,24 +1,32 @@
 # PHT CORD Demo
+!!! warning
+Under construction. This documentation is not complete.
+
 This section will provide explanations and examples for writing and executing CORD demo code and queries by using PHT meDIC.
 By using the demo account, we automatically accept and execute your analysis over three trains providing secure access to synthetic 
 CORD demo data in FHIR.
 
+Demo credentials for [PHT demo](https://demo.personalhealthtrain.de) username ``demo_user`` and password ``cord_pht_demo``. With this user you can use all functionalities and
+take a look at our admin area. Don't worry and play around, you cannot break something and the system resets itself.
 
 ## Running CORD demo trains
-
 We suggest to you to follow these steps:
-1. Download and install our offline tool [LINK_TODO](https://)
-2. Download the following example key pairs
-3. Define your FHIR query to be executed
-4. Define your analysis
-5. Submit your code 
-6. Decrypt results
+1. Download and install our offline tool [Offline Tool releases](https://github.com/PHT-Medic/offline-tool/releases).
+2. Download the all demo [Keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys). You will need those to decrypt your results.
+3. Define your FHIR query to be executed (see section below).
+4. Define your analysis (see section below).
+5. Submit your code (see section below).
+6. Decrypt results.
 
 ### Step 2 - Offline Tool
-Download and install the offline tool. Get familiar with its functionalities and load the provided keys.
+Download and install the offline tool. Get familiar with its functionalities additional infos can be found here
+[documentation]()
 
 ### Step 2 - Key loading
-The demo user has predefined keys. You need to download and use those in order to decrypt the analysis results.
+The demo user has predefined [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys). You need to download and use those in order to decrypt the analysis results.
+Go to the `Security` Section of the tool and load the previous downloaded `demo-start123_sk.pem` private key.
+You need to enter the password of the private ``start123``. Now you can continue with train submission - you will need to sign
+with your private key your submitted code and query.
 
 ### Step 3 - FHIR queries
 Our self implemented train-library not only includes security but also standardised FHIR query execution and access and supports
@@ -40,7 +48,7 @@ The train library requires the following minimal specifications:
 {
   "query": "Patient", # Recourses queried
   "data": {
-    "output_format": "json". # raw, json and XML are currently supported
+    "output_format": "json", # raw json and XML are currently supported
     "filename": "patients.json" # file name and format to be loaded in the code
   }
 }
@@ -77,11 +85,143 @@ These following examples will be executed at each station. Please get familiar w
 
 
 #### R code
-TODO enter here demo R code
+This following example code uses the following query:
+```` json
+{
+  "query": {
+    "resource": "Patient"
+  },
+  "data": {
+    "output_format": "xml",
+    "filename": "patients.xml"
+  }
+}
+````
 
+Example uses the FHIRCracker to load the provided FHIR bundles (`patients.xml`) and plots age distribution:
+```` R
+############################################################################################################################
+##         Zur Alterspyramide zu rechnen
+##############################################################################################################################
+library(tidyverse)
+library(eeptools) # um Alter zu berechnen
+library(ggplot2)# für muster age pyramid
+library(fhircrackr)
+
+# empty global enviroment
+rm(list = ls())
+
+options(warn=-1)# warnung ausblenden
+
+#LOAD Data from importet FHIR
+loaded_bundles <- fhir_load("/opt/train_data/")
+design <- list(
+  Patients = list(
+    resource = "//Patient",
+    cols = list(
+      patient_id = "id",
+      managing_orga = "managingOrganization/reference",
+      name_family = "name/family",
+      name_given = "name/given",
+      gender = "gender",
+      birthdate = "birthDate"
+    )
+  )
+)
+
+# crack fhir bundles
+dfs <- fhir_crack(loaded_bundles, design)
+
+# save raw patients dataframe
+data <- dfs$Patients
+
+##Data folders#############################################################################################################
+result_folder <- "./opt/pht_results/"
+
+# Berechne Alter auf der grund von Geburtsdatum
+data$AngabeAlter <- floor(age_calc(as.Date(data$birthdate), unit="years"))
+
+#WRITE Mean Data for PHT and add up if available ---------------------------
+data_pht_man = data %>% subset(gender=="male")
+data_pht_woman = data %>% subset(gender=="female")
+
+output_pht_df <- data.frame(
+  sex = c("male", "female"),
+  number = c(length(data_pht_man$AngabeAlter), length(data_pht_woman$AngabeAlter)),
+  age_mean = c(mean(data_pht_man$AngabeAlter), mean(data_pht_woman$AngabeAlter))
+)
+
+#if There is a count of 0 -> replace NaN with 0 for correct addition
+output_pht_df[is.na(output_pht_df)]<-0
+
+#Check if there are previous results -> if yes add up
+if (file.exists(paste(result_folder,"result_mean.csv", sep = ""))) {
+  
+  previous_mean_df <- read.csv2(paste0(result_folder,"result_mean.csv"))
+  
+  output_both <- previous_mean_df %>% 
+    # combine both datasets - add second dataframe in rows
+    bind_rows(
+      output_pht_df
+    ) %>% 
+    # rename column "number" to preserve for calculation
+    dplyr::rename( 
+      number_old = number
+    ) %>% 
+    # apply following operations on grouped variable sex
+    group_by(sex) %>% 
+    # summarize table: compute mean and number
+    dplyr::summarize(
+      # sum up all numbers of patients
+      number = sum(number_old),
+      # compute new mean
+      age_mean = sum(age_mean * number_old)/number
+    )
+ 
+  # overwrite variable for storing
+  output_pht_df <- output_both
+
+  message("previous PHT result found -> Add up")
+}
+
+# print results for fun
+print(output_pht_df)
+
+# write results (combined or not) to csv
+write.csv2(output_pht_df, "./opt/pht_results/result_mean.csv", row.names = FALSE)
+#----------------------------------------------------------------------------
+
+
+# Teile in Altersgruppen ein
+data$AngabeAlter <- cut(data$AngabeAlter, breaks = c(0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120))
+
+# Gruppiere
+result  <- as.data.frame(data %>%
+                           group_by(  AngabeAlter, gender) %>%
+                           summarise(Anzahl = n()))
+
+
+################## Um der Alterspyramid zu rechnen######################################################################
+# Nehmen wir Geschlechht, Alter, Anzahl
+############################################################################################################################
+stratified <- result[,c('gender','AngabeAlter','Anzahl')]
+stratified_female <- (data = stratified %>% subset(gender=="female"))
+stratified_male <- (data = stratified %>% subset(gender=="male")) %>% transform(Anzahl = (data = stratified %>% subset(gender=="male"))$Anzahl * -1 )
+stratified_wide <- rbind(stratified_female,stratified_male)
+
+#Labellen name als angabe
+names(stratified_wide)[names(stratified_wide)== "AngabeAlter"] <- "ageG"
+names(stratified_wide)[names(stratified_wide)== "Anzahl"] <- "Count"
+names(stratified_wide)[names(stratified_wide)== "gender"] <- "gender"
+
+#Alterspyramid kozipieren
+g <- ggplot(stratified_wide,aes(x=Count,y=ageG,fill=gender))
+g + geom_bar(stat="identity")
+````
+You can find more demo trains within our cord-demo [repository](https://github.com/PHT-Medic/cord-pht-demo/blob/master/R)
 #### Python code
 This code can be downloaded from this [repository](https://github.com/PHT-Medic/cord-pht-demo/blob/master/Python/minimal_demo.py).
-
+An advantage to use Python is the use of our secure count possibilities, based paillier cryptosystem.
 ```` python
 import os
 import json
