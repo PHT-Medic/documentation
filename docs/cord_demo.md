@@ -18,7 +18,7 @@ We suggest to you to follow these steps:
 5. Submit your code (see section below).
 6. Decrypt results.
 
-### Step 2 - Offline Tool
+### Step 1 - Offline Tool
 Download and install the offline tool. Get familiar with its functionalities additional infos can be found here
 [documentation]()
 
