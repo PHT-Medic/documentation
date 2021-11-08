@@ -1,4 +1,7 @@
 # PHT CORD Demo
+!!! warning
+Under construction. This documentation is not complete.
+
 This section will provide explanations and examples for writing and executing CORD demo code and queries by using PHT meDIC.
 By using the demo account, we automatically accept and execute your analysis over three trains providing secure access to synthetic 
 CORD demo data in FHIR.
