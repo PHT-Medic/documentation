@@ -16,6 +16,9 @@ nav:
     - Station: station.md
     - Trains: trains.md
   - CORD Demo: cord_demo.md
+    - FHIR Query: cord_fhir.md
+    - R Code: cord_r.md
+    - Python Code: cord_py.md
 
 
 
