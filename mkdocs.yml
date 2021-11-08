@@ -15,12 +15,11 @@ nav:
     - Offline Tool: offline_tool.md
     - Station: station.md
     - Trains: trains.md
-  - CORD Demo: cord_demo.md
+  - CORD Demo:
+    - Overview: cord_demo.md
     - FHIR Query: cord_fhir.md
     - R Code: cord_r.md
-    - Python Code: cord_py.md
-
-
+    - Python Code: cord_python.md
 
 
 markdown_extensions:
