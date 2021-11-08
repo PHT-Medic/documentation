@@ -1,7 +1,4 @@
 # PHT CORD Demo
-!!! warning
-Under construction. This documentation is not complete.
-
 This section will provide explanations and examples for writing and executing CORD demo code and queries by using PHT meDIC.
 By using the demo account, we automatically accept and execute your analysis over three trains providing secure access to synthetic 
 CORD demo data in FHIR.
@@ -11,12 +8,14 @@ take a look at our admin area. Don't worry and play around, you cannot break som
 
 ## Running CORD demo trains
 We suggest to you to follow these steps:
+
 1. Download and install our offline tool.
 2. Load the private keys.
 3. Define your FHIR query to be executed (see section below).
 4. Define your analysis (see section below).
 5. Submit your code (see section below).
 6. Decrypt results.
+
 
 ### Step 1 - Preliminaries
 1. Download and install the tool from our [releases page](https://github.com/PHT-Medic/offline-tool/releases).
