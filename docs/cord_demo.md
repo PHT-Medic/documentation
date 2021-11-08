@@ -43,6 +43,7 @@ Please follow these in order to create a first FHIR query.
 4. Specify the stations to be executed at
 5. Specify the query
 
+Read this section for details regarding FHIR queries: [FHIR query documentation](https://pht-medic.github.io/documentation/cord_fhir/)
 
 ### Step 4 - write your analysis code
 In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
