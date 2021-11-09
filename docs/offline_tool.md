@@ -27,15 +27,15 @@ and install it based on your OS on your local computer.
 
 4. Specify the directory where the keys should be saved
 5. Specify the name of the key-pair
-6. Select a password for your private key
+6. Select a password for your private key. (If you press enter, an empty password will be used)
 7. The public key needs to be stored in the UI to create trains
 
 ## Sign Hash 
 
 1. Start the application
 2. From the opening Page select "Security Values"
-3. Press "Select private key" and choose the matching private key to the public key stored in the UI
-4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation of the algorithm has occured)
+3. Press "Select private key" and choose the matching private key to the public key stored in the UI. If the keyfile is stored with a password, please enter it
+4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation of the algorithm has occurred)
 5. Press "Sign"
 6. Press "Copy" to copy the signed hash to clipboard
 7. Proceed to paste the signature into the train-wizard to continue train submission
@@ -80,8 +80,8 @@ and install it based on your OS on your local computer.
    ![Offline Tool Model Page](images/offline_tool_images/4step.png)
    <br/><br/>
    
-8. Select the models on the left list-box that you wish to decrypt.
-If a file is selected, it will appear in the right box.
-9. Press "Decrypt selected models".
+8. Select the models on the left list-box that you wish to decrypt
+If a file is selected, it will appear in the right box
+9. Press "Decrypt selected models"
 10. You can go to the corresponding directory with the decrypted results by pressing
-"Show decrypted files". The results are saved on your local machine and you are responsible protecting those.
+"Show decrypted files". The results are saved on your local machine and you are responsible protecting those
