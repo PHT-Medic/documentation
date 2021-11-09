@@ -39,9 +39,10 @@ Please follow these in order to create a first FHIR query.
 
 1. Login to the UI
 2. Create a new train
-3. Select the CORD Demo
+3. Select the CORD Demo in the desired programming language for your proposal
 4. Specify the stations to be executed at
 5. Specify the query
+6. Sign the hash with the local Offline Tool [documentation hash signing](https://pht-medic.github.io/documentation/offline_tool/#sign-hash)
 
 Read this section for details regarding FHIR queries: [FHIR query documentation](https://pht-medic.github.io/documentation/cord_fhir/)
 

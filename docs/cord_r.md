@@ -135,3 +135,7 @@ g + geom_bar(stat="identity")
 ````
 
 You can find more R demo trains within our cord-demo [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/R)
+
+
+### Credits
+These example trains are based on the [Projektathon4 repository](https://github.com/medizininformatik-initiative/usecase-cord/tree/master/Projektathon4)
