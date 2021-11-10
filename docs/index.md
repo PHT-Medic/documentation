@@ -8,7 +8,7 @@ For more information about the PHT team, projects and collaborations you can als
 ## Repositories
 Multiple repositories are part of the PHT. These can be roughly separated into central components managed by the PHT Team
 and hosted by the UKT and local components which are executed either by a user or by participating stations.  
-All public repositories related to the PHT can be found on our [gitlab](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture),
+All public repositories related to the PHT can be found on our [github page](https://github.com/PHT-Medic),
 with the major repositories being briefly introduced and categorized in the following sections.
 
 

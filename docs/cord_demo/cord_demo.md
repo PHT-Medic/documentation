@@ -122,12 +122,12 @@ The decrypted files can be accessed from you explorer or finder locally.
 log files from the execution.
 
 ### Is this the PHT?
-**Question: Is this the personal health train?**
+**Question: Is this the Personal Health Train?**
 
-**Answer** This is the implementation of the PHT from Tübingen University. Many other versions exist.
+**Answer** This is the implementation of the PHT from Tübingen University (PHT-meDIC). Many other versions exist.
 
-### Is there a difference in the demo?
-**Question: Is the pht-medic as it would operate on real patient data?**
+### Any difference in the demo?
+**Question: Is the PHT-meDIC as it would operate on real patient data?**
 
 **Answer** All services are interacting in this demo, as it would be on real data.
 But there is a major difference: any train will be approved and executed. There is no one to validate, if something malicious is ongoing.
