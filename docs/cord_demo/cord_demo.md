@@ -97,19 +97,22 @@ After a few minutes your train results can be downloaded. The files are automati
 Please follow these steps:
 
 1. Download results
-2. Open the offline tool
-3. Go to "Model" section
-4. Load your private key
-5. Open the result directory
-6. Select the files to decrypt
-7. Decrypt the files
-8. View or process the results locally
+<br/><br/> ![submission 8](../images/demo/submission_8.png)<br/><br/>
+2. Unzip the downloaded train results locally
+3. Result decryption
+   1. Open the offline tool
+   2. Go to "Model" section
+   3. Load your private key
+   4. Open the unzipped result directory
+   5. Load the train config file of your train
+   6. Select the files to decrypt
+   7. Decrypt the files by pressing the button
+      <br/><br/> ![submission 9](../images/demo/submission_9.png)<br/><br/>
+4. View, process and store the results locally your computer.
+   <br/><br/> ![submission 10](../images/demo/submission_10.png)<br/><br/>
 
 More information regarding result decryption can be read [here](../user_guide/offline_tool.md#decrypt-results).
 The decrypted files can be accessed from you explorer or finder locally.
-<br/><br/>
-![Offline Tool decrypted files](../images/offline_tool_images/decrypted.png)
-<br/><br/>
 
 ## FAQ
 ### Train not updating
