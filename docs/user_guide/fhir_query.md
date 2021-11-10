@@ -5,7 +5,37 @@ For more information on available FHIR resources and the fields they contain, vi
 [FHIR Documentation](https://www.hl7.org/fhir/resourcelist.html). We assume connected FHIR servers fulfill the
 specifications defined in FHIR Release #4 (v4.0.1).  
 Additionally, the `query.json` file contains specifications on how the response from the FHIR server should be stored
-and optionally parsed.
+and optionally parsed. The following example shows a JSON object defining a query for the Patient resource, the keys
+will be explained in the following sections.  
+
+````json
+{
+  "query": {
+    "resource": "Patient",
+    "parameters": [
+      {
+        "variable": "gender",
+        "condition": "male"
+      },
+      {
+        "variable": "birthdate",
+        "condition": "gt1980-08-12"
+      }
+    ],
+    "has": [
+      {
+        "resource": "Condition",
+        "property": "code",
+        "params": ["E70.0", "I20.0"]
+      }
+    ]
+  },
+  "data": {
+    "output_format": "json",
+    "filename": "patients.json"
+  }
+}
+````
 
 ## Writing a JSON Query
 
