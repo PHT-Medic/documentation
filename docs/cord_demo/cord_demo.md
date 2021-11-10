@@ -12,10 +12,12 @@ We suggest to you to follow these steps:
 
 1. Download and install our offline tool.
 2. Load the private keys.
-3. Define your FHIR query to be executed (see section below).
-4. Define your analysis (see section below).
-5. Submit your code (see section below).
-6. Decrypt results.
+3. Train submission
+   1. Define your FHIR query to be executed (see section below).
+   2. Define your analysis (see section below).
+   3. Submit your code (see section below).
+4. Run the train.
+5. Decrypt results.
 
 
 ### Step 1 - Preliminaries
@@ -34,36 +36,63 @@ Go to the `Security` Section of the tool and load the previous downloaded `demo-
 You need to enter the password of the private `start123`. Now you can continue with train submission - you will need to sign
 with your private key your submitted code and query.
 
-### Step 3 - FHIR queries
+### Step 3 - Train submission
+For this CORD PHT demo we recommend using or customizing an example train. Please clone this [repository](https://github.com/PHT-Medic/cord-pht-demo) if you want to
+use our example trains.
+
+Now you need to decide if you want to run a [Python](cord_python.md) or [R](cord_r.md) analysis.
+By writing the analysis code, you specify the data access, we recommend using FHIR.
+
+#### Step 3.1 FHIR queries
 Our self implemented train-library not only includes security but also standardised FHIR query execution and access and
 currently supports the following servers: IBM, Hapi and Blaze. In this demo we use Blaze FHIR servers.
-Please follow these in order to create a first FHIR query.
+
+Read this section for details regarding FHIR queries: [FHIR query documentation](cord_fhir.md) or continue with the train submission.
+
+#### Step 3.2 - write your analysis code
+In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
+These following examples will be executed at each station. Please get familiar with the following Python or R code:
+
+R demo trains code is documented here: [R CORD documentation](cord_r.md)
+
+Python demo trains code is documented here: [Python CORD documentation](cord_python.md)
+
+
+#### Step 3.3 - code submission
+Upload your analysis code within the UI and select the entrypoint (script to be executed at stations if multiple files are submitted).
+The hash of the uploaded files and query needs to be signed by using the Offline Tool with your private key. The next steps guide you through submission.
 
 1. Login to the UI
 2. Create a new train
 3. Select the CORD Demo in the desired programming language for your proposal
-4. Specify the stations to be executed at
-5. Specify the query
-6. Sign the hash with the local Offline Tool [documentation](../user_guide/offline_tool.md#sign-hash)
-
-Read this section for details regarding FHIR queries: [FHIR query documentation](cord_fhir.md)
-
-### Step 4 - write your analysis code
-In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
-These following examples will be executed at each station. Please get familiar with the following Python or R code:
-
-R demo code is documented here: [R CORD documentation](cord_r.md)
-
-Python demo code is documented here: [Python CORD documentation](cord_python.md)
+<br/><br/>
+   ![submission 1](../images/demo/submission_1.png)
+<br/><br/>
+5. Specify the stations to be executed at and select depending on your programming language the master image.
+<br/><br/>![submission 2](../images/demo/submission_2.png)<br/><br/>
 
 
-### Step 5 - Code submission
-Upload your analysis code within the UI and select the entrypoint (script to be executed at stations if multiple files are submitted).
-The hash of the uploaded files and query needs to be signed by the offline tool with your private key.
 
-TODO add images when bugs are fixed in UI.
+7. Upload the algorithm and select the entrypoint of the train.
+   <br/><br/>![submission 3](../images/demo/submission_3.png)<br/><br/>
+8. Specify the query
+   <br/><br/>![submission 4](../images/demo/submission_4.png)<br/><br/>
+9. Sign the hash with the local Offline Tool [documentation](../user_guide/offline_tool.md#sign-hash)
+   <br/><br/> ![submission 5](../images/demo/submission_5.png)<br/><br/>
 
-### Step 6 - result download and decryption
+
+### Step 4 - Train running
+You need to build and run the train before you can download the results.
+Start the building process of the train.
+<br/><br/> ![submission 6](../images/demo/submission_6.png)<br/><br/>
+Please reload the page within the browser after 30-40 seconds. Then you will be able to start the execution at the stations.
+<br/><br/> ![submission 7](../images/demo/submission_7.png)<br/><br/>
+
+After a few minutes, results are available. A soon released feature will display the progress of the train in the Stations overview with a random station numbering.
+The user will also be able to see log files of the train.
+
+
+### Step 5 - result download and decryption
 After a few minutes your train results can be downloaded. The files are automatically encrypted and need to be decrypted with the offline tool.
 Please follow these steps:
 
