@@ -12,7 +12,7 @@ The train library requires the following minimal specifications:
 
 ```json
 {
-  "query": "Patient",
+  "query": "/Patient?",
   "data": {
     "output_format": "xml",
     "filename": "patients.xml" 
