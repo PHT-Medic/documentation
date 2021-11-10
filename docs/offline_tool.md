@@ -43,28 +43,6 @@ and install it based on your OS on your local computer.
    <br/><br/>
    ![Offline Tool Security Values_2](images/offline_tool_images/sign.png)
    <br/><br/>
-   
-
-## Homomorphic Decryption
-
-1. Start the application
-2. From the opening page select "Secure Addition"
-3. Generate key-pair (Public & Private Key for Homomorphic Decryption)
-4. Select the corresponding Private Key (identical to 3. step of hash signing)
-5. Copy your encrypted number into the text field (encrypted number is found in the decrypted results from the
-   previous step)
-   
-   <br/><br/>
-   ![Offline Tool Secure Addition](images/offline_tool_images/extra.png)
-   <br/><br/>
-   
-6. Press "Decrypt"
-7. Now in the right textfield appears the decypted count query
-
-   <br/><br/>
-   ![Offline Tool Secure Addition_2](images/offline_tool_images/5step.png)
-   <br/><br/>
-
 
 ## Decrypt results
 
@@ -79,9 +57,35 @@ and install it based on your OS on your local computer.
    <br/><br/>
    ![Offline Tool Model Page](images/offline_tool_images/4step.png)
    <br/><br/>
-   
+
 8. Select the models on the left list-box that you wish to decrypt
-If a file is selected, it will appear in the right box
+   If a file is selected, it will appear in the right box
 9. Press "Decrypt selected models"
 10. You can go to the corresponding directory with the decrypted results by pressing
-"Show decrypted files". The results are saved on your local machine and you are responsible protecting those
+    "Show decrypted files". The results are saved on your local machine and you are responsible protecting those   
+
+## Homomorphic Decryption
+
+1. Start the application
+2. From the opening page select "Secure Addition"
+3. Generate key-pair (Public & Private Key for Homomorphic Decryption)
+4. Select the corresponding Private Key (identical steps as in section hash signing)
+5. Copy your encrypted paillier number into the text field (encrypted number is found in the decrypted results from the
+   previous step)
+   
+   <br/><br/>
+   ![Offline Tool Secure Addition](images/offline_tool_images/extra.png)
+   <br/><br/>
+   
+6. Press "Decrypt"
+7. Now in the right textfield appears the decypted count query
+
+   <br/><br/>
+   ![Offline Tool Secure Addition_2](images/offline_tool_images/5step.png)
+   <br/><br/>
+
+If you want to calculate the average age over multiple sites, this cannot be done trivially.
+You need to know the total age and total number of patients over all sites. By saving both decrypted numbers,
+you can manually calculate such afterwards. Average age: `5384 / 144 = 37,38`.
+![Offline Tool Model Page](images/offline_tool_images/6step.png)
+

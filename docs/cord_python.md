@@ -1,5 +1,7 @@
-#### Python code
+# Python code
 This code can be downloaded from this [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
+
+## Demo Train 1
 The following query filters at each station for female patients born greater than 1960.
 ```` json
 {
@@ -29,16 +31,11 @@ import os
 import json
 import pandas as pd
 import pathlib
-import pickle
 from dotenv import load_dotenv, find_dotenv
-from train_lib.fhir import PHTFhirClient
-
 
 DATA_PATH = os.getenv("TRAIN_DATA_PATH")
 FHIR_PATH = "/opt/train_data/cord_results.json"
-MODEL_PATH = '/opt/pht_results/model.pkl'
-RESULT_PATH = '/opt/pht_results/results.pkl'
-
+RESULT_PATH = '/opt/pht_results/results.txt'
 
 def load_if_exists(model_path: str):
     """
@@ -49,8 +46,8 @@ def load_if_exists(model_path: str):
     p = pathlib.Path(model_path)
     if pathlib.Path.is_file(p):
         print("Loading previous results")
-        with open(p, "rb") as model_file:
-            model = pickle.load(model_file)
+        with open(p, "r") as model_file:
+            model = json.load(model_file)
         return model
     else:
         return None
@@ -63,7 +60,7 @@ def save_results(results, result_path):
     :param result_path:  Path of results file
     :return: store results as pickle file
     """
-    dirPath = '/opt/pht_results'
+    dirPath = '/opt/train_results'
     try:
         # Create target Directory
         os.mkdir(dirPath)
@@ -71,19 +68,20 @@ def save_results(results, result_path):
     except FileExistsError:
         print("Directory ", dirPath,  " already exists (done by TB)")
     p = pathlib.Path(result_path)
-    with open(p, 'wb') as results_file:
-        return pickle.dump(results, results_file)
+    with open(p, 'w') as results_file:
+        json.dump(results, results_file)
+    print("Saved files")
 
 
 def parse_fhir_response() -> pd.DataFrame:
     """
     Load and parse provided FHIR resources to a pandas dataframe
-    :return: 
+    :return:
     """
     with open(FHIR_PATH, "r") as f:
         results = json.load(f)
     parsed_resources = []
-    for patient in results:
+    for patient in results["entry"]:
         resource = patient["resource"]
         parsed_resources.append(parse_resource(resource))
 
@@ -118,9 +116,6 @@ def occurence_data(pat_df, column):
 
     return pat_df[column].value_counts()
 
-# TODO extend with own custom functions here
-
-
 if __name__ == '__main__':
     """
     Main analysis function of the train - the CORD minimal demo, requires only result files and no models
@@ -137,18 +132,164 @@ if __name__ == '__main__':
     if results is None:
         results = {'analysis': {}, 'discovery': {}}
     print("Previous results: {}".format(results))
-    
+
     # Write analysis code here
     # demo function to count occurence of specified variables
     occ = occurence_data(pat_df, 'gender')
-    
-    results['analysis']['analysis_exec_' + str(len(results['analysis']) + 1)] = occ
-    
+
+    results['analysis']['analysis_exec_' + str(len(results['analysis']) + 1)] = str(occ)
+
     # print updated results
     print("Updated results: {}".format(results))
     save_results(results, RESULT_PATH)
 
 ````
+## Demo Train 2
 An advantage to use Python is the use of our secure count possibilities, based paillier cryptosystem.
+Doing such, you can add, multiply or subtract an encrypted integer number from another encrypted number. 
+This way, you can e.g. count the total number of certain conditions matching within a cohort, without reveling the input 
+value from any site.
 
-Examples for doing such are [here](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
+```` python
+import os
+import json
+import pandas as pd
+import pathlib
+from dotenv import load_dotenv, find_dotenv
+
+from train_lib.security.HomomorphicAddition import secure_addition
+
+
+DATA_PATH = os.getenv("TRAIN_DATA_PATH")
+FHIR_PATH = "/opt/train_data/cord_results.json"
+RESULT_PATH = '/opt/pht_results/results.txt'
+
+def load_if_exists(model_path: str):
+    """
+    Load previous computed results, if available
+    :param model_path: Path of models or results to load
+    :return: model
+    """
+    p = pathlib.Path(model_path)
+    if pathlib.Path.is_file(p):
+        print("Loading previous results")
+        with open(p, "r") as model_file:
+            model = json.load(model_file)
+        return model
+    else:
+        return None
+
+
+def save_results(results, result_path):
+    """
+    Create (if doesnt exist) a result directory and store the analysis results within
+    :param results: Result content
+    :param result_path:  Path of results file
+    :return: store results as pickle file
+    """
+    dirPath = '/opt/pht_results'
+    try:
+        # Create target Directory
+        os.mkdir(dirPath)
+        print("Directory ", dirPath,  " Created (usually done by TB)")
+    except FileExistsError:
+        print("Directory ", dirPath,  " already exists (done by TB)")
+    p = pathlib.Path(result_path)
+    with open(p, 'w') as results_file:
+        return json.dump(results, results_file)
+
+
+def parse_fhir_response() -> pd.DataFrame:
+    """
+    Load and parse provided FHIR resources to a pandas dataframe
+    :return:
+    """
+    with open(FHIR_PATH, "r") as f:
+        results = json.load(f)
+    parsed_resources = []
+    for patient in results["entry"]:
+        resource = patient["resource"]
+        parsed_resources.append(parse_resource(resource))
+
+    df = pd.DataFrame(parsed_resources)
+    return df
+
+
+def parse_resource(resource):
+    """
+    Parse a FHIR resource returned from a FHIR server in a desired format
+
+    :param resource:
+    :return: dictionary of parsed resource
+    """
+    sequence_dict = {
+        "givenName": resource['name'][0]['given'],
+        "familyName": resource['name'][0]['family'],
+        "birthDate": resource["birthDate"],
+        "gender": resource["gender"]
+    }
+    return sequence_dict
+
+
+def get_user_pk():
+    try:
+        with open('/opt/train_config.json', 'r') as train_conf:
+            conf = json.load(train_conf)
+            return conf['user_secure_add_pk']
+    except Exception:
+        return {'user_secure_add_pk': None}
+
+
+def paillier_addition(prev_result, local_result, number_to_add):
+    try:
+        curr_result = prev_result['analysis'][number_to_add]
+        print("Previous secure addition value from {} {}".format(number_to_add, curr_result))
+    except KeyError:
+        print("Previous secure addition from {} empty".format(number_to_add))
+        curr_result = None
+    default_user_he_pk_key = 318693975235417112059593426070243914461
+
+    return secure_addition(local_result, curr_result, int(default_user_he_pk_key))
+
+
+if __name__ == '__main__':
+    """
+    Main analysis function of the train - the CORD minimal demo for secure calculation of average age
+    :return:
+    """
+    load_dotenv(find_dotenv())
+    # parse the FHIR response and load previous results (if available)
+    pat_df = parse_fhir_response()
+    # Try to load previous results, if no exist create dictionary and print results before execution of analysis
+    try:
+        results = load_if_exists(RESULT_PATH)
+    except FileNotFoundError:
+        print("No file available")
+    if results is None:
+        results = {'analysis': {}, 'discovery': {}}
+    print("Previous results: {}".format(results))
+
+    # Write analysis code here
+    # demo function to calculate average age secure
+    now = pd.Timestamp('now')
+    pat_df['birthDate'] = pd.to_datetime(pat_df['birthDate'])
+    pat_df['age'] = (now - pat_df['birthDate']).astype('<m8[Y]')
+
+    sum_age = int(pat_df['age'].sum())
+    sum_pat = int(pat_df.shape[0])
+
+    secure_age = paillier_addition(results, sum_age, 'secure_age')
+    secure_pat = paillier_addition(results, sum_pat, 'secure_pat')
+
+    results['analysis']['secure_age'] = secure_age
+    results['analysis']['secure_pat'] = secure_pat
+
+    # print updated results
+    print("Updated results: {}".format(results))
+    save_results(results, RESULT_PATH)
+
+````
+
+This train uses the same FHIR query and the example is [here](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
+To decrypt and understand the results, please read the [Offline Tool documentation](https://pht-medic.github.io/documentation/offline_tool/#homomorphic-decryption).
+
