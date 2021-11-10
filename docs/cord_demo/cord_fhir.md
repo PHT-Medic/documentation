@@ -79,4 +79,7 @@ More advanced queries including searching multiple resources are demonstrated:
   }
 }
 ````
-Now only male subjects born greater than 1980 including a condition related to [PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and [unstable angina pectoris](https://www.msdmanuals.com/de-de/profi/herz-kreislauf-krankheiten/koronare-herzkrankheit/instabile-angina-pectoris) 
+Now only male subjects born greater than 1980 that have a condition related to
+[PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and 
+[unstable angina pectoris](https://www.msdmanuals.com/de-de/profi/herz-kreislauf-krankheiten/koronare-herzkrankheit/instabile-angina-pectoris)
+will be returned.

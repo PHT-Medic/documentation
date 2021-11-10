@@ -1,9 +1,10 @@
 # PHT CORD Demo
 This section will provide explanations and examples for writing and executing CORD demo code and queries by using PHT meDIC.
-By using the demo account, we automatically accept and execute your analysis over three trains providing secure access to synthetic 
+By using the demo account, we automatically accept and execute your analysis over three stations providing secure access to synthetic 
 CORD demo data in FHIR.
 
-Demo credentials for [PHT demo](https://demo.personalhealthtrain.de) username ``demo_user`` and password ``cord_pht_demo``. With this user you can use all functionalities and
+Demo credentials for [PHT demo](https://demo.personalhealthtrain.de) username `demo_user` and password `cord_pht_demo`.
+With this user you can use all functionalities and
 take a look at our admin area. Don't worry and play around, you cannot break something and the system resets itself.
 
 ## Running CORD demo trains
@@ -18,23 +19,24 @@ We suggest to you to follow these steps:
 
 
 ### Step 1 - Preliminaries
-1. Download and install the tool from our [releases page](https://github.com/PHT-Medic/offline-tool/releases).
+1. Download and install the offline tool from our [releases page](https://github.com/PHT-Medic/offline-tool/releases).
 2. The demo user has predefined [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys). Please download those.
-3. Login our [PHT demo page](https://demo.personalhealthtrain.de) with username ``demo_user`` and password ``cord_pht_demo``.
+3. Login our [PHT demo page](https://demo.personalhealthtrain.de) with username `demo_user` and password `cord_pht_demo`.
 
 
 ### Step 2 - Offline Tool and key loading
- Get familiar with its functionalities additional infos can be found here
-[documentation](https://pht-medic.github.io/documentation/offline_tool/).
+ Get familiar with its functionalities additional infos can be found in the
+[offline tool documentation](../user_guide/offline_tool.md).
 
-You need to download and use those in order to decrypt the analysis results.
+You need to download and use the [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys) in order 
+to decrypt the analysis results.
 Go to the `Security` Section of the tool and load the previous downloaded `demo-start123_sk.pem` private key.
-You need to enter the password of the private ``start123``. Now you can continue with train submission - you will need to sign
+You need to enter the password of the private `start123`. Now you can continue with train submission - you will need to sign
 with your private key your submitted code and query.
 
 ### Step 3 - FHIR queries
-Our self implemented train-library not only includes security but also standardised FHIR query execution and access and supports
-currently the following servers: IBM, Hapi and Blaze. In this demo we use HAPI FHIR servers.
+Our self implemented train-library not only includes security but also standardised FHIR query execution and access and
+currently supports the following servers: IBM, Hapi and Blaze. In this demo we use Blaze FHIR servers.
 Please follow these in order to create a first FHIR query.
 
 1. Login to the UI
@@ -42,17 +44,17 @@ Please follow these in order to create a first FHIR query.
 3. Select the CORD Demo in the desired programming language for your proposal
 4. Specify the stations to be executed at
 5. Specify the query
-6. Sign the hash with the local Offline Tool [documentation hash signing](https://pht-medic.github.io/documentation/offline_tool/#sign-hash)
+6. Sign the hash with the local Offline Tool [documentation](../user_guide/offline_tool.md#sign-hash)
 
-Read this section for details regarding FHIR queries: [FHIR query documentation](https://pht-medic.github.io/documentation/cord_fhir/)
+Read this section for details regarding FHIR queries: [FHIR query documentation](cord_fhir.md)
 
 ### Step 4 - write your analysis code
 In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
 These following examples will be executed at each station. Please get familiar with the following Python or R code:
 
-R demo code is documented here: [R CORD documentation](https://pht-medic.github.io/documentation/cord_r/)
+R demo code is documented here: [R CORD documentation](cord_r.md)
 
-Python demo code is documented here: [Python CORD documentation](https://pht-medic.github.io/documentation/cord_python/)
+Python demo code is documented here: [Python CORD documentation](cord_python.md)
 
 
 ### Step 5 - Code submission
@@ -74,10 +76,10 @@ Please follow these steps:
 7. Decrypt the files
 8. View or process the results locally
 
-More information regarding result decryption can be read [here](https://pht-medic.github.io/documentation/offline_tool/#decrypt-results).
+More information regarding result decryption can be read [here](../user_guide/offline_tool.md#decrypt-results).
 The decrypted files can be accessed from you explorer or finder locally.
 <br/><br/>
-![Offline Tool decrypted files](images/offline_tool_images/decrypted.png)
+![Offline Tool decrypted files](../images/offline_tool_images/decrypted.png)
 <br/><br/>
 
 ## FAQ

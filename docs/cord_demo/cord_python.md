@@ -291,5 +291,5 @@ if __name__ == '__main__':
 ````
 
 This train uses the same FHIR query and the example is [here](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
-To decrypt and understand the results, please read the [Offline Tool documentation](https://pht-medic.github.io/documentation/offline_tool/#homomorphic-decryption).
+To decrypt and understand the results, please read the [Offline Tool documentation](../user_guide/offline_tool.md#homomorphic-decryption).
 
