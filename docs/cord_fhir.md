@@ -62,26 +62,21 @@ More advanced queries including searching multiple resources are demonstrated:
       },
       {
         "variable": "birthdate",
-        "condition": "sa1980-08-12"
+        "condition": "gt1980-08-12"
       }
     ],
     "has": [
       {
         "resource": "Condition",
-        "variable": "code",
-        "params": ["E70.0,E70.1,E84.0,E84.1,E84.8,E84.80,E84.87,E84.88,E84.9"]
+        "property": "code",
+        "params": ["E70.0", "I20.0"]
       }
     ]
   },
   "data": {
     "output_format": "xml",
-    "filename": "patients.xml",
-    "variables": [
-      "id",
-      "birthDate",
-      "gender"
-    ]
+    "filename": "patients.xml"
   }
 }
 ````
-Now only male subjects born age starting after 1980 including a condition related to [PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and [Mukoviszidose](https://www.muko.info/informieren/ueber-die-erkrankung#) 
+Now only male subjects born greater than 1980 including a condition related to [PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and [unstable angina pectoris](https://www.msdmanuals.com/de-de/profi/herz-kreislauf-krankheiten/koronare-herzkrankheit/instabile-angina-pectoris) 
