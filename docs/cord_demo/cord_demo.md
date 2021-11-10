@@ -77,5 +77,24 @@ Please follow these steps:
 More information regarding result decryption can be read [here](https://pht-medic.github.io/documentation/offline_tool/#decrypt-results).
 The decrypted files can be accessed from you explorer or finder locally.
 <br/><br/>
-![Offline Tool decrypted files](../images/offline_tool_images/decrypted.png)
+![Offline Tool decrypted files](images/offline_tool_images/decrypted.png)
 <br/><br/>
+
+## FAQ
+### Train not updating
+**Question: My train is not updated in the UI, what can I do?**
+
+**Answer** Most likely your code or query has caused an error during execution. We work on extending this version, to provide you with
+log files from the execution.
+
+### Is this the PHT?
+**Question: Is this the personal health train?**
+
+**Answer** This is the implementation of the PHT from Tübingen University. Many other versions exist.
+
+### Is there a difference in the demo?
+**Question: Is the pht-medic as it would operate on real patient data?**
+
+**Answer** All services are interacting in this demo, as it would be on real data.
+But there is a major difference: any train will be approved and executed. There is no one to validate, if something malicious is ongoing.
+In case you saved all patient data as fake results in the train, you did not break the system nor hacked the architecture. We allowed you and automatically executed your train to do such.
