@@ -5,7 +5,7 @@ registered in the UI.
 
 ## Installation
 Visit
-the [station repository](https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/station)
+the [station repository](https://github.com/PHT-Medic/station)
 to view the code (the installation instructions can also be found here).
 
 ### Requirements
@@ -17,7 +17,7 @@ installed. For the default installation to work the ports `8080` and `5432` need
 ### Install with docker-compose
 Clone the repository  
 ```shell
-git clone https://gitlab.com/PersonalHealthTrain/implementations/germanmii/difuture/station/station.git
+git clone https://github.com/PHT-Medic/station.git
 ```
 
 1. Navigate into the cloned project `cd station` and edit the `.env` file with your local configuration.
