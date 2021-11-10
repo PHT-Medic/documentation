@@ -15,13 +15,13 @@ and install it based on your OS on your local computer.
 2. From the opening page select "Security Values"
 
    <br/><br/>
-   ![Offline Tool Start](images/offline_tool_images/start.png)
+   ![Offline Tool Start](../images/offline_tool_images/start.png)
    <br/><br/>
 
 3. Select "Generate private and public key"
    
    <br/><br/>
-   ![Offline Tool Security Values](images/offline_tool_images/1step.png)
+   ![Offline Tool Security Values](../images/offline_tool_images/1step.png)
    <br/><br/>
 
 
@@ -41,7 +41,7 @@ and install it based on your OS on your local computer.
 7. Proceed to paste the signature into the train-wizard to continue train submission
 
    <br/><br/>
-   ![Offline Tool Security Values_2](images/offline_tool_images/sign.png)
+   ![Offline Tool Security Values_2](../images/offline_tool_images/sign.png)
    <br/><br/>
 
 ## Decrypt results
@@ -55,7 +55,7 @@ and install it based on your OS on your local computer.
 7. Select your Private Key (the one used for the train submission in the UI)
 
    <br/><br/>
-   ![Offline Tool Model Page](images/offline_tool_images/4step.png)
+   ![Offline Tool Model Page](../images/offline_tool_images/4step.png)
    <br/><br/>
 
 8. Select the models on the left list-box that you wish to decrypt
@@ -74,18 +74,18 @@ and install it based on your OS on your local computer.
    previous step)
    
    <br/><br/>
-   ![Offline Tool Secure Addition](images/offline_tool_images/extra.png)
+   ![Offline Tool Secure Addition](../images/offline_tool_images/extra.png)
    <br/><br/>
    
 6. Press "Decrypt"
 7. Now in the right textfield appears the decypted count query
 
    <br/><br/>
-   ![Offline Tool Secure Addition_2](images/offline_tool_images/5step.png)
+   ![Offline Tool Secure Addition_2](../images/offline_tool_images/5step.png)
    <br/><br/>
 
 If you want to calculate the average age over multiple sites, this cannot be done trivially.
 You need to know the total age and total number of patients over all sites. By saving both decrypted numbers,
 you can manually calculate such afterwards. Average age: `5384 / 144 = 37,38`.
-![Offline Tool Model Page](images/offline_tool_images/6step.png)
+![Offline Tool Model Page](../images/offline_tool_images/6step.png)
 

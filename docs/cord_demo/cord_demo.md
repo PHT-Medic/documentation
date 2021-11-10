@@ -77,5 +77,5 @@ Please follow these steps:
 More information regarding result decryption can be read [here](https://pht-medic.github.io/documentation/offline_tool/#decrypt-results).
 The decrypted files can be accessed from you explorer or finder locally.
 <br/><br/>
-![Offline Tool decrypted files](images/offline_tool_images/decrypted.png)
+![Offline Tool decrypted files](../images/offline_tool_images/decrypted.png)
 <br/><br/>

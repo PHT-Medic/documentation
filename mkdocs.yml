@@ -5,27 +5,41 @@ theme:
     - navigation.tracking
     - navigation.expand
 
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
 site_dir: public
 
 nav:
   - Home: index.md
   - Concepts: concepts.md
   - User Guide:
-    - User Interface: user_interface.md
-    - Offline Tool: offline_tool.md
-    - Station: station.md
-    - Trains: trains.md
+    - User Interface: user_guide/user_interface.md
+    - Offline Tool: user_guide/offline_tool.md
+    - Station: user_guide/station.md
+    - Trains: user_guide/trains.md
+    - FHIR Query: user_guide/fhir_query.md
   - CORD Demo:
-    - Overview: cord_demo.md
-    - FHIR Query: cord_fhir.md
-    - R Code: cord_r.md
-    - Python Code: cord_python.md
+    - Overview: cord_demo/cord_demo.md
+    - FHIR Query: cord_demo/cord_fhir.md
+    - R Code: cord_demo/cord_r.md
+    - Python Code: cord_demo/cord_python.md
 
 
 markdown_extensions:
   - admonition
   - pymdownx.highlight
   - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
 plugins:
   - mkdocstrings

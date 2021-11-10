@@ -2,7 +2,7 @@
 !!! warning
     Under construction. This documentation is not complete.
 
-Documentation and [User Guide](user_interface.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
+Documentation and [User Guide](user_guide/user_interface.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
 For more information about the PHT team, projects and collaborations you can also visit our [website](https://personalhealthtrain.de/).
 
 ## Repositories
@@ -44,7 +44,7 @@ by Hashicorp as secret storage for our central services.
 ### Local
 #### Apache Airflow
 [Apache Airflow](https://airflow.apache.org/) is open source, community developed platform to programmatically author,
-schedule and monitor workflows and the primary component of the [PHT Station](station.md).
+schedule and monitor workflows and the primary component of the [PHT Station](user_guide/station.md).
 
 #### FHIR
 To overcome local setup differences between stations, the PHT provides controlled and reliable access to different FHIR Servers.

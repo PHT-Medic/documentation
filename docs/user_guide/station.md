@@ -47,7 +47,7 @@ The execution of the DAGs can also be monitored in the webinterface
 The first time you access the webinterface you will be prompted to log in. Enter the credentials set in the `.env` file 
 to login as admin.
 
-![Airflow Login](images/station_images/airflow_login.png)
+![Airflow Login](../images/station_images/airflow_login.png)
 
 ### Triggering the test DAG
 To test the configuration of the station as defined in the `.env` file, trigger the DAG named `test_station_configuration`
@@ -55,7 +55,7 @@ in the user interface.
 A DAG is triggered in the UI by clicking on the "play" button, where it can be started either with or without a json 
 file containing additional configuration for the DAG run.
 
-![Airflow UI Dags](images/station_images/airflow_ui.png)
+![Airflow UI Dags](../images/station_images/airflow_ui.png)
 
 Trigger the DAG without any additional configuration to check if the station is properly configured. A notification should
 appear in the UI that the DAG has been triggered.  
@@ -64,18 +64,18 @@ To monitor the execution click on the name of the DAG. You should see the indivi
 their status in the UI. If all tasks are marked as success, the station is properly configured and can connect to harbor
 as well as a FHIR server.
 
-![Airflow UI test station config](images/station_images/test_config_dag.png)
+![Airflow UI test station config](../images/station_images/test_config_dag.png)
 
 ### Accessing logs
 
 The logs stored during the execution of a DAG can be accessed for each individual task by clicking the indicator next 
 to the name of the task and selection Log in the pop-up window that appears.
 
-![Airflow UI access logs](images/station_images/task_logs.png)
+![Airflow UI access logs](../images/station_images/task_logs.png)
 
 If there are any errors stacktraces can be found in these logs, as well as any other output of the tasks (stdout, stderr)
 
-![Airflow UI task log details](images/station_images/task_log_details.png)
+![Airflow UI task log details](../images/station_images/task_log_details.png)
 
 ### Running a train
 
@@ -95,7 +95,7 @@ Replace the placeholders with the values of the train image to execute, and othe
 variables with the values corresponding to the stations configuration and paste it into the configuration form shown in 
 the following image.
 
-![Airflow trigger run train](images/station_images/trigger_run_train.png)
+![Airflow trigger run train](../images/station_images/trigger_run_train.png)
 
 
 
