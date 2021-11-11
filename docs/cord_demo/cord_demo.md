@@ -33,12 +33,13 @@ We suggest to you to follow these steps:
 You need to download and use the [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys) in order 
 to decrypt the analysis results.
 Go to the `Security` section of the tool and load the previous downloaded `demo-start123_sk.pem` private key.
-You need to enter the password of the private key: `start123`. Now you can continue with the train submission - you will need to sign
+You need to enter the password of the private key: `start123`.
+Now you can continue with the train submission - you will need to sign
 your submitted code and query with your private key.
 
 ### Step 3 - Train submission
-For this CORD PHT demo we recommend using or customizing an example train. Please clone this [repository](https://github.com/PHT-Medic/cord-pht-demo) if you want to
-use our example trains.
+For this CORD PHT demo we recommend using or customizing an example train.
+Please clone this [repository](https://github.com/PHT-Medic/cord-pht-demo) if you want to use our example trains.
 
 Now you need to decide if you want to run a [Python](cord_python.md) or [R](cord_r.md) analysis.
 By writing the analysis code, you specify the data access, we recommend using FHIR.
@@ -47,7 +48,8 @@ By writing the analysis code, you specify the data access, we recommend using FH
 Our self implemented train-library not only includes security but also standardised FHIR query execution and access and
 currently supports the following servers: IBM, Hapi and Blaze. In this demo we use Blaze FHIR servers.
 
-Read this section for details regarding FHIR queries: [FHIR query documentation](cord_fhir.md) or continue with the train submission.
+Read this section for details regarding FHIR queries:
+[FHIR query documentation](cord_fhir.md) or continue with the train submission.
 
 #### Step 3.2 - Write your analysis code
 In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
@@ -60,11 +62,12 @@ Python demo trains code is documented here: [Python CORD documentation](cord_pyt
 
 #### Step 3.3 - Code submission
 Upload your analysis code within the UI and select the entrypoint (script to be executed at stations if multiple files are submitted).
-The hash of the uploaded files and query needs to be signed by using the Offline Tool with your private key. The next steps guide you through the submission.
+The hash of the uploaded files and query needs to be signed by using the Offline Tool with your private key.
+The next steps guide you through the submission.
 
 1. Login to the UI
-2. Create a new train
-3. Select the CORD Demo in the desired programming language for your proposal
+2. Create a new train. Select the proposal based on your desired programming language.
+3. Keep the default Demo master image of the train unchanged, if you submit provided example code.
 <br/><br/>
    ![submission 1](../images/demo/submission_1.png)
 <br/><br/>
@@ -85,15 +88,18 @@ The hash of the uploaded files and query needs to be signed by using the Offline
 You need to build and run the train before you can download the results.
 Start the building process of the train.
 <br/><br/> ![submission 6](../images/demo/submission_6.png)<br/><br/>
-Please reload the page within the browser after 30-40 seconds. Then you will be able to start the execution at the stations.
+Please reload the page within the browser after 30-40 seconds.
+Then you will be able to start the execution at the stations.
 <br/><br/> ![submission 7](../images/demo/submission_7.png)<br/><br/>
 
-After a few minutes, results are available. A soon released feature will display the progress of the train in the Stations overview with a random station numbering.
+After a few minutes, results are available.
+A soon released feature will display the progress of the train in the Stations overview with a random station numbering.
 The user will also be able to see log files of the train.
 
 
 ### Step 5 - result download and decryption
-After a few minutes your train results can be downloaded. The files are automatically encrypted and need to be decrypted with the Offline Tool.
+After a few minutes your train results can be downloaded.
+The files are automatically encrypted and need to be decrypted with the Offline Tool.
 Please follow these steps:
 
 1. Download results
@@ -103,12 +109,13 @@ Please follow these steps:
     1. Start the Offline Tool
     2. Go to the "Model" section
     3. Load your private key
-    4. Open the unzipped result directory
-    5. Load the "train_config"-file of your train
-    6. Select the files to decrypt
-    7. Decrypt the files by pressing the button
+    4. Open the unzipped result directory "pht_results"
+    5. Load the "train_config.json"-file of your train
+    6. Select the files to decrypt (the selected ones appear in the box on the right)
+    7. Decrypt the files by pressing the "Decrypt selected models" button
       <br/><br/> ![submission 9](../images/demo/submission_9.png)<br/><br/>
 4. View, process and store the results locally on your computer.
+You can directly access them with the "Show decrypted files" button.
    <br/><br/> ![submission 10](../images/demo/submission_10.png)<br/><br/>
 
 More information regarding result decryption can be read [here](../user_guide/offline_tool.md#decrypt-results).
@@ -118,7 +125,8 @@ The decrypted files can be accessed from your explorer or finder locally.
 ### Train not updating
 **Question: My train is not updated in the UI, what can I do?**
 
-**Answer** Most likely your code or query has caused an error during execution. We work on extending this version to provide you with
+**Answer** Most likely your code or query has caused an error during execution.
+We work on extending this version to provide you with
 log files from the execution.
 
 ### Is this the PHT?
@@ -130,5 +138,7 @@ log files from the execution.
 **Question: Is the PHT-meDIC as it would operate on real patient data?**
 
 **Answer** All services are interacting in this demo, as it would be on real data.
-But there is a major difference: any train will be approved and executed. There is no one to validate, if something malicious is ongoing.
-In case you saved all patient data as fake results in the train, you did not break the system nor hacked the architecture. We allowed you and automatically executed your train to do so.
+But there is a major difference: any train will be approved and executed.
+There is no one to validate, if something malicious is ongoing.
+In case you saved all patient data as fake results in the train, you did not break the system nor hacked the architecture.
+We allowed you and automatically executed your train to do so.
