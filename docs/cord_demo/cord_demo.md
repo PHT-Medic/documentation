@@ -86,13 +86,13 @@ The next steps guide you through the submission.
 
 ### Step 4 - Train running
 You need to build and run the train before you can download the results.
-Start the building process of the train.
+Start the building process of the train.  
 <br/><br/> ![submission 6](../images/demo/submission_6.png)<br/><br/>
-Please reload the page within the browser after 30-40 seconds.
+Please manually reload the page within the browser after 30-40 seconds.
 Then you will be able to start the execution at the stations.
 <br/><br/> ![submission 7](../images/demo/submission_7.png)<br/><br/>
 
-After a few minutes, results are available.
+After a few minutes, results are available. Please reload the page manually again.
 A soon released feature will display the progress of the train in the Stations overview with a random station numbering.
 The user will also be able to see log files of the train.
 
