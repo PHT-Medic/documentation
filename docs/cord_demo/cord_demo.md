@@ -63,7 +63,7 @@ Python demo trains code is documented here: [Python CORD documentation](cord_pyt
 #### Step 3.3 - Code submission
 Upload your analysis code within the UI and select the entrypoint (script to be executed at stations if multiple files are submitted).
 The hash of the uploaded files and query needs to be signed by using the Offline Tool with your private key.
-The next steps guide you through the submission.
+The next steps guide you through the general submission process, exemplified by the submission of [R demo train 2](https://github.com/PHT-Medic/cord-pht-demo/blob/master/R/demo-train-2.R).
 
 1. Login to the UI
 2. Create a new train. Select the proposal based on your desired programming language.
