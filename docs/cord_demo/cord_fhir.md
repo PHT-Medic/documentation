@@ -1,5 +1,6 @@
 # CORD Demo FHIR
-You need to specify for our self developed FHIR client in our train-library two minimal things:
+You need to specify two minimal things for our self developed FHIR client in our train-library:
+
 1. The Resource to access (e.g. `Patient` or `Condition`).
 2. The format and name the file should be provided to the train (accessed in the algorithm).
 
@@ -22,7 +23,7 @@ This minimal query will load **all CORD demo data** from each station.
 
 ## FHIR queries with conditions
 
-If you want to query specific gender, ages extend your query:
+If you want to query specific gender or ages extend your query:
 ```json
 {
   "query": {
@@ -44,7 +45,7 @@ If you want to query specific gender, ages extend your query:
   }
 }
 ```
-This query will now only return female subjects, born greater than 1960 for the Python train example. The R demo trains  require as input data:
+This query will now only return female subjects, born in a year greater than 1960 for the Python train example. The R demo trains require as input data:
 ```json
 {
   "data": {
@@ -85,7 +86,7 @@ More advanced queries including searching multiple resources are demonstrated:
   }
 }
 ````
-Now only male subjects born greater than 1980 that have a condition related to [PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and 
+Now only male subjects born in a year greater than 1980 that have a condition related to [PKU](https://en.wikipedia.org/wiki/Phenylketonuria) and 
 [unstable angina pectoris](https://www.msdmanuals.com/de-de/profi/herz-kreislauf-krankheiten/koronare-herzkrankheit/instabile-angina-pectoris)
 will be returned.
 

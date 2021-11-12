@@ -2,10 +2,10 @@
 You can find this example train within our R cord-demo [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/R)
 
 ### Demo Train 1
-This train uses the provided csv input file. You dont need to specify a FHIR query.
+This train uses the provided csv input file. You don't need to specify a FHIR query.
 
 ### Demo Train 2
-The following two demo train use the [FHIRCracker](https://github.com/firecracker-microvm/firecracker) to load the FHIR xml bundles.
+The following two demo trains use the [FHIRCracker](https://github.com/firecracker-microvm/firecracker) to load the FHIR xml-bundles.
 This train creates an age distribution plot based on FHIR input data.
 
 The corresponding query is:

@@ -32,7 +32,7 @@ We suggest to you to follow these steps:
 
 You need to download and use the [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys) in order 
 to decrypt the analysis results.
-Go to the `Security` section of the tool and load the previous downloaded `demo-start123_sk.pem` private key.
+Go to the `Security Values` section of the tool and load the previous downloaded `demo-start123_sk.pem` private key.
 You need to enter the password of the private key: `start123`.
 Now you can continue with the train submission - you will need to sign
 your submitted code and query with your private key.
@@ -52,8 +52,8 @@ Read this section for details regarding FHIR queries:
 [FHIR query documentation](cord_fhir.md) or continue with the train submission.
 
 #### Step 3.2 - Write your analysis code
-In any IDE you can write your analysis code. We suggest to use PyCharm for Python and RStudio for R code.
-These following examples will be executed at each station. Please get familiar with the following Python or R code:
+You can write your analysis code in any IDE. We suggest to use PyCharm for Python and RStudio for R code.
+The following examples will be executed at each station. Please get familiar with the following Python or R code:
 
 R demo trains code is documented here: [R CORD documentation](cord_r.md)
 

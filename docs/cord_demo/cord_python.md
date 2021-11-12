@@ -2,7 +2,7 @@
 This code can be downloaded from this [repository](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
 
 ## Demo Train 1
-The following query filters at each station for female patients born greater than 1960.
+The following query filters at each station for female patients born in a year greater than 1960.
 ```` json
 {
   "query": {
@@ -24,7 +24,7 @@ The following query filters at each station for female patients born greater tha
   }
 }
 ````
-The by the station loaded and  provided `query_results.json` file will be processed and counts the occurrences of values.
+The by the station loaded and provided `query_results.json` file will be processed and counts the occurrences of values.
 
 ```` python
 import os
@@ -147,7 +147,7 @@ if __name__ == '__main__':
 ## Demo Train 2
 An advantage to use Python is the use of our secure count possibilities, based paillier cryptosystem.
 Doing such, you can add, multiply or subtract an encrypted integer number from another encrypted number. 
-This way, you can e.g. count the total number of certain conditions matching within a cohort, without reveling the input 
+This way, you can e.g. count the total number of certain conditions matching within a cohort, without revealing the input 
 value from any site.
 
 ```` python
