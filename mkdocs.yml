@@ -18,11 +18,11 @@ theme:
 site_dir: public
 
 nav:
-  - Home: index.md
-  - Concepts: concepts.md
+  - What is PHT?: index.md
+  - Components: components.md
   - User Guide:
     - User Interface: user_guide/user_interface.md
-    - Offline Tool: user_guide/offline_tool.md
+    - Desktop App: user_guide/desktop_app.md
     - Station: user_guide/station.md
     - Trains: user_guide/trains.md
     - FHIR Query: user_guide/fhir_query.md
@@ -31,6 +31,8 @@ nav:
     - FHIR Query: cord_demo/cord_fhir.md
     - R Code: cord_demo/cord_r.md
     - Python Code: cord_demo/cord_python.md
+  - Glossar: glossar.md
+  - For Your Information (FYI): fyi.md
 
 
 markdown_extensions:
