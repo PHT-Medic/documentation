@@ -96,8 +96,19 @@ variables with the values corresponding to the stations configuration and paste 
 the following image.
 
 ![Airflow trigger run train](../images/station_images/trigger_run_train.png)
-
-
+Volumes are dictionaries and follow the docker format and are passed as is to the container.
+This functionality gets used to pass, for example, csv's; see example config below.  
+```json
+{
+  "repository": "<HARBOR-REGISTRY>/<STATION_ID>/<TRAIN-IMAGE>",
+  "tag": "latest",
+  "volumes":  {"</local/paht/to/data.csv>": {
+                    "bind": "/opt/train_data/<filename inside train.csv>",
+                    "mode": "ro"
+                }
+  
+}
+```
 
 
 
