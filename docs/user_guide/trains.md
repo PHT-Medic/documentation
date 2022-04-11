@@ -5,10 +5,11 @@ will be executed as a train and how to define queries.
 Information on how to build trains and actually send them on their way can be found in the user guide for the
 [UI](user_interface.md).
 
+This example can be used as `entrypoint.py`, which is namely reference in this documentation.
 
-## Defining trains
+## Defining Trains
 
-### Example Trains
+### Example Train
 
 #### Calculate average age based on a fhir query
 The query to be used in this train is the CSV version of the minimal example found in the next section.
@@ -16,6 +17,10 @@ What this train will do ist calculate the average age of patients matching the q
 The stations will pass the query results to the train as volumes and also set the environment variable `TRAIN_DATA_PATH`
 inside the train container, which is used by the train to load the passed csv file.
 
+!!! warning
+    Not sure if Code is correct. You do not exactly calculate the true average over all stations, instead only an approximation.
+
+    /2 -> /num_stations_visited and do not' = new_avergae -> += new_average
 
 ```python
 import pandas as pd

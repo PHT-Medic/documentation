@@ -22,15 +22,15 @@ nav:
   - Components: components.md
   - User Guide:
     - User Interface: user_guide/user_interface.md
-    - Desktop App: user_guide/desktop_app.md
+    - Desktop App (Offline Tool): user_guide/desktop_app.md
     - Station: user_guide/station.md
     - Trains: user_guide/trains.md
     - FHIR Query: user_guide/fhir_query.md
-  - CORD Demo:
-    - Overview: cord_demo/cord_demo.md
-    - FHIR Query: cord_demo/cord_fhir.md
-    - R Code: cord_demo/cord_r.md
-    - Python Code: cord_demo/cord_python.md
+  #- CORD Demo:
+    #- Overview: cord_demo/cord_demo.md
+    #- FHIR Query: cord_demo/cord_fhir.md
+    #- R Code: cord_demo/cord_r.md
+    #- Python Code: cord_demo/cord_python.md
   - Glossar: glossar.md
   - For Your Information (FYI): fyi.md
 

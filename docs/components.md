@@ -3,24 +3,24 @@
 ## Repositories
 Multiple repositories are part of the PHT. These can be roughly separated into central components managed by the PHT Team
 and hosted by the UKT and local components which are executed either by a user or by participating stations.  
-All public repositories related to the PHT can be found on our [github page](https://github.com/PHT-Medic),
+All public repositories related to the PHT can be found on our [gitHub page](https://github.com/PHT-Medic),
 with the major repositories being briefly introduced and categorized in the following sections.
 
 
 ### Central Components
-| Service        | Repository link |
-|:-------------:|:-------------:|
-| **Web UI**      | [PHT medDIC/central-ui.git](https://github.com/PHT-Medic/central-ui.git) |
-| **Train Builder**      | [PHT medDIC//train-builder](https://github.com/PHT-Medic/central-train-builder.git)      |
-| **Train Router** | [PHT medDIC/train-router-py](https://github.com/PHT-Medic/central-train-router.git)      |
-| **Train Container Library**|  [PHT medDIC/train-container-library](https://github.com/PHT-Medic/train-container-library.git)|
+|           Service           |                                        Repository link                                         |
+|:---------------------------:|:----------------------------------------------------------------------------------------------:|
+|         **Web UI**          |            [PHT medDIC/central-ui.git](https://github.com/PHT-Medic/central-ui.git)            |
+|      **Train Builder**      |      [PHT medDIC//train-builder](https://github.com/PHT-Medic/central-train-builder.git)       |
+|      **Train Router**       |      [PHT medDIC/train-router-py](https://github.com/PHT-Medic/central-train-router.git)       |
+| **Train Container Library** | [PHT medDIC/train-container-library](https://github.com/PHT-Medic/train-container-library.git) |
 
 
 ### Local Components
-| Service        | Repository link |
-|:-------------:|:-------------:|
-|**Station** | [PHT medDIC/station](https://github.com/PHT-Medic/station)|
-|**Offline Tool** | [PHT medDIC/pht-offline-tool](https://github.com/PHT-Medic/offline-tool.git)|
+|     Service      |                               Repository link                                |
+|:----------------:|:----------------------------------------------------------------------------:|
+|   **Station**    |          [PHT medDIC/station](https://github.com/PHT-Medic/station)          |
+| **Offline Tool** | [PHT medDIC/pht-offline-tool](https://github.com/PHT-Medic/offline-tool.git) |
 
 
 ## Third Party Services

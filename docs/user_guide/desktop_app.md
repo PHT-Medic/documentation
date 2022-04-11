@@ -4,7 +4,7 @@ The PHT Desktop App is the offline tool of the User Interface. It can sign hashe
 
 ## Installation
 
-Follow the description of the README.md file on the github-website where you can download the programm:[https://github.com/PHT-Medic/desktop-app](https://github.com/PHT-Medic/desktop-app).
+Follow the description of the README.md file on the github-website where you can download the program:[https://github.com/PHT-Medic/desktop-app](https://github.com/PHT-Medic/desktop-app).
 
 1. Install [Yarn](https://classic.yarnpkg.com/en/) (yarn is used as dependency manager)
 2. Build application via this command in a command line window: ```yarn run build```
@@ -24,33 +24,29 @@ Follow the description of the README.md file on the github-website where you can
 
 4. Specify the directory where the keys should be saved.
 5. Specify the filename of the private and the public key on the right side.
-6. Select a passphrase for your private key. (If you press enter, an empty password will be used)
+6. Select a passphrase for your private key. (If you press enter, an empty passphrase will be used)
 7. Click on the "Generate"-button.
       
       [![Offline Tool RSA Encryption](../images/offline_tool_images/rsa_encryption_colored.png)](../images/offline_tool_images/rsa_encryption_colored.png)
       <br/><br/>
-!!! TODO
-      At this point 
 
 ## Sign Hash 
 
-1. Start the application.
-2. From the opening Page select "Security Values".
-3. Press "Select private key" and choose the matching private key to the public key stored in the UI. If the keyfile is stored with a password, please enter it.
-4. Paste hash from train wizard (UI) into the left box (this hash is generated based on the query and entrypoint and guarantees that no manipulation of the algorithm has occurred).
-5. Press "Sign".
-6. Press "Copy" to copy the signed hash to clipboard.
-7. Proceed to paste the signature into the train-wizard to continue train submission.
+To perform the signature on a hash value it is necessary that the application knows your keypair (private and public key). (See "Create Keys" above). 
 
-      <br/><br/>
-      ![Offline Tool Security Values_2](../images/offline_tool_images/sign.png)
-      <br/><br/>
+1. In the Home-menu press Settings -> Signature.
+2. In the "Content" textfield you should paste the generated HashKey from step 2.6 in [User Guide -> User interface](user_guide/user_interface.md).
+3. Click on "Sign".
+4. Copy the signed hash and proceed step 2.6 in [User Guide -> User interface](user_guide/user_interface.md).
 
+
+!!! TODO
+      At this point 
 ## Decrypt results
 
-1. After executing train the UI download the results to your local machine
+1. After executing a training in the UI, you can download the results to your local machine.
 2. Extract the folder and extract results and the train_config.json
-3. Start the application
+3. Start the Dektop App
 4. From the opening page select "Model Page"
 5. Select the path to the encrypted result directory (where you extracted the results before)
 6. Select the train_config.json
@@ -64,7 +60,7 @@ Follow the description of the README.md file on the github-website where you can
    If a file is selected, it will appear in the right box
 9. Press "Decrypt selected models"
 10. You can go to the corresponding directory with the decrypted results by pressing
-    "Show decrypted files". The results are saved on your local machine and you are responsible protecting those   
+    "Show decrypted files". The results are saved on your local machine, and you are responsible protecting those   
 
 ## Homomorphic Decryption
 
@@ -80,7 +76,7 @@ Follow the description of the README.md file on the github-website where you can
       <br/><br/>
    
 6. Press "Decrypt"
-7. Now in the right textfield appears the decypted count query
+7. Now in the right textfield appears the decrypted count query
 
       <br/><br/>
       ![Offline Tool Secure Addition_2](../images/offline_tool_images/5step.png)
