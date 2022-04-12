@@ -14,7 +14,7 @@ to view the code (the installation instructions can also be found here).
 installed.<br> 
 * For the default installation to work the ports `8080` and `5432` need to be available on localhost.
 * In the ideal case you open the cloned repository in an IDE such as Pycharm, so you have all files listed and can use terminal immediately.
-* If you are on a Windows Computer you need to change the line seperator to the "Unix/macOS"-style for the airflow directory. In Pycharm you can follow these steps:
+* If you are on a Windows Computer you need to change the line seperator to the **Unix/macOS**-style for the airflow directory. In Pycharm you can follow these steps:
     1. Select the airflow folder
     2. Click on File in the top-left corner
     3. Click on File Properties -> Line Separators -> LF - Unix and maxOS (\n)
@@ -27,11 +27,11 @@ installed.<br>
 
     | Attribute | Explanation |
     |:------:|------|
-    |`STATION_ID`| Chosen identifier of the station (match central UI configuration) |
+    |`STATION_ID`| Chosen identifier of the station (match central UI configuration). You can find it as namespace  |
     |`STATION_PRIVATE_KEY_PATH`| Path to the private key on the local filesystem that should be mounted as a volume |
     |`AIRFLOW_USER`| Admin user to be created for the airflow instance |
     |`AIRFLOW_PW`| Password for the airflow admin user |
-    |`HARBOR_API_URL`|Url of the central harbor instance |
+    |`HARBOR_URL`|Url of the central harbor instance |
     |`HARBOR_USER`| Username to authenticate against harbor |
     |`HARBOR_PW`| Password to authenticate against harbor |
     |`STATION_DATA_DIR`| Absolute path of the directory where the station stores the input data for trains.<br>This path is also used by the FHIR client to store the query results before passing them to the trains |
@@ -69,6 +69,9 @@ services:
 3. Go to ```http://localhost:8080``` nd check whether you can see the web interface of Apache Airflow
 4. Login to the airflow web interface with the previously set user credentials
 
+!!! info
+  The train needs to arrive first at the station and then you should start the station. Else the train won't build and shows an error in the User Interface.
+
 ## Getting started with Airflow
 Trains and other station tasks are executed via airflow DAGs. The DAGs can be triggered via the airflow web interface,
 which is available under ```http://127.0.0.1:8080``` on the station machine. 
@@ -83,7 +86,7 @@ to login as admin.
 ### Triggering the test DAG
 To test the configuration of the station as defined in the `.env` file, trigger the DAG named `test_station_configuration`
 in the user interface.  
-A DAG is triggered in the UI by clicking on the "play" button, where it can be started either with or without a json 
+A DAG is triggered in the UI by clicking on the **play** button, where it can be started either with or without a json 
 file containing additional configuration for the DAG run.
 
 [![image](../images/station_images/airflow_ui.png)](../images/station_images/airflow_ui.png)
@@ -101,7 +104,7 @@ their status in the UI. If all tasks are marked as success, the station is prope
 
 ### Accessing logs
 
-The logs stored during the execution of a DAG can be accessed for each individual task by clicking the colored,squared/circled - indicator next to the name of the task. In the new pop-up window you can see in the top a list of options. There you can pick "Log" to view the Log of this task.
+The logs stored during the execution of a DAG can be accessed for each individual task by clicking the colored,squared/circled - indicator next to the name of the task. In the new pop-up window you can see in the top a list of options. There you can pick **Log** to view the Log of this task.
 
 [![image](../images/station_images/task_logs.png)](../images/station_images/task_logs.png)
 
@@ -117,7 +120,7 @@ train configuration is displayed below.
 
 ```json
 {
-  "repository": "<HARBOR-REGISTRY>/<STATION_ID>/<TRAIN-IMAGE>",
+  "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-IMAGE>",
   "tag": "latest",
   "env": {"FHIR_ADDRESS": "<FHIR-ADDRESS>","FHIR_USER": "<ID>","FHIR_PW": "<PSW>"}
 }
