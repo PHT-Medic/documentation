@@ -10,7 +10,7 @@ hosting the data in a secure fashion.
 
 The following overview shows all interactions between service components to execute a train iteratively over three stations
 with our PHT-TBI architecture.
-[![Overview](../images/process_images/pht_overview.png)](../images/process_images/pht_overview.png)
+[![Overview](./images/process_images/pht_overview.png)](./images/process_images/pht_overview.png)
 
 ## Mission Statement
 From machine learning (ML) healthcare can profit by ‘learning’ models which support clinical practice in treatment decision
@@ -27,7 +27,7 @@ example, genomics pipelines or deep-learning algorithms – analytics methods th
 distributed queries or simple statistics.
 
 ## Architecture
-[![Architecture](../images/process_images/pht_services.png)](../images/process_images/pht_services.png)
+[![Architecture](./images/process_images/pht_services.png)](./images/process_images/pht_services.png)
 
 ### Central Services
 * User Interface - Self developed service in [Vue.js](https://vuejs.org/guide/introduction.html) for proposal and train submission, downloading of results
@@ -52,7 +52,7 @@ The following flow chart depicts the security protocol used for protecting parti
 as well as encrypting any stored results using envelope encryption.   
 This ensures that only approved algorithms 
 are executed and that only previously registered participants in an analysis can access the results. 
-[![Security Protocol](../images/process_images/security_protocol.png)](../images/process_images/security_protocol.png)
+[![Security Protocol](./images/process_images/security_protocol.png)](./images/process_images/security_protocol.png)
 
 ## Technologies
 ### Apache Airflow
