@@ -4,20 +4,14 @@ This section will provide installation instructions for installing a PHT Station
 registered in the UI.**
 
 ## Installation
-Visit
-the [station repository](https://github.com/PHT-Medic/station)
-to view the code (the installation instructions can also be found here).
+Visit the [station repository](https://github.com/PHT-Medic/station) to view the code 
+(the installation instructions can also be found here).
 
 ### Requirements
 
 * [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) need to be
 installed.<br> 
 * For the default installation to work the ports `8080` and `5432` need to be available on localhost.
-* In the ideal case you open the cloned repository in an IDE such as Pycharm, so you have all files listed and can use terminal immediately.
-* If you are on a Windows Computer you need to change the line seperator to the **Unix/macOS**-style for the airflow directory. In Pycharm you can follow these steps:
-    1. Select the airflow folder
-    2. Click on File in the top-left corner
-    3. Click on File Properties -> Line Separators -> LF - Unix and maxOS (\n)
 
 
 ### Install with docker-compose
@@ -45,9 +39,34 @@ installed.<br>
     |`FHIR_SERVER_TYPE`<br>(optional) | Type of FHIR server <br>(PHT FHIR client supports IBM, Hapi and Blaze FHIR servers) |
 
 3. Create a volume for the station: ```docker volume create pg_station```
-4. Bring up the project by running: ```docker-compose build```
+4. Build the images by running: ```docker-compose build```
 
-#### Using pre-built images (Optional)
+
+### First steps with running the station
+1. Run ```docker-compose up -d```
+2. Check that the logs do not contain any startup errors with ```docker-compose logs -f```
+3. Go to ```http://localhost:8080``` nd check whether you can see the web interface of Apache Airflow
+4. Login to the airflow web interface with the previously set user credentials
+
+### Troubleshooting/F.A.Q.
+
+#### I don't have a private key
+Generate a new key using [open-ssl](https://www.openssl.org/):
+```shell
+openssl genrsa -out key.pem 2048
+```
+Generate the associated public key using:
+```shell
+openssl rsa -in key.pem -outform PEM -pubout -out public.pem
+```
+and then register this key in the UI.
+
+#### Windows installation
+If you are on a Windows Computer you need to change the line seperator to the **Unix/macOS**-style for the airflow directory. In Pycharm you can follow these steps:  
+1. Select the airflow folder  
+2. Click on File in the top-left corner  
+3. Click on File Properties -> Line Separators -> LF - Unix and maxOS (\n)  
+#### Using pre-built images
 If there are issues while building the airflow container you can use our prebuilt images to run the airflow instance.<br>
 Edit the airflow service in the docker-compose.yml file and replace the build command without prebuilt image:
 ```
@@ -63,14 +82,6 @@ services:
 # ------------- ommitted ------------
 ```
 
-### First steps with running the station
-1. Run ```docker-compose up -d```
-2. Check that the logs do not contain any startup errors with ```docker-compose logs -f```
-3. Go to ```http://localhost:8080``` nd check whether you can see the web interface of Apache Airflow
-4. Login to the airflow web interface with the previously set user credentials
-
-!!! info
-  The train needs to arrive first at the station and then you should start the station. Else the train won't build and shows an error in the User Interface.
 
 ## Getting started with Airflow
 Trains and other station tasks are executed via airflow DAGs. The DAGs can be triggered via the airflow web interface,

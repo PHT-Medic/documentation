@@ -1,9 +1,9 @@
 # For Your Information (FYI)
 ## Publications
-!!! warning
-    TODO: Are there any publications yet?
+!!! info
+    coming soon
 ## Join the Community
-!!! warning
-    TODO: Provide an E-mail address or something else?
+
+Feel free to join our discord server [here](https://discord.gg/vEsUaEFBVE) or follow us on [github](https://github.com/PHT-Medic)
 ## Meet the Team - Core (Developer-) Members
 Please visit our official website: [https://personalhealthtrain.de/about-us/](https://personalhealthtrain.de/about-us/)

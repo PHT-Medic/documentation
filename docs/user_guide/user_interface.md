@@ -1,9 +1,6 @@
 # User Interface
 
-!!! warning
-      The Link below (pht-ui.personalhealthtrain.de) is not properly working
-
-The User Interface (UI) is the central control interface [pht-ui.personalhealthtrain.de](https://pht-ui.personalhealthtrain.de)
+The User Interface (UI) is the central control interface [https://pht-medic.medizin.uni-tuebingen.de](https://pht-medic.medizin.uni-tuebingen.de/)
 to interact with the PHT. Its main tasks are the administration of stations and train proposals
 but also the submission of analysis-trains and consequently receiving encrypted results.
 
@@ -134,7 +131,7 @@ Click on **Next** to continue.
 
 #### 2.5. Add a FHIR Query
 
-In this **Extra**-section of the train submission you can past your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
+In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
 You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](./fhir_query.md)
 

@@ -36,7 +36,7 @@ distributed queries or simple statistics.
 * Container Registry - Harbor, an open-source container registry providing trains to stations
 * Train Router - Self developed Python service to move trains between projects accordingly to the route
 * Result Service - Vue.js self developed service, to extract encrypted results
-* Secret Storage - Based on Hashicorps Vault a service to store securely public keys of users and routes of trains
+* Secret Storage - Based on Hashicorps Vault a service to securely store public keys of users/stations and routes of trains
 * Train Images - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
 
 ### Local Services
@@ -45,7 +45,7 @@ distributed queries or simple statistics.
 * Station IAM - Identity and Access management system (based on Keycloak) to manage users of one hospital
 * Offline Tool - Self developed GUI to create key pairs and decrypt results locally.
 ## Security
-Add link to paper. Security Protocol with train building, pre_run, and post_run protocol.
+
 
 ### Security Protocol
 The following flow chart depicts the security protocol used for protecting participating stations against malicious code,

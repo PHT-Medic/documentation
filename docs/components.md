@@ -3,7 +3,7 @@
 ## Repositories
 Multiple repositories are part of the PHT. These can be roughly separated into central components managed by the PHT Team
 and hosted by the UKT and local components which are executed either by a user or by participating stations.  
-All public repositories related to the PHT can be found on our [gitHub page](https://github.com/PHT-Medic),
+All public repositories related to the PHT can be found in our [github organization](https://github.com/PHT-Medic),
 with the major repositories being briefly introduced and categorized in the following sections.
 
 

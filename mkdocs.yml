@@ -18,7 +18,7 @@ theme:
 site_dir: public
 
 nav:
-  - What is PHT?: index.md
+  - What is the PHT?: index.md
   - Components: components.md
   - User Guide:
     - User Interface: user_guide/user_interface.md
