@@ -5,17 +5,17 @@ will be executed as a train and how to define queries.
 Information on how to build trains and actually send them on their way can be found in the user guide for the
 [UI](user_interface.md).
 
+This example can be used as `entrypoint.py`, which is namely reference in this documentation.
 
-## Defining trains
+## Defining Trains
 
-### Example Trains
+### Example Train
 
 #### Calculate average age based on a fhir query
 The query to be used in this train is the CSV version of the minimal example found in the next section.
 What this train will do ist calculate the average age of patients matching the query across multiple stations.  
 The stations will pass the query results to the train as volumes and also set the environment variable `TRAIN_DATA_PATH`
 inside the train container, which is used by the train to load the passed csv file.
-
 
 ```python
 import pandas as pd

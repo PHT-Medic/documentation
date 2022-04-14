@@ -121,10 +121,7 @@ string and returning the full resources returned by the server.
   }
 }
 ```
-
-Trains must contain
-
-#### Advanced Example
+#### Advanced Example - JSON
 
 To define more complex queries, including resource chaining and additional variable `has` inside the query object of
 the `query.json` can be used to find resources based on other resources referring to them.  
@@ -183,6 +180,21 @@ patients based on Observations and Conditions that the patient is required to ha
       }
     ]
   },
+  "data": {
+    "output_format": "json",
+    "filename": "patients.json"
+  }
+}
+```
+
+#### Advanced Example - URL + JSON
+
+The following code block shows the definition of the same query as above but this time defined by a FHIR conform query
+string and returning the full resources returned by the server.
+
+```json
+{
+  "query": "Patient?gender=male&birthdate=sa1980-08-12&_has:Observation:patient:code=I63.0,I63.1,I63.2,I63.3,I63.4,I63.5,I63.6,I63.7,I63.8,I63.9&_has:Condition:patient:code=D70.0,D70.10,D70.11,D70.11,D70.12,D70.13,D70.14,D70.18,D70.19,D70.3,D70.5,D70.6,D70.7",
   "data": {
     "output_format": "json",
     "filename": "patients.json"
