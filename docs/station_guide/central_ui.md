@@ -5,6 +5,23 @@ In order to manage the stations settings the user needs to be assigned the **Sta
 !!! warning
    When changing the settings of your station in the central UI you need to restart your local station.
 
+
+### Configuring an OIDC provider
+To allow each participant to control their own distribution of roles, the central UI allows the user to configure an OIDC provider which
+can be used to authenticate users associated with their realm.
+OIDC providers can be configured in the admin panel of the central UI under **Auth -> Realms** in the providers tab.
+[![image](../images/ui_images/providers_overview.png)](../images/ui_images/providers_overview.png)
+
+
+Clicking on the **Add** button on the left will allow you to configure a new OIDC provider.
+
+
+[![image](../images/ui_images/provider_add.png)](../images/ui_images/provider_add.png)
+
+This provider can then be selected in the login screen to authenticate users belonging to your realm.
+
+
+
 ### Registering/Updating a public key
 
 1. Within the admin area (top left, next to Home), you need to select **Auth -> Realms** within the left navigation.
@@ -23,3 +40,25 @@ In order to manage the stations settings the user needs to be assigned the **Sta
 2. Select the Station you want to edit
 3. In *Harbor* the credentials, project name and path can be modified - webhooks for API communication can be tested.
    [![image](../images/ui_images/harbor_station.png)](../images/ui_images/harbor_station.png)
+
+
+## Review
+Before accepting a proposal or a train the requested data and the code contained in a train need to be reviewed. While
+removing network access and the built-in security features should be sufficient to prevent the transfer of data, the 
+code still needs to be reviewed to prevent any unwanted behaviour.
+
+### Proposal
+Proposals are the top level organizational unit of the PHT system. Proposals describe the goal of an analysis, the 
+requested data and an estimation of the potential risk of participation. When the description of the proposal meets the
+local requirements of your station, a user with the role of **Station Authority** can accept the proposal, otherwise
+the proposal is rejected (optionally with comments for improvement).
+
+Joining a proposal means that users of other stations also joined in the proposal can select your station as a
+participant in the trains they create for this proposal.
+
+### Train
+Trains contain analysis code that will be executed on the data requested in the proposal. The code is user submitted, so
+while the security protocol prevents the transfer of any unencrypted data via docker images and restricted network access,
+prevents direct transfer of any data, the code still needs to be reviewed in order to prevent any kind of malicious behaviour.
+
+
