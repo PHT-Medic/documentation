@@ -18,7 +18,8 @@ Visit the [station repository](https://github.com/PHT-Medic/station) to view the
 
 1. Clone the repository: ```git clone https://github.com/PHT-Medic/station.git```
 
-2. Navigate into the cloned project `cd station` and edit the `.env` file with your local configuration.
+2. Navigate into the cloned project `cd station` and edit the `.env` file with your local configuration. The `.env.tmpl`
+   file is a template file that can be used to generate a `.env` file with the correct environment keys.
 
    | Attribute |                                                                                         Explanation                                                                                          |
        |:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|------|
@@ -40,8 +41,8 @@ Visit the [station repository](https://github.com/PHT-Medic/station) to view the
    |`OIDC_PROVIDER_URL`<br>(optional) |                                              Token url of Open ID connect provider <br>(e.g. keycloak, that is configured for the FHIR server)                                               |
    |`FHIR_SERVER_TYPE`<br>(optional) |                                                     Type of FHIR server <br>(PHT FHIR client supports IBM, Hapi and Blaze FHIR servers)                                                      |
 
-3. Create a volume for the station: ```docker volume create pg_station```
-4. Build the images by running: ```docker-compose build```
+4. Create a volume for the station: ```docker volume create pg_station```
+5. Build the images by running: ```docker-compose build```
 
 ### First steps with running the station
 

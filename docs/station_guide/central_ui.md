@@ -2,7 +2,8 @@
 
 In order to manage the stations settings the user needs to be assigned the **Station Authority** role.
 
-!!! warning When changing the settings of your station in the central UI you need to restart your local station.
+!!! warning
+   When changing the settings of your station in the central UI you need to restart your local station.
 
 ### Registering/Updating a public key
 

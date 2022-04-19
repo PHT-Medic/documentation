@@ -28,9 +28,8 @@ To monitor the execution click on the name of the DAG. You should see the indivi
 as their status in the UI. If all tasks are marked as success, the station is properly configured and can connect to
 harbor as well as a FHIR server.
 
-!!! warning If you did not provide any FHIR_Server configurations in the .env-file, then this Trigger will fail, because
-this test will try to connect to the FHIR_server. All the nodes will be marked as red or orange except the "
-get_dag_config"
+!!! warning
+    If you did not provide any FHIR_Server configurations in the .env-file, then this Trigger will fail, because this test will try to connect to the FHIR_server. All the nodes will be marked as red or orange except the "get_dag_config"
 
 [![image](../images/station_images/test_config_dag.png)](../images/station_images/test_config_dag.png)
 
