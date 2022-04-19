@@ -1,6 +1,6 @@
 # User Interface
 
-The User Interface (UI) is the central control interface [https://pht-medic.medizin.uni-tuebingen.de](https://pht-medic.medizin.uni-tuebingen.de/)
+The User Interface (UI) [https://pht-medic.medizin.uni-tuebingen.de](https://pht-medic.medizin.uni-tuebingen.de/) is the central control interface 
 to interact with the PHT. Its main tasks are the administration of stations and train proposals
 but also the submission of analysis-trains and consequently receiving encrypted results.
 
@@ -66,11 +66,12 @@ a study proposal for analysis. In order to do such, click on the **list**-icon o
 
 [![Proposal Creation](../images/ui_images/proposal_approve.png)](../images/ui_images/proposal_approve.png)
 
-## Train submission
-### 1. Add User keys
-Follow the description in **User Account Configuration** -> **Registering/Updating a public key**
 
-[![Add User keys](../images/ui_images/Register_Updating_public_key.png)](../images/ui_images/Register_Updating_public_key.png)
+
+
+## Train submission
+### 1. Add user key
+If no public key has been registered yet follow the instructions in [user account configuration](#user-account-configuration) section.
 
 ### 2. Create a new train
 In the **Home** section you can choose **Trains** in the menu on the left-hand side. You will lead to the **Outgoing** page where you can switch to the creation form via the **Create** button inbetween the menu and the overview-list.
@@ -83,7 +84,7 @@ On this page you can define:
       1. **Discovery**: A discovery train can be used to get to know about the availability of data at the targeted stations.
       2. **Analysis**: An analyse train should be created on base of the knowledge achieved during the discovery phase
 
-- which **proposal** you want to add to the train. You can only send one proposal at the time.
+- to which **proposal** the train is associated. Only one proposal can be selected.
 
 Click on **create** to continue.
 
@@ -101,9 +102,9 @@ Click on **Next** to continue.
 
 #### 2.3. Check the Security Settings
 
-You need to select one of the possible public RSA-keys for encrypting the train.
+You need to select one of your registered RSA public keys for encrypting the train.
 
-Additionally, you can add one Paillier-key to encrypt the results inside the train. 
+Additionally, you can add a Paillier-key to be used for homomorphic encryption. 
 
 Click on **Next** to continue.
 
@@ -111,9 +112,9 @@ Click on **Next** to continue.
 
 #### 2.4. Load Code to the train
 
-In the file-section of the train submission you can upload you Code-files, which the train will perform while visiting the different stations.
+In the file-section of the train submission you can upload the files containing your code, which the train will execute while visiting the different stations.
 
-You can decide whether you want to upload only one single file or even a whole directory of files. Depending on you decision you need to mark or unmark the **Directory mode**-switch.
+You can decide whether you want to upload only one single file or a whole directory of files. Depending on you decision you need to mark or unmark the **Directory mode**-switch.
 
 After you have selected the file or directory via the browse-button you can find all the files listed below. Depending on the folder, you may not wish to upload each file, so it is possible to delete some files at this point.
 
