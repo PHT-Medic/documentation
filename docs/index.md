@@ -10,7 +10,7 @@ hosting the data in a secure fashion.
 
 The following overview shows all interactions between service components to execute a train iteratively over three stations
 with our PHT-TBI architecture.
-[![Overview](./images/process_images/pht_overview.png)](./images/process_images/pht_overview.png)
+[![Overview](./images/process_images/pht_services.png)](./images/process_images/pht_services.png)
 
 ## Mission Statement
 From machine learning (ML) healthcare can profit by ‘learning’ models which support clinical practice in treatment decision
@@ -27,23 +27,25 @@ example, genomics pipelines or deep-learning algorithms – analytics methods th
 distributed queries or simple statistics.
 
 ## Architecture
-[![Architecture](./images/process_images/pht_services.png)](./images/process_images/pht_services.png)
+[![Architecture](./images/process_images/execution_short.png)](./images/process_images/execution_short.png)
 
 ### Central Services
 * User Interface - Self developed service in [Vue.js](https://vuejs.org/guide/introduction.html) for proposal and train submission, downloading of results
-* Message Broker - RabbitMQ, for consuming and publishing events between services 
-* Train Builder - Self developed service in Python to build valid trains
+* Message Broker - RabbitMQ, for consuming and publishing events between services
 * Container Registry - Harbor, an open-source container registry providing trains to stations
-* Train Router - Self developed Python service to move trains between projects accordingly to the route
-* Result Service - Vue.js self developed service, to extract encrypted results
+* Train Manager - Self developed services serving different components in Node.js
+  * Train Building - to build and distribute valid trains
+  * Train Routing - to move trains between projects accordingly to the route
+  * Result Exctracting - to extract encrypted results
 * Secret Storage - Based on Hashicorps Vault a service to securely store public keys of users/stations and routes of trains
 * Train Images - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
 
 ### Local Services
-* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.
+
+[comment]: <> (* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.)
 * Airflow - [Apache Airflow](https://airflow.apache.org/) is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
 * Station IAM - Identity and Access management system (based on Keycloak) to manage users of one hospital
-* Offline Tool - Self developed GUI to create key pairs and decrypt results locally.
+* Desktop App - Self developed GUI to create key pairs and decrypt results locally.
 ## Security
 
 

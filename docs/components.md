@@ -9,18 +9,18 @@ with the major repositories being briefly introduced and categorized in the foll
 
 ### Central Components
 |           Service           |                                        Repository link                                         |
-|:---------------------------:|:----------------------------------------------------------------------------------------------:|
-|         **Web UI**          |            [PHT medDIC/central-ui.git](https://github.com/PHT-Medic/central-ui.git)            |
-|      **Train Builder**      |      [PHT medDIC//train-builder](https://github.com/PHT-Medic/central-train-builder.git)       |
-|      **Train Router**       |      [PHT medDIC/train-router-py](https://github.com/PHT-Medic/central-train-router.git)       |
+|:---------------------------:|:----------------------------------------------------------------------------------------------:| 
+|      **Central**       |      [PHT medDIC/central](https://github.com/PHT-Medic/central)       |
 | **Train Container Library** | [PHT medDIC/train-container-library](https://github.com/PHT-Medic/train-container-library.git) |
 
+The central services (Central UI, Train building, Train Routing, Result Extraction, API, etc.) are individual packages within
+the central repository. These services are written in TypeScript.
 
 ### Local Components
 |     Service      |                               Repository link                                |
 |:----------------:|:----------------------------------------------------------------------------:|
 |   **Station**    |          [PHT medDIC/station](https://github.com/PHT-Medic/station)          |
-| **Offline Tool** | [PHT medDIC/pht-offline-tool](https://github.com/PHT-Medic/offline-tool.git) |
+| **Desktop App** | [PHT medDIC/desktop-app](https://github.com/PHT-Medic/desktop-app) |
 
 
 ## Third Party Services

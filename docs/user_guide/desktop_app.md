@@ -1,11 +1,12 @@
 # PHT Desktop App
 
-The PHT Desktop App is the offline tool of the User Interface. It can sign hashes locally during the submission process of a train. After successful execution, it is used to decrypt downloaded results and key management.  
+The PHT Desktop App is the offline tool of the User Interface. It can sign hashes locally during the submission process of a train.
+After successful execution, it is used to decrypt downloaded results and key management.  
 
 ## Installation
 
 Download the newest release for your operating system from [github](https://github.com/PHT-Medic/desktop-app/releases) and
-install the software.
+install the software on your local machine.
 
 ## Create Keys
 This is an example to create an *RSA-key-pair*. The same steps are requiered for creating a *homomorphic key-pair*.
