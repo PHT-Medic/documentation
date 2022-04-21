@@ -23,12 +23,12 @@ nav:
   - Guide (Analyst):
     - User Interface: user_guide/user_interface.md
     - Desktop App (Offline Tool): user_guide/desktop_app.md
-    - Station: user_guide/station.md
     - Trains: user_guide/trains.md
     - FHIR Query: user_guide/fhir_query.md
   - Guide (Station Administrator):
     - Central UI: station_guide/central_ui.md
     - Installation: station_guide/installation.md
+    - Station: station_guide/station.md
 
   #- CORD Demo:
     #- Overview: cord_demo/cord_demo.md
