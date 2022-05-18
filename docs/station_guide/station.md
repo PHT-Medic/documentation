@@ -79,9 +79,11 @@ The path to which the volume must be mounted is specified in the train.
 {
   "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-IMAGE>",
   "tag": "latest",
-  "<Absolute path on station vm>": {
-    "bind": "<Mount target in train container>",
-    "mode": "ro"
+  "volumes": {
+    "<Absolute path on station vm>": {
+      "bind": "<Mount target in train container>",
+      "mode": "ro"
+    }
   }
 }
 ```
