@@ -15,12 +15,26 @@ OIDC providers can be configured in the admin panel of the central UI under **Au
 
 Clicking on the **Add** button on the left will allow you to configure a new OIDC provider.
 
+#### Keycloak settings
 
 [![image](../images/ui_images/provider_add.png)](../images/ui_images/provider_add.png)
 
 This provider can then be selected in the login screen to authenticate users belonging to your realm.
 
+The following settings are used with Keycloak as identity provider:
+```
+Name: <Display name in UI>
+Client-ID: <name of client specified in keycloak>
+Client Secret: <secret of client if set to confidential>
 
+Token
+Host: <URL to realm> (e.g. https://DOMAIN.de/auth/realms/PHT_DEV/)
+Path: protocol/openid-connect/token
+
+Authorization
+Host: Auto from Token
+Path: protocol/openid-connect/auth
+```
 
 ### Registering/Updating a public key
 
