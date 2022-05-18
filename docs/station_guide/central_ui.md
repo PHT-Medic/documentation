@@ -5,6 +5,9 @@ In order to manage the stations settings the user needs to be assigned the **Sta
 !!! warning
    When changing the settings of your station in the central UI you need to restart your local station.
 
+## Add a realm
+In order to set a OIDC provider and manage your stations you need to get an organization. Please contact us,
+such we can provide you a realm in which you can manage all your stations, users and identity providers.
 
 ### Configuring an OIDC provider
 To allow each participant to control their own distribution of roles, the central UI allows the user to configure an OIDC provider which
