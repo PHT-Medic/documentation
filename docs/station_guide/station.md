@@ -77,7 +77,7 @@ The path to which the volume must be mounted is specified in the train.
 
 ```json
 {
-  "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-IMAGE>",
+  "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-ID>",
   "tag": "latest",
   "volumes": {
     "<Absolute path on station vm>": {

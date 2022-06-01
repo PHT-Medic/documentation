@@ -22,9 +22,10 @@ Clicking on the **Add** button on the left will allow you to configure a new OID
 
 [![image](../images/ui_images/provider_add.png)](../images/ui_images/provider_add.png)
 
-This provider can then be selected in the login screen to authenticate users belonging to your realm.
+Any OpenID-provider can be configured to be selected in the login screen to authenticate users belonging to your realm.
+If you dont know how to set up a client in Keycloak, follow the steps below configuration.
 
-The following settings are used with Keycloak as identity provider:
+The following settings are used in the User Interface with Keycloak as identity provider:
 ```
 Name: <Display name in UI>
 Client-ID: <name of client specified in keycloak>
@@ -39,6 +40,16 @@ Host: Auto from Token
 Path: protocol/openid-connect/auth
 ```
 
+##### Create a Realm in Keycloak
+1. Create a realm - in this example: ``PHT_DEV``
+2. Create a new client within this realm - in this example: ``pht-staging``
+   [![image](../images/keycloak_images/keycloak_1.png)](../images/keycloak_images/keycloak_1.png)
+3. Set the access type to confidential and a root URL and the valid redirect URIs
+   [![image](../images/keycloak_images/keycloak_2.png)](../images/keycloak_images/keycloak_2.png)
+4. Copy your client secret and use it for the configuration in the UI
+   [![image](../images/keycloak_images/keycloak_3.png)](../images/keycloak_images/keycloak_3.png)
+5. The following two roles must be created in the identity provider
+   [![image](../images/keycloak_images/keycloak_4.png)](../images/keycloak_images/keycloak_4.png)
 ### Registering/Updating a public key
 
 1. Within the admin area (top left, next to Home), you need to select **Auth -> Realms** within the left navigation.
