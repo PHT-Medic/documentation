@@ -57,7 +57,7 @@ A template train configuration is displayed below.
   "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-IMAGE>",
   "tag": "latest",
   "env": {
-    "FHIR_ADDRESS": "<FHIR-ADDRESS>",
+    "FHIR_SERVER_URL": "<FHIR-ADDRESS>",
     "FHIR_USER": "<ID>",
     "FHIR_PW": "<PSW>"
   }
