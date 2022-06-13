@@ -26,6 +26,14 @@ This is an example to create an *RSA-key-pair*. The same steps are requiered for
       
       [![Offline Tool RSA Encryption](../images/offline_tool_images/rsa_encryption.png)](../images/offline_tool_images/rsa_encryption.png)
 
+### Alternative approach
+Generate a new key using [open-ssl](https://www.openssl.org/):
+
+1. Open a command-line terminal
+2. Create and go to your specific folder where you want to store the new key-pair
+3. Type: ```openssl genrsa -passout pass:start123 -out private.pem 2048``` for creating the private key
+4. Type: ```openssl rsa -in private.pem -passin pass:start123 -outform PEM -pubout -out public.pem``` for creating the assoziated public key.
+
 ## Sign Hash 
 
 To perform the signature on a hash value it is necessary that the application knows your keypair (private and public key). (See *Create Keys* above). 
