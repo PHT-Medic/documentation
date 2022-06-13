@@ -30,22 +30,23 @@ distributed queries or simple statistics.
 [![Architecture](./images/process_images/execution_short.png)](./images/process_images/execution_short.png)
 
 ### Central Services
-* User Interface - Self developed service in [Vue.js](https://vuejs.org/guide/introduction.html) for proposal and train submission, downloading of results
-* Message Broker - RabbitMQ, for consuming and publishing events between services
-* Container Registry - Harbor, an open-source container registry providing trains to stations
-* Train Manager - Self developed services serving different components in Node.js
-  * Train Building - to build and distribute valid trains
-  * Train Routing - to move trains between projects accordingly to the route
-  * Result Exctracting - to extract encrypted results
-* Secret Storage - Based on Hashicorps Vault a service to securely store public keys of users/stations and routes of trains
-* Train Images - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
+* `User Interface` - Frontend application for proposal and train management, downloading of results and much more.
+* `API` - Backend application to manage resources and trigger commands & events through the Message Broker.
+* `Message Broker` - RabbitMQ, for consuming and publishing commands & events between different services
+* `Container Registry` - Harbor, an open-source container registry to manage (train-) images
+* `Train Manager` - Micro Service serving different components:
+  * `Train Building` - Build and distribute valid trains
+  * `Train Routing` - Move trains between projects & registries accordingly to the route
+  * `Result Extracting` - Download, extract & serve encrypted results from the registry
+* `Secret Storage` - Based on Hashicorps Vault a service to securely store public keys of users/stations and routes of trains
+* `Train Images` - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
 
-### Local Services
+### Local/Station Services
 
 [comment]: <> (* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.)
-* Airflow - [Apache Airflow](https://airflow.apache.org/) is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
-* Station IAM - Identity and Access management system (based on Keycloak) to manage users of one hospital
-* Desktop App - Self developed GUI to create key pairs and decrypt results locally.
+* `Airflow` - [Apache Airflow](https://airflow.apache.org/) is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
+* `Station IAM` - Identity and Access management system (based on Keycloak) to manage users of one hospital
+* `Desktop App` - Self developed GUI to create key pairs and decrypt results locally.
 ## Security
 
 
@@ -56,21 +57,14 @@ This ensures that only approved algorithms
 are executed and that only previously registered participants in an analysis can access the results. 
 [![Security Protocol](./images/process_images/security_protocol.png)](./images/process_images/security_protocol.png)
 
-## Technologies
-### Apache Airflow
-Wikipedia: *Apache Airflow ([https://airflow.apache.org](https://airflow.apache.org/)) is an open-source workflow management
-platform. It started at Airbnb in October 2014 as a solution to manage the company's increasingly complex workflows.
-Creating Airflow allowed Airbnb to programmatically author and
-schedule their workflows and monitor them via the built-in Airflow user interface.From the beginning, the project was made
-open source, becoming an Apache Incubator project in March 2016 and a Top-Level Apache Software Foundation project in January 2019.*
+## Languages
 
-Airflow is written in Python, and workflows are created via Python scripts. Airflow is designed under the principle of
-"configuration as code". While other "configuration as code" workflow platforms exist using markup languages like XML,
-using Python allows developers to import libraries and classes to help them create their workflows.
+### JavaScript
+Wikipedia: *JavaScript ([https://developer.mozilla.org/en/docs/Web/JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript)) often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.*
 
-### Vue JS
-Wikipedia: *Vue.js ([https://vuejs.org](https://Vuejs.org/) - commonly referred to as Vue) is an open-source model–view–viewmodel
-front end JavaScript framework for building user interfaces and single-page applications.*
+### TypeScript
+Wikipedia: *TypeScript ([https://www.typescriptlang.org/](https://www.typescriptlang.org/)) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. 
+It is designed for the development of large applications and transpiles to JavaScript.*
 
 ### Python
 Wikipedia: *Python ([https://python.org](https://python.org/)) is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes
