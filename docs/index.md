@@ -30,25 +30,29 @@ distributed queries or simple statistics.
 [![Architecture](./images/process_images/execution_short.png)](./images/process_images/execution_short.png)
 
 ### Central Services
-* `User Interface` - Frontend application for proposal and train management, downloading of results and much more.
-* `API` - Backend application to manage resources and trigger commands & events through the Message Broker.
-* `Message Broker` - RabbitMQ, for consuming and publishing commands & events between different services
-* `Container Registry` - Harbor, an open-source container registry to manage (train-) images
-* `Train Manager` - Micro Service serving different components:
-  * `Train Building` - Build and distribute valid trains
-  * `Train Routing` - Move trains between projects & registries accordingly to the route
-  * `Result Extracting` - Download, extract & serve encrypted results from the registry
-* `Secret Storage` - Based on Hashicorps Vault a service to securely store public keys of users/stations and routes of trains
-* `Train Images` - Trains are docker images, including the algorithm, train logic and software dependencies of user submitted code
+* `RabbitMQ` - Message broker for consuming and publishing commands & events between different services
+* `Harbor` - Docker registry to manage (train-) images
+* `Vault` - Secret storage to securely store sensitive information
+
+
+* `User Interface (UI)` - Frontend application for proposal and train management, downloading of results and much more
+* `API` - Backend application to manage resources and trigger commands & events through the message broker
+* `Train Manager` - Microservice serving different components:
+    * `Train Building` - Build and distribute train images to a registry
+    * `Train Routing` - Move trains between projects & registries accordingly to the route of the train
+    * `Result Extracting` - Download, extract & serve encrypted results from the registry
+
 
 ### Local/Station Services
+* `Airflow` - Open-Source-Tool to create and schedule workflows and enables persistent access to data, execution and monitoring of trains
+* `Keycloak` - Identity and Access Management (IAM) to manage users and roles
+
 
 [comment]: <> (* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.)
-* `Airflow` - [Apache Airflow](https://airflow.apache.org/) is an open-source tool to create and schedule workflows. Are used for persistent access to data and execution and monitoring of trains.
-* `Station IAM` - Identity and Access management system (based on Keycloak) to manage users of one hospital
-* `Desktop App` - Self developed GUI to create key pairs and decrypt results locally.
-## Security
+* `Desktop App` - GUI to manage key pairs and decrypt results locally
 
+
+## Security
 
 ### Security Protocol
 The following flow chart depicts the security protocol used for protecting participating stations against malicious code,
