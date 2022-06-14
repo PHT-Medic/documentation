@@ -1,8 +1,8 @@
 ## Components
 Multiple git repositories contain the components of the PHT. These can be roughly separated into the following categories:
-- global
-- central
-- local/station
+* global
+* central
+* local/station
 
 All *public* repositories can be found on [GitHub](https://github.com/PHT-Medic).
 
