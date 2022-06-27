@@ -96,3 +96,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 # ------------- ommitted ------------
 ```
+
+### Changing Airflow admin password/user
+
+Changing the Airflow admin password/user in the env file after the build is not directly possible. Either use Airflow UI to change the password or delete the airflow volume and rebuild after the change.
