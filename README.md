@@ -1,5 +1,7 @@
 # Documentation 📖
 
+[![Deploy](https://github.com/PHT-Medic/documentation/actions/workflows/main.yml/badge.svg)](https://github.com/PHT-Medic/documentation/actions/workflows/main.yml)
+
 This repository contains:
 - markdown files 
 - images 
