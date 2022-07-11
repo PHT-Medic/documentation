@@ -80,9 +80,8 @@ On this page you can define:
 
 - an *optional* **name** for the given train.
 - which **type** of train you want to create. There are two options:
-
-      1. **Discovery**: A discovery train can be used to get to know about the availability of data at the targeted stations.
-      2. **Analysis**: An analyse train should be created on base of the knowledge achieved during the discovery phase
+   - **Discovery**: A discovery train can be used to get to know about the availability of data at the targeted stations.
+   - **Analysis**: An analysis train should be created on base of the knowledge achieved during the discovery phase.
 
 - to which **proposal** the train is associated. Only one proposal can be selected.
 
