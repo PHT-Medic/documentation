@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a,a as n}from"./app.a4d3ea8c.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"glossar.md"}'),r={name:"glossar.md"},s=n("",1),i=[s];function l(o,d,c,y,g,h){return e(),a("div",null,i)}var x=t(r,[["render",l]]);export{_ as __pageData,x as default};
