@@ -1,7 +1,6 @@
 .temp
 .DS_Store
 dist
-!src/.vitepress/dist
 doc
 node_modules
 .vscode

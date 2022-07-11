@@ -20,8 +20,8 @@ export default defineConfig({
             },
             {
                 text: 'Guide',
-                link: '/user-guide/',
-                activeMatch: '/user-guide/',
+                link: '/guide/',
+                activeMatch: '/guide/',
             },
             {
                 text: 'About',
@@ -32,32 +32,32 @@ export default defineConfig({
             }
         ],
         sidebar: {
-            '/user-guide/': [
+            '/guide/': [
                 {
                     text: 'General',
                     collapsible: false,
                     items: [
-                        {text: 'Introduction', link: '/user-guide/index'},
-                        {text: 'Components', link: '/user-guide/components'},
-                        {text: 'Trains', link: '/user-guide/trains'},
-                        {text: 'FHIR', link: '/user-guide/fhir'},
+                        {text: 'Introduction', link: '/guide/index'},
+                        {text: 'Components', link: '/guide/components'},
+                        {text: 'Trains', link: '/guide/trains'},
+                        {text: 'FHIR', link: '/guide/fhir'},
                     ]
                 },
                 {
                     text: 'Central',
                     collapsible: false,
                     items: [
-                        {text: 'UI', link: '/user-guide/central/user_interface'},
-                        {text: 'DesktopApp', link: '/user-guide/central/desktop_app'}
+                        {text: 'UI', link: '/guide/central/user_interface'},
+                        {text: 'DesktopApp', link: '/guide/central/desktop_app'}
                     ]
                 },
                 {
                     text: 'Station',
                     collapsible: false,
                     items: [
-                        {text: 'Central UI', link: '/user-guide/station/central_ui'},
-                        {text: 'Installation', link: '/user-guide/station/installation'},
-                        {text: 'Configuration', link: '/user-guide/station/configuration'},
+                        {text: 'Central UI', link: '/guide/station/central_ui'},
+                        {text: 'Installation', link: '/guide/station/installation'},
+                        {text: 'Configuration', link: '/guide/station/configuration'},
                     ]
                 }
             ]
