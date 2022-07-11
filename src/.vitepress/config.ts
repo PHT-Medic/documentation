@@ -19,9 +19,16 @@ export default defineConfig({
                 activeMatch: '/',
             },
             {
-                text: 'User Guide',
+                text: 'Guide',
                 link: '/user-guide/',
                 activeMatch: '/user-guide/',
+            },
+            {
+                text: 'About',
+                activeMatch: '/about/',
+                items: [
+                    { text: 'Team', link: '/about/team' },
+                ]
             }
         ],
         sidebar: {
@@ -30,7 +37,8 @@ export default defineConfig({
                     text: 'General',
                     collapsible: false,
                     items: [
-                        {text: 'Overview', link: '/user-guide/'},
+                        {text: 'Introduction', link: '/user-guide/index'},
+                        {text: 'Components', link: '/user-guide/components'},
                         {text: 'Trains', link: '/user-guide/trains'},
                         {text: 'FHIR', link: '/user-guide/fhir'},
                     ]
@@ -52,17 +60,6 @@ export default defineConfig({
                         {text: 'Configuration', link: '/user-guide/station/configuration'},
                     ]
                 }
-            ],
-            '/': [
-                {
-                    text: 'Introduction',
-                    collapsible: false,
-                    items: [
-                        {text: 'Overview', link: '/'},
-                        {text: 'Components', link: '/components'},
-                        {text: 'Team', link: '/team'}
-                    ]
-                },
             ]
         }
     }
