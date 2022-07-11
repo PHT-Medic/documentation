@@ -1,11 +1,28 @@
-[![docs](https://github.com/PHT-Medic/documentation/actions/workflows/deploy_docs.yml/badge.svg)](https://github.com/PHT-Medic/documentation/actions/workflows/deploy_docs.yml)
-# PHT Documentation
+# Documentation 📖
 
-This repository contains markdown files and images to be compiled into the PHT Documentation and User guide hosted
-on our [github pages documentation](https://pht-medic.github.io/documentation/)
+This repository contains:
+- markdown files 
+- images 
+
+to be compiled into the PHT Documentation and User guide hosted
+on [GitHub Pages](https://pht-medic.github.io/documentation/)
 
 ## Contributing
 
-1. Install the requirements: `pip install -r requirements.txt`
-2. Use mkdocs to display the site with hot reloading run: `mkdocs serve`
-3. Any changes made in the `./docs` directory or `mkdocs.yml` will be hot reloaded on save
+1. Clone Repository
+
+```shell
+git clone https://github.com/PHT-Medic/documentation
+```
+
+2. Install dependencies
+
+```shell
+npm i
+```
+
+3. Run docs generation with HMR:
+
+```shell
+npm run dev
+```

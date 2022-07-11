@@ -23,7 +23,7 @@ Furthermore, you do have two options for loading the key into the system:
 
 On the right sight, you will then find each already stored keys with specific name as list below the **Overview** and the search bar (where you can filter after a specific key in the list)
 
-[![image](../images/ui_images/Register_Updating_public_key.png)](../images/ui_images/Register_Updating_public_key.png)
+[![image](../../images/ui_images/Register_Updating_public_key.png)](../../images/ui_images/Register_Updating_public_key.png)
 
 ## Proposals
 A Proposal is an organizational unit in the PHT, which represents the collaboration between different participants in regard to a specific research or analysis project.  
@@ -35,7 +35,7 @@ You have the option to adjust the already existing proposals via the **List**-ic
 
 Moreover, you have the option to switch to the **incoming** section or to create a new proposal on the left side between the menu and the overview-list.
 
-[![image](../images/ui_images/proposal.png)](../images/ui_images/proposal.png)
+[![image](../../images/ui_images/proposal.png)](../../images/ui_images/proposal.png)
 
 ### Creating a new Proposal
 
@@ -50,7 +50,7 @@ After pressing the **Create**-button, it will take you to a new form. Here you c
 
 After clicking on the create-button the proposal will be sent to all the selected stations, such each side can approve/reject the analysis.
 
-[![Proposal create](../images/ui_images/proposal_create.png)](../images/ui_images/proposal_create.png)
+[![Proposal create](../../images/ui_images/proposal_create.png)](../../images/ui_images/proposal_create.png)
 
 #### Definition of Risk
 A train is working on specific data from the different station but data can be quite differentiable depending on combinations of all data. Private data is really sensitive and needs to be handled accordingly. So we give a Risk, so each station can have a clue about what kind of data will be used during the stopover of the train.
@@ -64,7 +64,7 @@ For this we have three stages:
 Within the incoming section of each station, a station authority can independently decide to comment, approve or reject
 a study proposal for analysis. In order to do such, click on the **list**-icon on the right side of the corresponding proposal and select the preferred action.
 
-[![Proposal Creation](../images/ui_images/proposal_approve.png)](../images/ui_images/proposal_approve.png)
+[![Proposal Creation](../../images/ui_images/proposal_approve.png)](../../images/ui_images/proposal_approve.png)
 
 
 
@@ -88,7 +88,7 @@ On this page you can define:
 
 Click on **create** to continue.
 
-[![Train Creation](../images/ui_images/create_train.png)](../images/ui_images/create_train.png)
+[![Train Creation](../../images/ui_images/create_train.png)](../../images/ui_images/create_train.png)
 
 #### 2.2. Define MasterImage and choose Stations
 
@@ -98,7 +98,7 @@ Additionally, you can select those stations you want the train to be sent to. Th
 
 Click on **Next** to continue.
 
-[![Train: MasterImage and Stations](../images/ui_images/train_1.png)](../images/ui_images/train_1.png)
+[![Train: MasterImage and Stations](../../images/ui_images/train_1.png)](../../images/ui_images/train_1.png)
 
 #### 2.3. Check the Security Settings
 
@@ -108,7 +108,7 @@ Additionally, you can add a Paillier-key to be used for homomorphic encryption.
 
 Click on **Next** to continue.
 
-[![Train: Security Settings](../images/ui_images/train_2.png)](../images/ui_images/train_2.png)
+[![Train: Security Settings](../../images/ui_images/train_2.png)](../../images/ui_images/train_2.png)
 
 #### 2.4. Load Code to the train
 
@@ -118,7 +118,7 @@ You can decide whether you want to upload only one single file or a whole direct
 
 After you have selected the file or directory via the browse-button you can find all the files listed below. Depending on the folder, you may not wish to upload each file, so it is possible to delete some files at this point.
 
-[![Train: Load Code](../images/ui_images/train_3_1.png)](../images/ui_images/train_3_1.png)
+[![Train: Load Code](../../images/ui_images/train_3_1.png)](../../images/ui_images/train_3_1.png)
 
 After uploading the files to the train you need to select one of the files as entrypoint. It is not name-depending as you can see in the picture below. You can select the specific file by clicking on the green-button. The chosen file will be displayed in the black textfield. *We have chosen the stuff_1.py as entrypoint for showing you, that it is not necessary to name one of your files "entrypoint".*
 
@@ -128,29 +128,29 @@ Additionally, you can delete some files as well at this point.
 
 Click on **Next** to continue.
 
-[![Train: Load Code](../images/ui_images/train_3_2.png)](../images/ui_images/train_3_2.png)
+[![Train: Load Code](../../images/ui_images/train_3_2.png)](../../images/ui_images/train_3_2.png)
 
 #### 2.5. Add a FHIR Query
 
 In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
-You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](./fhir_query.md)
+You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../fhir.md)
 
 Here we used an example query from the FHIR Query documentation. 
 
-[![Train: Add FHIR Query](../images/ui_images/train_4.png)](../images/ui_images/train_4.png)
+[![Train: Add FHIR Query](../../images/ui_images/train_4.png)](../../images/ui_images/train_4.png)
 
 #### 2.6. Create Hash and Signature 
 
 One of the last steps it is to create a hash of the train started by this station. For this you need to generate the hash-value. (This could take some time)
 
-After the hash value was generated, copy it and perform the signature on this with your private key. For this action you need to download and install the Offline Tool. How this signature is performed you can read it in this documentation under the section [User Guide -> Desktop App (Offline Tool)](./desktop_app.md)
+After the hash value was generated, copy it and perform the signature on this with your private key. For this action you need to download and install the Offline Tool. How this signature is performed you can read it in this documentation under the section [User Guide -> Desktop App (Offline Tool)](desktop_app.md)
 
 The final signature from the Offline App you need to the textfield **Signed Hash**.
 
 Click on **Next** to finish the configuration step.
 
-[![Train: Create Hash and Signature](../images/ui_images/train_5.png)](../images/ui_images/train_5.png)
+[![Train: Create Hash and Signature](../../images/ui_images/train_5.png)](../../images/ui_images/train_5.png)
 
 ### 3. Start the train
 
@@ -160,8 +160,8 @@ You can start the train by firstly build the whole train together (by clicking o
 
 After a successful build train you can **Run** the train, which starts visiting the stations and perform your code.
 
-Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](./station.md)
+Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../station/configuration.md)
 
-After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App (Offline Tool)](./desktop_app.md) again.
+After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](desktop_app.md) again.
 
-[![Train: Start train](../images/ui_images/train_6.png)](../images/ui_images/train_6.png)
+[![Train: Start train](../../images/ui_images/train_6.png)](../../images/ui_images/train_6.png)

@@ -1,3 +1,5 @@
+# FHIR Query
+
 Data in the PHT is accessed (or at least indexed) via a station-owned FHIR server. Users creating a train can specify the
 FHIR query to be executed either as a valid FHIR-API query string or by specifying the requested Resource(s) and the
 filter parameters in the `query.json` file created via the UI.  

@@ -1,9 +1,9 @@
-# PHT Station
+# Installation
 
+::: info
 This section will provide installation instructions for installing a PHT Station.<br>**It assumes that the station has
 been registered in the UI.**
-
-## Installation
+:::
 
 Visit the [station repository](https://github.com/PHT-Medic/station) to view the code
 (the installation instructions can also be found here).

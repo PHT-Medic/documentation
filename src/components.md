@@ -1,5 +1,6 @@
-## Components
+# Components
 Multiple git repositories contain the components of the PHT. These can be roughly separated into the following categories:
+
 * global
 * central
 * local/station

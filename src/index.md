@@ -1,5 +1,5 @@
-## Overview
-Documentation and [User Guide](user_guide/user_interface.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
+# Overview
+Documentation and [User Guide](user-guide/index.md) for the Personal Health Train (PHT) an open source, container based secure distributed analysis platform.
 For more information about the PHT team, projects and collaborations you can also visit our [website](https://personalhealthtrain.de/).
 
 ## Introduction
@@ -63,7 +63,7 @@ are executed and that only previously registered participants in an analysis can
 
 ## Languages
 
-### JavaScript
+### JavaScript 
 Wikipedia: *JavaScript ([https://developer.mozilla.org/en/docs/Web/JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript)) often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.*
 
 ### TypeScript
