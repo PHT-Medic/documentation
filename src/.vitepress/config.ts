@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress';
 
 export default defineConfig({
     title: 'PersonalHealthTrain',
+    base: '/documentation/',
     themeConfig: {
         socialLinks: [
             { icon: 'github', link: 'https://github.com/PHT-Medic/documentation' },
