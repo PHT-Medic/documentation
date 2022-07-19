@@ -57,7 +57,7 @@ export default defineConfig({
                     items: [
                         {text: 'Central UI', link: '/guide/station/central_ui'},
                         {text: 'Installation', link: '/guide/station/installation'},
-                        {text: 'Configuration', link: '/guide/station/configuration'},
+                        {text: 'Usage', link: '/guide/station/usage'},
                     ]
                 }
             ]

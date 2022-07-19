@@ -1,4 +1,4 @@
-# Configuration
+# Usage
 
 ## Getting started with Airflow
 
