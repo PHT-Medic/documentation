@@ -30,8 +30,8 @@ const members = [
   },
   {
     avatar: 'https://www.github.com/SirHerr.png',
-    name: 'Marius Herr',
-    title: 'Advisor & Consultant',
+    name: 'Marius de Arruda Botelho Herr',
+    title: 'Project Lead',
     links: [
       { icon: 'github', link: 'https://github.com/SirHerr' },
       { icon: 'linkedin', link: 'https://de.linkedin.com/in/marius-de-arruda-botelho-herr-60b89b18b' },
