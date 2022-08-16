@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as a,f as n}from"./app.bca6134f.js";const x=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/glossar.md"}'),r={name:"guide/glossar.md"},s=n("",1),i=[s];function l(d,o,c,g,y,h){return e(),a("div",null,i)}var _=t(r,[["render",l]]);export{x as __pageData,_ as default};
