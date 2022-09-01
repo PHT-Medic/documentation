@@ -21,7 +21,7 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "@tada5hi/eslint-config-typescript": "^1.0.5",
+        "@tada5hi/eslint-config-typescript": "^1.0.6",
         "eslint": "^8.22.0",
         "np": "^7.6.0",
         "rimraf": "^3.0.2",
