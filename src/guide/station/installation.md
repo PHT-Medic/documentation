@@ -80,17 +80,15 @@ directory. In Pycharm you can follow these steps:
 
 #### Using pre-built images
 
-If there are issues while building the airflow container you can use our prebuilt images to run the airflow
-instance.<br>
-Edit the airflow service in the docker-compose.yml file and replace the build command without prebuilt image:
+If you want to use custom dags in airflow, you will have to change the  docker-compose.yml; instated of pulling the latest pre-build airflow image; you have to build airflow locally. This is done by commenting out the  "build: './airflow' "  line and uncommenting the "  image: ghcr.io/pht-medic/station-airflow:latest"  line 
 
 ```yaml
 # ------------- ommitted ------------
 services:
   airflow:
-    # remove the build command
+    # replace with the build command
     build: './airflow'
-    # replace with the image command
+    # remove the image command
     image: ghcr.io/pht-medic/station-airflow:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
