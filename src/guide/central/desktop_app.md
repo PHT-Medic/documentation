@@ -14,11 +14,11 @@ This is an example to create an *RSA-key-pair*. The same steps are requiered for
 1. Start the application.
 2. From the Homepage click on **Settings** on the left hand side.
 
-[![Offline Tool Start](../../images/offline_tool_images/settings.png)](../../images/offline_tool_images/settings.png)
+[![Offline Tool Start](/images/offline_tool_images/settings.png)](/images/offline_tool_images/settings.png)
       
 3. Click on the **KeyPair**-button of the RSA box.
 
-[![Offline Tool KeyPairs](../../images/offline_tool_images/encryption.png)](../../images/offline_tool_images/encryption.png)
+[![Offline Tool KeyPairs](/images/offline_tool_images/encryption.png)](/images/offline_tool_images/encryption.png)
       
 
 4. Specify the directory where the keys should be saved.
@@ -26,7 +26,7 @@ This is an example to create an *RSA-key-pair*. The same steps are requiered for
 6. Select a passphrase for your private key. (If you press enter, an empty passphrase will be used)
 7. Click on the **Generate**-button.
       
-[![Offline Tool RSA Encryption](../../images/offline_tool_images/rsa_encryption.png)](../../images/offline_tool_images/rsa_encryption.png)
+[![Offline Tool RSA Encryption](/images/offline_tool_images/rsa_encryption.png)](/images/offline_tool_images/rsa_encryption.png)
 
 ### Alternative approach
 Generate a new key using [open-ssl](https://www.openssl.org/):
@@ -44,16 +44,16 @@ To perform the signature on a hash value it is necessary that the application kn
 2. In the **Hash** textfield you should paste the generated HashKey from step 2.6 in [User Guide -> User interface](user_interface.md).
 3. Click on **Sign**.
 4. Copy the signed hash from the **Signature (read only)** textfield and proceed step 2.6 in [User Guide -> User interface](user_interface.md).
-      [![Offline Tool Signature](../../images/offline_tool_images/Signature.png)](../../images/offline_tool_images/Signature.png)
+      [![Offline Tool Signature](/images/offline_tool_images/Signature.png)](/images/offline_tool_images/Signature.png)
 
 ## Decrypt results
 
 1. After executing a training in the UI, you can download the results to your local machine.
-      [![Offline Tool Download Results](../../images/offline_tool_images/download_results.png)](../../images/offline_tool_images/download_results.png)
+      [![Offline Tool Download Results](/images/offline_tool_images/download_results.png)](/images/offline_tool_images/download_results.png)
 2. Open the Desktop App -> Load your keys to the Desktop App via Settings -> Click on **results** on the menu. 
       
       You will be directed to an overview where you can click on **Select Result-File(.tar)** button. Chose the downloaded results-file from the UI and press load.
-      [![Offline Tool Load Results](../../images/offline_tool_images/load_results.png)](../../images/offline_tool_images/load_results.png)
+      [![Offline Tool Load Results](/images/offline_tool_images/load_results.png)](/images/offline_tool_images/load_results.png)
 3. A new view appears where you can chose which files you want to save.
 
       By clicking on the **x**-buttons, you can delete those files from the working space (you do not delete them from the results_file.tar, only a deletion from the Desktop App!).

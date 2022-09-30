@@ -13,8 +13,8 @@ export default defineConfig({
             text: 'Edit this page on GitHub'
         },
         logo: {
-            light: '../images/icon/icon_medic_dark.png',
-            dark: '../images/icon/icon_medic_light.png'
+            light: '/images/icon/icon_medic_dark.png',
+            dark: '/images/icon/icon_medic_light.png'
         },
         siteTitle: false,
         nav: [
