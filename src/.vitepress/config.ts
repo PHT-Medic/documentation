@@ -12,7 +12,7 @@ export default defineConfig({
             pattern: 'https://github.com/PHT-Medic/documentation/edit/master/src/:path',
             text: 'Edit this page on GitHub'
         },
-        logo: { light: '/images/icon_medic_dark.png', dark: '/images/icon_medic_light.png' },
+        logo: { light: '../images/icon_medic_dark.png', dark: '../images/icon_medic_light.png' },
         siteTitle: false,
         nav: [
             {
