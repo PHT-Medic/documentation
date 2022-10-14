@@ -1,1 +1,0 @@
-import{_ as t,o as e,c as n,f as a}from"./app.a206cc99.js";const x=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/glossar.md"}'),r={name:"guide/glossar.md"},s=a("",1),i=[s];function l(d,o,c,g,y,h){return e(),n("div",null,i)}const _=t(r,[["render",l]]);export{x as __pageData,_ as default};
