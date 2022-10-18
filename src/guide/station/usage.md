@@ -90,6 +90,45 @@ The path to which the volume must be mounted is specified in the train.
 }
 ```
 
+### Running a train with GPU support
+
+A train container can be configured to use the GPU of the station VM. The use of gpu resources requires the [nvidia
+container runtime](https://github.com/NVIDIA/nvidia-docker) to be installed.
+
+Follow these [instructions](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+to install the nvidia container runtime for docker.
+Check if the nvidia container runtime is installed and usable by containers by running the following command:
+
+```shell
+sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+```
+
+If the command runs successfully, gpu resource can be configured for the train container by adding the following
+configuration options to the DAG configuration:
+
+1. Use all available GPUs on the station VM:
+    ```json
+    {
+      "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-ID>",
+      "tag": "latest",
+      "gpus": "all"
+    }
+    ```
+   
+2. Use a selection of gpus identified by their ids:
+    ```json
+    {
+      "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-ID>",
+      "tag": "latest",
+      "gpus": [0, 1]
+    }
+    ```
+
+
+
+
+
+
 
 
 
