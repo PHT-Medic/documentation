@@ -28,17 +28,19 @@ If you dont know how to set up a client in Keycloak, follow the steps below conf
 
 The following settings are used in the User Interface with Keycloak as identity provider:
 ```
+Slug: Unique pretty (url) identifier
 Name: <Display name in UI>
 Client-ID: <name of client specified in keycloak>
 Client Secret: <secret of client if set to confidential>
 
 Token
-Host: <URL to realm> (e.g. https://DOMAIN.de/auth/realms/PHT_DEV/)
-Path: protocol/openid-connect/token
+Endpoint: (e.g. https://DOMAIN.de/auth/realms/REALM_NAME/protocol/openid-connect/token)
+DOMAIN and REALM_NAME need to be edited.
 
 Authorization
-Host: Auto from Token
-Path: protocol/openid-connect/auth
+Endpoint: (e.g. https://DOMAIN.de/auth/realms/REALM_NAME/protocol/openid-connect/auth)
+DOMAIN and REALM_NAME need to be edited.
+
 ```
 
 ##### Create a Realm in Keycloak
