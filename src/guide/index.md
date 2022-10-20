@@ -14,7 +14,7 @@ securely hosting the data.
 
 The following overview shows all interactions between service components to execute a train iteratively over three stations
 with our PHT-TBI architecture.
-[![Overview](../images/process_images/pht_services.png)](../images/process_images/pht_services.png)
+[![Overview](/images/process_images/pht_services.png)](/images/process_images/pht_services.png)
 
 ## Mission Statement
 From Machine Learning (ML) healthcare can profit by ‘learning’ models which support clinical practice in treatment decision
@@ -31,7 +31,7 @@ example, genomics pipelines or deep-learning algorithms – analytics methods th
 distributed queries or simple statistics.
 
 ## Architecture
-[![Architecture](../images/process_images/execution_short.png)](../images/process_images/execution_short.png)
+[![Architecture](/images/process_images/execution_short.png)](/images/process_images/execution_short.png)
 
 ### Central Services
 * `RabbitMQ` - Message broker for consuming and publishing commands & events between different services
@@ -63,7 +63,7 @@ The following flow chart depicts the security protocol used for protecting parti
 as well as encrypting any stored results using envelope encryption.   
 This ensures that only approved algorithms 
 are executed and that only previously registered participants in an analysis can access the results. 
-[![Security Protocol](../images/process_images/security_protocol.png)](../images/process_images/security_protocol.png)
+[![Security Protocol](/images/process_images/security_protocol.png)](/images/process_images/security_protocol.png)
 
 ## Languages
 

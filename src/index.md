@@ -1,9 +1,9 @@
 ---
 layout: home
 hero:
-  name: PHT
+  name: PHT-meDIC
   text: PersonalHealthTrain
-  tagline: The production-ready DIFUTURE implementation of the Personal Health Train (PHT-meDIC) from Tübingen University as part of the PHT implementation network
+  tagline: The production-ready DIFUTURE implementation of the Personal Health Train (PHT-meDIC) from Tübingen University as part of the PHT GO:FAIR implementation network
   actions:
     - theme: brand
       text: Get Started

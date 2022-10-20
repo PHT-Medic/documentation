@@ -11,7 +11,7 @@ webinterface.
 The first time you access the webinterface you will be prompted to log in. Enter the credentials set in the `.env` file
 to login as admin. Or use the credentials that you have obtained from the station administrator.
 
-[![image](../../images/station_images/airflow_login.png)](../../images/station_images/airflow_login.png)
+[![image](/images/station_images/airflow_login.png)](/images/station_images/airflow_login.png)
 
 ### Triggering the test DAG
 
@@ -21,7 +21,7 @@ in the user interface.
 A DAG is triggered in the UI by clicking on the **play** button, where it can be started either with or without a json
 file containing additional configuration for the DAG run.
 
-[![image](../../images/station_images/airflow_ui.png)](../../images/station_images/airflow_ui.png)
+[![image](/images/station_images/airflow_ui.png)](/images/station_images/airflow_ui.png)
 
 Trigger the DAG without any additional configuration to check if the station is properly configured. A notification
 should appear in the UI that the DAG has been triggered.
@@ -33,7 +33,7 @@ harbor as well as a FHIR server.
 !!! warning
     If you did not provide any FHIR_Server configurations in the .env-file, then this Trigger will fail, because this test will try to connect to the FHIR_server. All the nodes will be marked as red or orange except the "get_dag_config"
 
-[![image](../../images/station_images/test_config_dag.png)](../../images/station_images/test_config_dag.png)
+[![image](/images/station_images/test_config_dag.png)](/images/station_images/test_config_dag.png)
 
 ### Accessing logs
 
@@ -41,12 +41,12 @@ The logs stored during the execution of a DAG can be accessed for each individua
 colored,squared/circled - indicator next to the name of the task. In the new pop-up window you can see in the top a list
 of options. There you can pick **Log** to view the Log of this task.
 
-[![image](../../images/station_images/task_logs.png)](../../images/station_images/task_logs.png)
+[![image](/images/station_images/task_logs.png)](/images/station_images/task_logs.png)
 
 If there are any errors stacktraces can be found in these logs, as well as any other output of the tasks (stdout,
 stderr)
 
-[![image](../../images/station_images/task_log_details.png)](../../images/station_images/task_log_details.png)
+[![image](/images/station_images/task_log_details.png)](/images/station_images/task_log_details.png)
 
 ### Running a train
 
@@ -69,7 +69,7 @@ A template train configuration is displayed below.
 Replace the placeholders with the values of the train image to execute, and other variables with the values
 corresponding to the stations configuration and paste it into the configuration form shown in the following image.
 
-[![image](../../images/station_images/trigger_run_train.png)](../../images/station_images/trigger_run_train.png)
+[![image](/images/station_images/trigger_run_train.png)](/images/station_images/trigger_run_train.png)
 
 ### Running a train with volume data
 
@@ -89,6 +89,45 @@ The path to which the volume must be mounted is specified in the train.
   }
 }
 ```
+
+### Running a train with GPU support
+
+A train container can be configured to use the GPU of the station VM. The use of gpu resources requires the [nvidia
+container runtime](https://github.com/NVIDIA/nvidia-docker) to be installed.
+
+Follow these [instructions](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+to install the nvidia container runtime for docker.
+Check if the nvidia container runtime is installed and usable by containers by running the following command:
+
+```shell
+sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+```
+
+If the command runs successfully, gpu resource can be configured for the train container by adding the following
+configuration options to the DAG configuration:
+
+1. Use all available GPUs on the station VM:
+    ```json
+    {
+      "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-ID>",
+      "tag": "latest",
+      "gpus": "all"
+    }
+    ```
+   
+2. Use a selection of gpus identified by their ids:
+    ```json
+    {
+      "repository": "<HARBOR-REGISTRY>/<STATION_NAMESPACE>/<TRAIN-ID>",
+      "tag": "latest",
+      "gpus": [0, 1]
+    }
+    ```
+
+
+
+
+
 
 
 

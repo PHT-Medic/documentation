@@ -69,28 +69,28 @@ The next steps guide you through the general submission process, exemplified by 
 2. Create a new train. Select the proposal based on your desired programming language.
 3. Keep the default Demo master image of the train unchanged, if you submit provided example code.
 <br/><br/>
-   ![submission 1](../../images/demo/submission_1.png)
+   ![submission 1](/images/demo/submission_1.png)
 <br/><br/>
 5. Specify the stations to be executed at and select depending on your programming language the master image.
-<br/><br/>![submission 2](../../images/demo/submission_2.png)<br/><br/>
+<br/><br/>![submission 2](/images/demo/submission_2.png)<br/><br/>
 
 
 
 7. Upload the algorithm and select the entrypoint of the train.
-   <br/><br/>![submission 3](../../images/demo/submission_3.png)<br/><br/>
+   <br/><br/>![submission 3](/images/demo/submission_3.png)<br/><br/>
 8. Specify the query
-   <br/><br/>![submission 4](../../images/demo/submission_4.png)<br/><br/>
+   <br/><br/>![submission 4](/images/demo/submission_4.png)<br/><br/>
 9. Sign the hash with the local Offline Tool: [Documentation](../../guide/central/desktop_app.md#sign-hash)
-   <br/><br/> ![submission 5](../../images/demo/submission_5.png)<br/><br/>
+   <br/><br/> ![submission 5](/images/demo/submission_5.png)<br/><br/>
 
 
 ### Step 4 - Train running
 You need to build and run the train before you can download the results.
 Start the building process of the train.  
-<br/><br/> ![submission 6](../../images/demo/submission_6.png)<br/><br/>
+<br/><br/> ![submission 6](/images/demo/submission_6.png)<br/><br/>
 Please manually reload the page within the browser after 30-40 seconds.
 Then you will be able to start the execution at the stations.
-<br/><br/> ![submission 7](../../images/demo/submission_7.png)<br/><br/>
+<br/><br/> ![submission 7](/images/demo/submission_7.png)<br/><br/>
 
 After a few minutes, results are available. Please reload the page manually again.
 A soon released feature will display the progress of the train in the Stations overview with a random station numbering.
@@ -103,7 +103,7 @@ The files are automatically encrypted and need to be decrypted with the Offline 
 Please follow these steps:
 
 1. Download results
-<br/><br/> ![submission 8](../../images/demo/submission_8.png)<br/><br/>
+<br/><br/> ![submission 8](/images/demo/submission_8.png)<br/><br/>
 2. Unzip the downloaded train results locally
 3. Result decryption:
     1. Start the Offline Tool
@@ -113,10 +113,10 @@ Please follow these steps:
     5. Load the "train_config.json"-file of your train
     6. Select the files to decrypt (the selected ones appear in the box on the right)
     7. Decrypt the files by pressing the "Decrypt selected models" button
-      <br/><br/> ![submission 9](../../images/demo/submission_9.png)<br/><br/>
+      <br/><br/> ![submission 9](/images/demo/submission_9.png)<br/><br/>
 4. View, process and store the results locally on your computer.
 You can directly access them with the "Show decrypted files" button.
-   <br/><br/> ![submission 10](../../images/demo/submission_10.png)<br/><br/>
+   <br/><br/> ![submission 10](/images/demo/submission_10.png)<br/><br/>
 
 More information regarding result decryption can be read [here](../../guide/central/desktop_app.md#decrypt-results).
 The decrypted files can be accessed from your explorer or finder locally.
