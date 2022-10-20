@@ -8,13 +8,13 @@ been registered in the UI.**
 Visit the [station repository](https://github.com/PHT-Medic/station) to view the code
 (the installation instructions can also be found here).
 
-### Requirements
+## Requirements
 
 * [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) need to
   be installed.<br>
 * For the default installation to work the ports `8080` and `5432` need to be available on localhost.
 
-### Install with docker-compose
+## Install with docker-compose
 
 1. Clone the repository: ```git clone https://github.com/PHT-Medic/station.git```
 
@@ -44,16 +44,16 @@ Visit the [station repository](https://github.com/PHT-Medic/station) to view the
 4. Create a volume for the station: ```docker volume create pg_station```
 5. Build the images by running: ```docker-compose build```
 
-### First steps with running the station
+## First steps with running the station
 
 1. Run ```docker-compose up -d```
 2. Check that the logs do not contain any startup errors with ```docker-compose logs -f```
 3. Go to ```http://localhost:8080``` nd check whether you can see the web interface of Apache Airflow
 4. Login to the airflow web interface with the previously set user credentials
 
-### Troubleshooting/F.A.Q.
+## Troubleshooting/F.A.Q.
 
-#### I don't have a private key
+### I don't have a private key
 
 Generate a new key using [open-ssl](https://www.openssl.org/):
 
@@ -69,7 +69,7 @@ openssl rsa -in key.pem -outform PEM -pubout -out public.pem
 
 and then register this key in the UI.
 
-#### Windows installation
+### Windows installation
 
 If you are on a Windows Computer you need to change the line seperator to the **Unix/macOS**-style for the airflow
 directory. In Pycharm you can follow these steps:
@@ -78,7 +78,7 @@ directory. In Pycharm you can follow these steps:
 2. Click on File in the top-left corner
 3. Click on File Properties -> Line Separators -> LF - Unix and maxOS (\n)
 
-#### Using pre-built images
+### Using pre-built images
 
 If you want to use custom dags in airflow, you will have to change the  docker-compose.yml; instated of pulling the latest pre-build airflow image; you have to build airflow locally. This is done by commenting out the  "build: './airflow' "  line and uncommenting the "  image: ghcr.io/pht-medic/station-airflow:latest"  line 
 
@@ -98,3 +98,9 @@ services:
 ### Changing Airflow admin password/user
 
 Changing the Airflow admin password/user in the env file after the build is not directly possible. Either use Airflow UI to change the password or delete the airflow volume and rebuild after the change.
+
+## Running airflow behind a reverse proxy
+Edit the airflow configuration in `airflow/airflow.cfg` according to the instructions found [here](https://airflow.apache.org/docs/apache-airflow/stable/howto/run-behind-proxy.html)
+Set forwarding in your reverse proxy (nginx for example) to access the airflow instance running on ```http://127.0.0.1:8080```
+After updating the configuration stop the instance if it is running (```docker-compose down```) and restart it after rebuilding the image
+(```docker-compose up --build -d```).
