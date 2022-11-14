@@ -6,7 +6,7 @@ import{_ as e,o as t,c as a,f as n}from"./app.28c9cc87.js";const f=JSON.parse(`{
 <span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;"># replace with the build command</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">build</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">./airflow</span><span style="color:#89DDFF;">&#39;</span></span>
 <span class="line"><span style="color:#89DDFF;">    </span><span style="color:#676E95;"># remove the image command</span></span>
-<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">image</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">ghcr.io/pht-medic/station-airflow:latest</span></span>
+<span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">image</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">ghcr.io/pht-medic/airflow:latest</span></span>
 <span class="line"><span style="color:#A6ACCD;">    </span><span style="color:#F07178;">volumes</span><span style="color:#89DDFF;">:</span></span>
 <span class="line"><span style="color:#A6ACCD;">      </span><span style="color:#89DDFF;">-</span><span style="color:#A6ACCD;"> </span><span style="color:#C3E88D;">/var/run/docker.sock:/var/run/docker.sock</span></span>
 <span class="line"><span style="color:#676E95;"># ------------- ommitted ------------</span></span>
