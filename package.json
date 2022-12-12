@@ -21,7 +21,7 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "@tada5hi/eslint-config-vue-typescript": "^1.0.8",
+        "@tada5hi/eslint-config-vue-typescript": "^1.0.10",
         "eslint": "^8.24.0",
         "np": "^7.6.0",
         "rimraf": "^3.0.2",
