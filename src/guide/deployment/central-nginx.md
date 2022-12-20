@@ -7,10 +7,54 @@ For harbor, we create a new file (e.g. `harbor`) in the directory `/etc/nginx/si
 
 ::: warning Info
 Don't forget to replace the placeholders with the actual values:
-- harbor.example.com
+
+- `[HARBOR_DOMAIN]`: Domain name (e.g. harbor.example.com)
+- `[HARBOR_ADDRESS]`: Ip Address:Port of the harbor instance rev. proxy (e.g. 192.168.1.1:443)
+- `[HARBOR_SSL_CRT]`: Path to certificate file (.crt)
+- `[HARBOR_SSL_KEY]`: Path to certificate key file (.key)
 :::
 
 ```text
+server {
+    server_name [HARBOR_DOMAIN];
+
+    gzip            on;
+    gzip_types      text/plain application/xml text/css application/javascript;
+    gzip_min_length 1000;
+
+    client_max_body_size 0;
+    chunked_transfer_encoding on;
+    
+    listen 443 ssl;
+    ssl_certificate [HARBOR_SSL_CRT];
+    ssl_certificate_key [HARBOR_SSL_KEY];
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    location / {
+        proxy_redirect                      off;
+        proxy_set_header Host               $host;
+        proxy_set_header X-Real-IP          $remote_addr;
+        proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_pass                          [HARBOR_ADDRESS];
+
+        proxy_buffering off;
+        proxy_request_buffering off;
+    }
+
+}
+server {
+    if ($host = [HARBOR_DOMAIN]) {
+        return 301 https://$host$request_uri;
+    }
+
+
+    server_name [HARBOR_DOMAIN];
+    listen 80;
+    return 404;
+
+}
 
 ```
 
