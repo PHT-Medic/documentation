@@ -50,16 +50,18 @@ export default defineConfig({
                 {
                     text: 'Central',
                     items: [
-                        {text: 'Introduction', link: '/guide/deployment/central-introduction'},
-                        {text: 'Nginx', link: '/guide/deployment/central-nginx'},
-                        {text: 'Harbor', link: '/guide/deployment/central-harbor'},
-                        {text: 'App', link: '/guide/deployment/central-app'}
+                        {text: 'Introduction', link: '/guide/deployment/central/central-introduction'},
+                        {text: 'Nginx', link: '/guide/deployment/central/central-nginx'},
+                        {text: 'Harbor', link: '/guide/deployment/central/central-harbor'},
+                        {text: 'App', link: '/guide/deployment/central/central-app'}
                     ]
                 },
                 {
                     text: 'Station',
                     items: [
-
+                        {text: 'Introduction', link: '/guide/deployment/station/station-introduction'},
+                        {text: 'Central Setup', link: '/guide/deployment/station/station-central-setup'},
+                        {text: 'Installation', link: '/guide/deployment/station/station-installation'},
                     ]
                 }
             ],

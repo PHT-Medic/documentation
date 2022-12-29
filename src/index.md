@@ -9,7 +9,7 @@ hero:
       text: User Guide
       link: /guide/user/
     - theme: brand
-      text: Installation Guide
+      text: Deployment Guide
       link: /guide/deployment/
     - theme: alt
       text: View on GitHub
