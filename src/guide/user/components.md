@@ -41,6 +41,9 @@ platform of the PHT. Trains are defined as images which are distributed between 
 For securely storing sensitive user or train data as key-value pairs we utilize [Vault](https://www.vaultproject.io/)
 by Hashicorp as secret storage for our central services.
 
+#### RabbitMQ
+RabbitMQ is used as message broker for the communication between microservices.
+
 ### Local/Station
 #### Apache Airflow
 [Apache Airflow](https://airflow.apache.org/) is an open source, community developed platform to programmatically author,
@@ -51,9 +54,9 @@ To overcome local setup differences between stations, the PHT provides controlle
 We support the  [IBM FHIR Server](https://hub.docker.com/r/ibmcom/ibm-fhir-server), [Blaze](https://github.com/samply/blaze)
 and [HAPI](https://hapifhir.io) server. University hospital Tübingen is using the IBM FHIR server.
 
-#### Keycloak
-A user within the central user interface has always to be associated to a station. Each station can independently use different IAMs.
-We in Tübingen use [Keycloak](https://hub.docker.com/r/jboss/keycloak/) for our user management.
+#### IAM
+A user within the central user interface is always associated to a station. Each station can independently use different IAMs.
+We in Tübingen use [Keycloak](https://hub.docker.com/r/jboss/keycloak/) for our identity management.
 
 
 ## Credits
