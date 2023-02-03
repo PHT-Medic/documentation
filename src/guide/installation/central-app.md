@@ -18,7 +18,7 @@ Therefore, run the command `dpkg-reconfigure dash` to make the adjustment if nec
 ## Installation
 ```shell
 git clone https://github.com/PHT-Medic/central-deployment
-cd central-deployment
+cd central-installation
 ```
 
 ## Configuration

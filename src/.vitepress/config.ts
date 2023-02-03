@@ -27,8 +27,8 @@ export default defineConfig({
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
-                    { text: 'User', link: '/guide/user/index'},
-                    { text: 'Deployment', link: '/guide/deployment/index'}
+                    { text: 'analyst', link: '/guide/user/index'},
+                    { text: 'Deployment', link: '/guide/installation/index'}
                 ]
             },
             {
@@ -40,20 +40,31 @@ export default defineConfig({
             }
         ],
         sidebar: {
+            '/guide/introduction': [
+                {
+                    text: 'Introduction',
+                    items: [
+                        { text: 'Introduction', link: '/guide/introduction/index' },
+                    ]
+                }
+            ]
+
+        },
+        sidebar: {
             '/guide/deployment': [
                 {
                     text: 'Deployment-Guide',
                     items: [
-                        {text: 'Introduction', link: '/guide/deployment/index'},
+                        {text: 'Introduction', link: '/guide/installation/index'},
                     ]
                 },
                 {
                     text: 'Central',
                     items: [
-                        {text: 'Introduction', link: '/guide/deployment/central-introduction'},
-                        {text: 'Nginx', link: '/guide/deployment/central-nginx'},
-                        {text: 'Harbor', link: '/guide/deployment/central-harbor'},
-                        {text: 'App', link: '/guide/deployment/central-app'}
+                        {text: 'Introduction', link: '/guide/installation/central-introduction'},
+                        {text: 'Nginx', link: '/guide/installation/central-nginx'},
+                        {text: 'Harbor', link: '/guide/installation/central-harbor'},
+                        {text: 'App', link: '/guide/installation/central-app'}
                     ]
                 },
                 {
