@@ -7,16 +7,13 @@ hero:
   actions:
     - theme: brand
       text: Introduction
-      link: /guide/user/
+      link: /guide/introduction/
     - theme: brand
-      text: Analyst Guide
-      link: /guide/deployment/
+      text: Analyst
+      link: /guide/analyst/
     - theme: brand
-      text: Station Admin Guide
-      link: /guide/deployment/
-    - theme: brand
-      text: Installation Guide
-      link: /guide/deployment/
+      text: Admin
+      link: /guide/admin/
     - theme: alt
       text: View on GitHub
       link: https://github.com/PHT-Medic
