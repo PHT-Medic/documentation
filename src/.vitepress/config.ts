@@ -27,8 +27,10 @@ export default defineConfig({
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
-                    { text: 'User', link: '/guide/user/index'},
-                    { text: 'Deployment', link: '/guide/deployment/index'}
+                    { text: 'Introduction', link: '/guide/introduction/index' },
+                    { text: 'Analyst', link: '/guide/analyst/setup'},
+                    { text: 'Admin', link: '/guide/admin/index'},
+                    { text: 'Installation', link: '/guide/installation/index'},
                 ]
             },
             {
@@ -40,58 +42,56 @@ export default defineConfig({
             }
         ],
         sidebar: {
-            '/guide/deployment': [
+             '/guide': [
                 {
-                    text: 'Deployment-Guide',
+                    text: 'Introduction',
                     items: [
-                        {text: 'Introduction', link: '/guide/deployment/index'},
-                    ]
-                },
-                {
-                    text: 'Central',
-                    items: [
-                        {text: 'Introduction', link: '/guide/deployment/central-introduction'},
-                        {text: 'Nginx', link: '/guide/deployment/central-nginx'},
-                        {text: 'Harbor', link: '/guide/deployment/central-harbor'},
-                        {text: 'App', link: '/guide/deployment/central-app'}
-                    ]
-                },
-                {
-                    text: 'Station',
-                    items: [
+                        { text: 'Overview', link: '/guide/introduction/index' },
+                        { text: 'Components', link: '/guide/introduction/components' },
+                        { text: 'Trains', link: '/guide/introduction/trains' },
+                        { text: 'FHIR', link: '/guide/introduction/fhir' },
 
                     ]
+                },
+                 {
+                    text: 'Analyst',
+                    items: [
+                        {text: 'Setup / Configuration', link: '/guide/analyst/setup'},
+                        {text: 'Train creation', link: '/guide/analyst/train_admin'},
+                        {text: 'Result extraction', link: '/guide/analyst/results'},
+                    ]
+                },
+                 {
+                    text: 'Admin',
+                    collapsible: false,
+                    items: [
+                        {text: 'Central', link: '/guide/admin/index'},
+                        {text: 'Station setup', link: '/guide/admin/index'},
+                        {text: 'Proposal review', link: '/guide/admin/index'},
+                        {text: 'Train review', link: '/guide/admin/index'},
+                        {text: 'Train execution', link: '/guide/admin/index'},
+                    ]
+                },
+                {
+                    text: 'Station Installation',
+                    items: [
+                        {text: 'Central', link: '/guide/analyst/index'},
+                        {text: 'Installation', link: '/guide/analyst/index'},
+                    ]
+                },
+                {
+                    text: 'Central Installation',
+                    items: [
+                        {text: 'Introduction', link: '/guide/analyst/index'},
+                        {text: 'Nginx', link: '/guide/analyst/index'},
+                        {text: 'Harbor', link: '/guide/analyst/index'},
+                        {text: 'App', link: '/guide/analyst/index'},
+                    ]
                 }
+
+
             ],
-            '/guide/user/': [
-                {
-                    text: 'User-Guide',
-                    collapsible: false,
-                    items: [
-                        {text: 'Introduction', link: '/guide/user/index'},
-                        {text: 'Components', link: '/guide/user/components'},
-                        {text: 'Trains', link: '/guide/user/trains'},
-                        {text: 'FHIR', link: '/guide/user/fhir'},
-                    ]
-                },
-                {
-                    text: 'Central',
-                    collapsible: false,
-                    items: [
-                        {text: 'UI', link: '/guide/user/central/user_interface'},
-                        {text: 'DesktopApp', link: '/guide/user/central/desktop_app'}
-                    ]
-                },
-                {
-                    text: 'Station',
-                    collapsible: false,
-                    items: [
-                        {text: 'Central UI', link: '/guide/user/station/central_ui'},
-                        {text: 'Installation', link: '/guide/user/station/installation'},
-                        {text: 'Usage', link: '/guide/user/station/usage'},
-                    ]
-                }
-            ]
+
         }
     }
 });

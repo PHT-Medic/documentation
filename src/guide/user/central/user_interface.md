@@ -133,7 +133,7 @@ Click on **Next** to continue.
 
 In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
-You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../fhir.md)
+You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../../introduction/fhir.md)
 
 Here we used an example query from the FHIR Query documentation. 
 
@@ -143,7 +143,7 @@ Here we used an example query from the FHIR Query documentation.
 
 One of the last steps it is to create a hash of the train started by this station. For this you need to generate the hash-value. (This could take some time)
 
-After the hash value was generated, copy it and perform the signature on this with your private key. For this action you need to download and install the Offline Tool. How this signature is performed you can read it in this documentation under the section [User Guide -> Desktop App (Offline Tool)](desktop_app.md)
+After the hash value was generated, copy it and perform the signature on this with your private key. For this action you need to download and install the Offline Tool. How this signature is performed you can read it in this documentation under the section [User Guide -> Desktop App (Offline Tool)](../../analyst/desktop_app.md)
 
 The final signature from the Offline App you need to the textfield **Signed Hash**.
 
@@ -161,6 +161,6 @@ After a successful build train you can **Run** the train, which starts visiting 
 
 Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../station/usage.md)
 
-After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](desktop_app.md) again.
+After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](../../analyst/desktop_app.md) again.
 
 [![Train: Start train](/images/ui_images/train_6.png)](/images/ui_images/train_6.png)

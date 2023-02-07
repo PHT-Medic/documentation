@@ -6,11 +6,14 @@ hero:
   tagline: The production-ready DIFUTURE implementation of the Personal Health Train (PHT-meDIC) from Tübingen University as part of the PHT GO:FAIR implementation network
   actions:
     - theme: brand
-      text: User Guide
-      link: /guide/user/
+      text: Introduction
+      link: /guide/introduction/
     - theme: brand
-      text: Installation Guide
-      link: /guide/deployment/
+      text: Analyst
+      link: /guide/analyst/
+    - theme: brand
+      text: Admin
+      link: /guide/admin/
     - theme: alt
       text: View on GitHub
       link: https://github.com/PHT-Medic
