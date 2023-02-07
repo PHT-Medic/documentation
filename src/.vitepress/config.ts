@@ -57,8 +57,9 @@ export default defineConfig({
                     text: 'Analyst',
                     items: [
                         {text: 'Setup / Configuration', link: '/guide/analyst/setup'},
-                        {text: 'Train creation', link: '/guide/analyst/train_admin'},
-                        {text: 'Result extraction', link: '/guide/analyst/results'},
+                        {text: 'Train Creation', link: '/guide/analyst/train_analyst'},
+                        {text: 'Result Extraction', link: '/guide/analyst/result'},
+                        {text: 'Other Train Options ', link: '/guide/analyst/other_features'},
                     ]
                 },
                  {
@@ -66,10 +67,10 @@ export default defineConfig({
                     collapsible: false,
                     items: [
                         {text: 'Central', link: '/guide/admin/index'},
-                        {text: 'Station setup', link: '/guide/admin/index'},
-                        {text: 'Proposal review', link: '/guide/admin/index'},
-                        {text: 'Train review', link: '/guide/admin/index'},
-                        {text: 'Train execution', link: '/guide/admin/index'},
+                        {text: 'Station Setup', link: '/guide/admin/index'},
+                        {text: 'Proposal Review', link: '/guide/admin/index'},
+                        {text: 'Train Review', link: '/guide/admin/index'},
+                        {text: 'Train Execution', link: '/guide/admin/index'},
                     ]
                 },
                 {

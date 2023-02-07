@@ -41,9 +41,9 @@ Generate a new key using [open-ssl](https://www.openssl.org/):
 To perform the signature on a hash value it is necessary that the application knows your keypair (private and public key). (See *Create Keys* above). 
 
 1. In the Menu click on **Signature**.
-2. In the **Hash** textfield you should paste the generated HashKey from step 2.6 in [User Guide -> User interface](../user/central/user_interface.md).
+2. In the **Hash** textfield you should paste the generated HashKey from step 2.6 in [User Guide -> User interface](../admin/central.md).
 3. Click on **Sign**.
-4. Copy the signed hash from the **Signature (read only)** textfield and proceed step 2.6 in [User Guide -> User interface](../user/central/user_interface.md).
+4. Copy the signed hash from the **Signature (read only)** textfield and proceed step 2.6 in [User Guide -> User interface](../admin/central.md).
       [![Offline Tool Signature](/images/offline_tool_images/Signature.png)](/images/offline_tool_images/Signature.png)
 
 ## Decrypt results
