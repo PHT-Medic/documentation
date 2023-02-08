@@ -41,7 +41,6 @@ For this we have three stages:
 
 ## Train submission
 
-
 ### Create a new train
 In the **Home** section you can choose **Trains** in the menu on the left-hand side. You will lead to the **Outgoing** page where you can switch to the creation form via the **Create** button inbetween the menu and the overview-list.
 ####  Define pre-parameters of the new train
@@ -128,11 +127,22 @@ Click on **Next** to finish the configuration step.
 
 [![Train: Create Hash and Signature](/images/ui_images/train_5.png)](/images/ui_images/train_5.png)
 
-### 
+###  Train Approval 
 
+Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. See the [Admin Guide](../admin/central) for details on how the approval process works.
+
+### Finding the Train 
+
+Your train can be found in several ways after it is created.
+
+ - In the **Home** section, you can choose **Trains** in the menu on the left-hand side. All your trains and their current status are listed under *Outgoing**.
+ - If you have several trains for different proposals, it may be helpful to find them under proposals. To do this, go to the **Home** section and select **Proposals** from the menu on the left. There you will find your list of proposals. Select the one your train is using and select **Trains** from the proposals menu below the proposals name. You will then see a list of all the trains for that proposal.
+
+ Selecting the name of the train will take you to the train overview.  Here you can view the status and start the build and run.
 ### Start the train
 
-At this point the train is ready to be led loose on the track.
+At this point, the train is ready to be led loose on the track.
+
 
 You can start the train by firstly build the whole train together (by clicking on the green **start**-button next to **Build**).
 
