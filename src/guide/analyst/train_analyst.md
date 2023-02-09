@@ -1,4 +1,3 @@
-
 # Train Creation
 Before creating a new train, we first have to create a proposal. If there is a Proposal your train can use, you can continue with the [Train setup](#train-setup) step.
 
@@ -139,6 +138,7 @@ Your train can be found in several ways after it is created.
  - If you have several trains for different proposals, it may be helpful to find them under proposals. To do this, go to the **Home** section and select **Proposals** from the menu on the left. There you will find your list of proposals. Select the one your train is using and select **Trains** from the proposals menu below the proposals name. You will then see a list of all the trains for that proposal.
 
  Selecting the name of the train will take you to the train overview.  Here you can view the status and start the build and run.
+
 ### Start the train
 
 At this point, the train is ready to be led loose on the track.
@@ -149,5 +149,6 @@ You can start the train by firstly build the whole train together (by clicking o
 After a successful build train you can **Run** the train, which starts visiting the stations and perform your code.
 
 Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../user/station/usage.md)
+
 
 After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](../analyst/train_analyst.md) again.

@@ -1,4 +1,4 @@
-# Analyst Introduction
+# Setup / Configuration
 As an Analyst, you will interact with two of the components of the PHT. The [Central services](#central-services), where you can create [Trains](/guide/introduction/trains.md) and see their status,
 and the [Desktop APP](#desktop-app), where you can create your keys, sign your trains, and decrypt the results of your train. 
 In this guide, we will show you step-by-step how to install the desktop app and create your user in the central instance. Then, we will show you how to make your first train and download the results.   

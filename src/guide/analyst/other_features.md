@@ -1,4 +1,4 @@
-# Train With  Homomorphic Encryption
+# Other Train Options
 
 ## Homomorphic Keys
 If you want to create a train that uses Homomorphic encryption, you will have to create a *homomorphic key-pair*; this is done similarly.
