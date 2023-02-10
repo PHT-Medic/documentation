@@ -1,4 +1,7 @@
 # Other Train Options
+## Homomorphic Encryption
+
+You can use homomorphic encryption if your analysis requires data to be visible only in a globally aggregated state. In a normal train, the stations can see the intermediate results from the stations running before them. 
 
 ## Homomorphic Keys
 If you want to create a train that uses Homomorphic encryption, you will have to create a *homomorphic key-pair*; this is done similarly.
