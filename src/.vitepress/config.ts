@@ -4,6 +4,7 @@ export default defineConfig({
     title: 'PersonalHealthTrain',
     base: '/',
     themeConfig: {
+
         socialLinks: [
             { icon: 'github', link: 'https://github.com/PHT-Medic/documentation' },
             { icon: 'discord', link: 'https://discord.gg/vEsUaEFBVE' },
@@ -22,6 +23,7 @@ export default defineConfig({
                 text: 'Home',
                 link: '/',
                 activeMatch: '/',
+
             },
             {
                 text: 'Guide',
@@ -59,7 +61,7 @@ export default defineConfig({
                         {text: 'Setup / Configuration', link: '/guide/analyst/setup'},
                         {text: 'Train Creation', link: '/guide/analyst/train_analyst'},
                         {text: 'Result Extraction', link: '/guide/analyst/result'},
-                        {text: 'Other Train Options ', link: '/guide/analyst/other_features'},
+                        {text: 'Train Options ', link: '/guide/analyst/other_features'},
                     ]
                 },
                  {

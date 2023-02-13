@@ -10,7 +10,7 @@ hero:
       link: /guide/introduction/
     - theme: brand
       text: Analyst
-      link: /guide/analyst/
+      link: /guide/analyst/setup
     - theme: brand
       text: Admin
       link: /guide/admin/
