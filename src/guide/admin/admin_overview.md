@@ -13,4 +13,4 @@ but also the submission of analysis-trains and consequently receiving encrypted 
 
 ## What is the station software?
 
-
+Station is the software that runs the trains in the selected clinics.

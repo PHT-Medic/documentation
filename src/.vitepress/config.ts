@@ -59,6 +59,7 @@ export default defineConfig({
                     text: 'Analyst',
                     items: [
                         {text: 'Setup / Configuration', link: '/guide/analyst/setup'},
+                        {text: 'Proposal Creation', link: '/guide/analyst/proposal_analyst'},
                         {text: 'Train Creation', link: '/guide/analyst/train_analyst'},
                         {text: 'Result Extraction', link: '/guide/analyst/result'},
                         {text: 'Train Options ', link: '/guide/analyst/other_features'},
