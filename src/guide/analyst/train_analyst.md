@@ -111,7 +111,7 @@ You can start the train by firstly build the whole train together (by clicking o
 
 After a successful build train you can **Run** the train, which starts visiting the stations and perform your code.
 
-Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../user/station/usage.md)
+Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../admin/usage.md)
 
 
 After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](../analyst/train_analyst.md) again.
