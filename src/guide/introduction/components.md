@@ -8,34 +8,40 @@ Multiple git repositories contain the components of the PHT. These can be roughl
 All *public* repositories can be found on [GitHub](https://github.com/PHT-Medic).
 
 ### Global
-Global components/services are neither used exclusive on central nor local/station side.
+Global components/services are neither used exclusively on the central nor local/station side.
+They currently include the Train Container Library, which implements all functions related to the validation and 
+interaction with the PHT train images/containers.
 
 |           Service            |                                     Repository                                      | Programing Language | Lead                                |
 |:----------------------------:|:-----------------------------------------------------------------------------------:|:-------------------:|:------------------------------------|
 | **Train Container Library**  | [Train-Container-Library](https://github.com/PHT-Medic/train-container-library.git) |       Python        | [migraf](https://github.com/migraf) |
 
 ### Central
-Central components/services (Central UI, Train building, Train Routing, Result Extraction, API, etc.) are individual packages within one monorepo.
+Central components/services are individual packages within one monorepo. They include the implementation of the Central 
+UI, Train Building, Train Routing, Result Extraction, API, etc., which supply the core functions of the PHT.
 
 |            Service            |                   Repository                    |  Programing Language  | Lead                                  |
 |:-----------------------------:|:-----------------------------------------------:|:---------------------:|:--------------------------------------|
 |          **Central**          | [Central](https://github.com/PHT-Medic/central) | JavaScript/TypeScript | [tada5hi](https://github.com/tada5hi) |
 
 ### Local/Station
+Local/Station components/services are packages utilized in local setups by analysts and administrators. The Station 
+repository is used to set up local stations by administrators. The Desktop App implements a released version of
+the local PHT tool, necessary for the encryption of stations and signing/decryption of trains.
 
 |           Service           |                                     Repository                                     | Programing Language   | Lead                                  |
 |:---------------------------:|:----------------------------------------------------------------------------------:|:----------------------|:--------------------------------------|
 |         **Station**         |                  [Station](https://github.com/PHT-Medic/station)                   | Python                | [migraf](https://github.com/migraf)   |
 |       **Desktop App**       |              [Desktop-App](https://github.com/PHT-Medic/desktop-app)               | JavaScript/TypeScript | [tada5hi](https://github.com/tada5hi) |
 
-## Third Party Services
+## Third-Party Services
 The PHT relies heavily on other great open-source projects. Not only as libraries but also as standalone components of
-our architecture.
+the architecture.
 
 ### Central
 #### Harbor
 The container registry provided by the [Harbor project](https://goharbor.io/) is the central data/algorithm exchange 
-platform of the PHT. Trains are defined as images which are distributed between the participants private harbor projects.
+platform of the PHT. Trains are defined as images distributed between the participant's private harbor projects.
 
 #### Vault
 For securely storing sensitive user or train data as key-value pairs we utilize [Vault](https://www.vaultproject.io/)

@@ -1,5 +1,5 @@
 # Train Creation
-Before we can create a new train, we must first create a proposal. If there is no proposal that your train can use, you have created a [Proposal](#train-setup).
+Important: Before we can create a new train, we must have an available proposal. If there is none, we have to create a new [Proposal](#train-setup) first.
 
 ## Train submission
 
