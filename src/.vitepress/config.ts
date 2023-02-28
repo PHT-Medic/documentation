@@ -86,10 +86,10 @@ export default defineConfig({
                 {
                     text: 'Central Installation',
                     items: [
-                        {text: 'Introduction', link: '/guide/analyst/index'},
-                        {text: 'Nginx', link: '/guide/analyst/index'},
-                        {text: 'Harbor', link: '/guide/analyst/index'},
-                        {text: 'App', link: '/guide/analyst/index'},
+                        {text: 'Introduction', link: '/guide/deployment/central-introduction'},
+                        {text: 'Nginx', link: '/guide/deployment/central-nginx'},
+                        {text: 'Harbor', link: '/guide/deployment/central-harbor'},
+                        {text: 'App', link: '/guide/deployment/central-app'},
                     ]
                 }
 
