@@ -69,11 +69,8 @@ export default defineConfig({
                     text: 'Admin',
                     collapsible: false,
                     items: [
-                        {text: 'Central', link: '/guide/admin/index'},
-                        {text: 'Station Setup', link: '/guide/admin/index'},
-                        {text: 'Proposal Review', link: '/guide/admin/index'},
-                        {text: 'Train Review', link: '/guide/admin/index'},
-                        {text: 'Train Execution', link: '/guide/admin/index'},
+                        {text: 'Central', link: '/guide/admin/central.md'},
+                        {text: 'Station Setup', link: '/guide/admin/index'}
                     ]
                 },
                 {
