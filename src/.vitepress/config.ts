@@ -31,8 +31,9 @@ export default defineConfig({
                 items: [
                     { text: 'Introduction', link: '/guide/introduction/index' },
                     { text: 'Analyst', link: '/guide/analyst/setup'},
-                    { text: 'Admin', link: '/guide/admin/index'},
-                    { text: 'Installation', link: '/guide/installation/index'},
+                    { text: 'Admin', link: '/guide/admin/admin_overview'},
+                    { text: 'Station Installation', link: '/guide/installation/station/installation'},
+                    { text: 'Central Installation', link: '/guide/deployment/central-introduction'},
                 ]
             },
             {
@@ -67,17 +68,16 @@ export default defineConfig({
                 },
                  {
                     text: 'Admin',
-                    collapsible: false,
                     items: [
-                        {text: 'Central', link: '/guide/admin/central.md'},
+                        {text: 'Overview', link: '/guide/admin/admin_overview'},
+                        {text: 'Central', link: '/guide/admin/central'},
                         {text: 'Station Setup', link: '/guide/admin/index'}
                     ]
                 },
                 {
                     text: 'Station Installation',
                     items: [
-                        {text: 'Central', link: '/guide/analyst/index'},
-                        {text: 'Installation', link: '/guide/analyst/index'},
+                        {text: 'Installation', link: '/guide/installation/station/installation'},
                     ]
                 },
                 {

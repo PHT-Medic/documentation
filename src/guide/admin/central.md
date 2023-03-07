@@ -1,6 +1,11 @@
 # Central
+In order to manage the stations settings the user needs to be assigned the **Station Authority** role.
 
-## Realm management
+::: warning IMPORTANT
+When changing the settings of your station in the central UI you need to restart your local station. 
+:::
+
+## Realm Management
 In order to set a OIDC provider and manage your stations you need to get an organization. Please contact us,
 such we can provide you a realm in which you can manage all your stations, users and identity providers.
 
@@ -129,7 +134,7 @@ e-mail address for the new user account have to be given.
 ### Identity Providers
 
 
-## Proposal review
+## Proposal Review
 A Proposal is an organizational unit in the PHT, which represents the collaboration between different participants in regard to a specific research or analysis project.  
 It contains an initial risk assessment as well as a high level description of the requested data.
 
@@ -148,7 +153,7 @@ a study proposal for analysis. In order to do such, click on the **list**-icon o
 [![Proposal Creation](/images/ui_images/proposal_approve.png)](/images/ui_images/proposal_approve.png)
 
 
-## Train review
+## Train Review
 As a station administrator, you have a very important role when it comes to trains: If your station was part of a 
 fully approved proposal the analyst user who set it up is able to create trains with your station as a halt. Upon its 
 execution, it will naturally make a stop at your station requiring approval. Here, you may review the analysis code and
