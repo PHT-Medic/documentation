@@ -1,5 +1,7 @@
 # Introduction 
-
+::: warning Info
+This section is only required if you want to use the PHT-meDIC software completely independently of the PHT infrastructure provided by  https://app.personalhealthtrain.de/
+:::
 ## Requirements
 The following guide is based on some shared assumptions:
 
