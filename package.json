@@ -28,7 +28,7 @@
         "typescript": "^4.9.4"
     },
     "dependencies": {
-        "vitepress": "^1.0.0-alpha.38",
+        "vitepress": "^1.0.0-alpha.59",
         "vue": "^3.2.40"
     }
 }
