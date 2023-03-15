@@ -41,10 +41,8 @@ export default defineConfig({
                     text: 'Overview',
                     items: [
                         { text: 'Introduction', link: '/guide/user/' },
-                        { text: 'Components', link: '/guide/user/components' },
-                        { text: 'Trains', link: '/guide/user/trains' },
-                        { text: 'FHIR', link: '/guide/user/fhir' },
-
+                        { text: 'Architecture', link: '/guide/user/architecture' },
+                        { text: 'Components', link: '/guide/user/components' }
                     ]
                 },
                 {
@@ -52,9 +50,16 @@ export default defineConfig({
                     items: [
                         {text: 'Setup / Configuration', link: '/guide/user/setup'},
                         {text: 'Proposal Creation', link: '/guide/user/proposal'},
+                        {text: 'Train Definition', link: '/guide/user/train-definition'},
                         {text: 'Train Creation', link: '/guide/user/train-creation'},
                         {text: 'Result Extraction', link: '/guide/user/result'},
                         {text: 'Train Options ', link: '/guide/user/other_features'},
+                    ]
+                },
+                {
+                    text: 'Concepts',
+                    items: [
+                        { text: 'FHIR Query', link: '/guide/user/fhir-query' },
                     ]
                 }
             ],
