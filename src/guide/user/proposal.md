@@ -1,4 +1,4 @@
-# Proposals
+# Proposal
 A Proposal is an organizational unit in the context of the PHT, which represents the collaboration between different participants in 
 regard to a specific research or analysis project. It contains an initial risk assessment as well as a high level 
 description of the requested data.
@@ -31,7 +31,7 @@ text block.
 
 After clicking on the Create-button the proposal will be sent to all the selected stations, so each side can either 
 approve or reject the analysis. How the approval process works from the perspective of a realm admin, see the 
-[admin guide](/guide/admin/central).
+[admin guide](../admin/central.md).
 
 [![Proposal create](/images/ui_images/proposal_create.png)](/images/ui_images/proposal_create.png)
 
@@ -51,6 +51,6 @@ performed on a lot of personal information of only a few participants. Overall t
 when the FHIR-Servers provide enough privacy-preserving measurements such as pseudonymization or anonymization.
 
 
-With this you can now finally start creating [trains](/guide/analyst/train_analyst).
+With this you can now finally start creating [trains](./train-creation.md).
 
 

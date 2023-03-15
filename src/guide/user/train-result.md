@@ -1,4 +1,4 @@
-# Result Extraction
+# Train Result
 
 ## Download 
 
@@ -10,7 +10,7 @@ This will start the download of a tar file. The name of the file is your train I
 
 The results file is encrypted with the public key you selected during setup. In order for the Desktop APP to decrypt the results, it is necessary to load the same key pair that you used to set up the train.
 
-1.  Load the RSA key pair, see [Setup -> Load keys](setup.md#load-keys)
+1.  Load the RSA key pair, see [Setup -> Load keys](requirements.md#load-keys)
 
 2.  Click on **results** on the menu. 
       

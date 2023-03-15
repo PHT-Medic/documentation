@@ -62,7 +62,7 @@ DOMAIN and REALM_NAME need to be edited.
 ## Station Management
 ### Station Setup
 Before going deeper into the next steps make sure that your local Station Setup is ready. If it is not, follow the steps
-found [here](/guide/installation/station/installation).
+found [here](./../deployment/station.md).
 
 ### Registering/Updating a public key
 1. Within the admin area (top left, next to Home), you need to select **Auth -> Realms** within the left navigation.

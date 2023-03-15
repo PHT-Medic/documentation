@@ -28,7 +28,7 @@ We suggest to you to follow these steps:
 
 ### Step 2 - Offline Tool and key loading
  Get familiar with its functionalities. Additional information can be found in the
-[DesktopApp documentation](../../guide/analyst/train_analyst.md).
+[DesktopApp documentation](../../guide/user/train-creation.md).
 
 You need to download and use the [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys) in order 
 to decrypt the analysis results.
@@ -80,7 +80,7 @@ The next steps guide you through the general submission process, exemplified by 
    <br/><br/>![submission 3](/images/demo/submission_3.png)<br/><br/>
 8. Specify the query
    <br/><br/>![submission 4](/images/demo/submission_4.png)<br/><br/>
-9. Sign the hash with the local Offline Tool: [Documentation](../../guide/analyst/train_analyst.md#sign-hash)
+9. Sign the hash with the desktop app
    <br/><br/> ![submission 5](/images/demo/submission_5.png)<br/><br/>
 
 
@@ -118,7 +118,7 @@ Please follow these steps:
 You can directly access them with the "Show decrypted files" button.
    <br/><br/> ![submission 10](/images/demo/submission_10.png)<br/><br/>
 
-More information regarding result decryption can be read [here](../../guide/analyst/train_analyst.md#decrypt-results).
+More information regarding result decryption can be read [here](./../../guide/user/train-result.md#decrypt).
 The decrypted files can be accessed from your explorer or finder locally.
 
 ## FAQ

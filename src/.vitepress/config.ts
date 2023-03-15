@@ -22,7 +22,7 @@ export default defineConfig({
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
-                    { text: 'User', link: '/guide/user/setup'},
+                    { text: 'User', link: '/guide/user/'},
                     { text: 'Admin', link: '/guide/admin/overview'},
                     { text: 'Deployment', link: '/guide/deployment/index'},
                 ]
@@ -48,18 +48,18 @@ export default defineConfig({
                 {
                     text: 'Getting Started',
                     items: [
-                        {text: 'Setup / Configuration', link: '/guide/user/setup'},
-                        {text: 'Proposal Creation', link: '/guide/user/proposal'},
+                        {text: 'Requirements', link: '/guide/user/requirements'},
+                        {text: 'Proposal', link: '/guide/user/proposal'},
                         {text: 'Train Definition', link: '/guide/user/train-definition'},
                         {text: 'Train Creation', link: '/guide/user/train-creation'},
-                        {text: 'Result Extraction', link: '/guide/user/result'},
-                        {text: 'Train Options ', link: '/guide/user/other_features'},
+                        {text: 'Train Result', link: '/guide/user/train-result'},
                     ]
                 },
                 {
                     text: 'Concepts',
                     items: [
                         { text: 'FHIR Query', link: '/guide/user/fhir-query' },
+                        { text: 'Homomorphic Encryption', link: '/guide/user/homomorphic-encryption' },
                     ]
                 }
             ],

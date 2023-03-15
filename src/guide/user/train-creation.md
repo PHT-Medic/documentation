@@ -1,5 +1,9 @@
 # Train Creation
-Important: Before you can create a new train, you must have an available proposal. If there is none, you have to create a new [Proposal](./proposal.md) first.
+::: warning Important
+Before you can create a new train, a proposal must already exist that was created by you or someone
+else in your organization. Otherwise, one must be created first [here](./proposal).
+:::
+
 
 ## Train submission
 
@@ -75,7 +79,7 @@ One of the last steps is to create a hash of the train started by this station. 
 
 After the hash value was generated, copy the HashKey and perform the signature with your private key. 
 
-The application must know your keypair (private and public key) to perform the signature on a hash value. (See [Create Keys](setup.md#load-keys) when you have restarted the Desktop APP). 
+The application must know your keypair (private and public key) to perform the signature on a hash value. (See [Create Keys](requirements.md#load-keys) when you have restarted the Desktop APP). 
 
 1. In the Menu, click on **Signature**.
 2. In the **Hash** text field, you should paste the generated HashKey
@@ -114,4 +118,4 @@ After a successful build train you can **Run** the train, which starts visiting 
 Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../admin/usage.md)
 
 
-After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](/train.md) again.
+After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, the Desktop App is required.
