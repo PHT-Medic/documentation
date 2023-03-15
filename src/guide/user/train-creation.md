@@ -95,7 +95,7 @@ Click on **Next** to finish the configuration step.
 
 ###  Train Approval 
 
-Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. See the [Admin Guide](../admin/central) for details on how the approval process works.
+Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. See the [Admin Guide](../admin/identity-providers) for details on how the approval process works.
 
 ### Finding the Train 
 

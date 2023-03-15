@@ -31,7 +31,7 @@ text block.
 
 After clicking on the Create-button the proposal will be sent to all the selected stations, so each side can either 
 approve or reject the analysis. How the approval process works from the perspective of a realm admin, see the 
-[admin guide](../admin/central.md).
+[admin guide](../admin/identity-providers.md).
 
 [![Proposal create](/images/ui_images/proposal_create.png)](/images/ui_images/proposal_create.png)
 

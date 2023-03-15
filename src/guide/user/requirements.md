@@ -36,7 +36,7 @@ If you already have made a key-pair, you can load them into the Desktop APP. For
 
 ### PublicKey Upload
 Log into the Central-UI with either the identity provider from your organization or an account that your realm
-admin set up. In the [admin guide](./../admin/central), you can find how the user management and
+admin set up. In the [admin guide](./../admin/identity-providers), you can find how the user management and
 configuration of identity providers is done.
 After signing in for the first time, you should register the public key you generated in the Desktop APP in the Central 
 Services. In the **Home** section press **Settings** in the menu on the left-hand side and then press **Secrets**.

@@ -1,4 +1,4 @@
-# Train Definition
+# Train Coding
 
 This example can be used as `entrypoint.py`, which is namely reference in this documentation.
 

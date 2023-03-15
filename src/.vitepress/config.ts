@@ -23,8 +23,8 @@ export default defineConfig({
                 activeMatch: '/guide/',
                 items: [
                     { text: 'User', link: '/guide/user/'},
-                    { text: 'Admin', link: '/guide/admin/overview'},
-                    { text: 'Deployment', link: '/guide/deployment/index'},
+                    { text: 'Admin', link: '/guide/admin/'},
+                    { text: 'Deployment', link: '/guide/deployment/'},
                 ]
             },
             {
@@ -50,7 +50,7 @@ export default defineConfig({
                     items: [
                         {text: 'Requirements', link: '/guide/user/requirements'},
                         {text: 'Proposal', link: '/guide/user/proposal'},
-                        {text: 'Train Definition', link: '/guide/user/train-definition'},
+                        {text: 'Train Coding', link: '/guide/user/train-coding'},
                         {text: 'Train Creation', link: '/guide/user/train-creation'},
                         {text: 'Train Result', link: '/guide/user/train-result'},
                     ]
@@ -65,11 +65,27 @@ export default defineConfig({
             ],
             '/guide/admin' : [
                 {
-                    text: 'Admin',
+                    text: 'Overview',
                     items: [
-                        {text: 'Overview', link: '/guide/admin/overview'},
-                        {text: 'Central', link: '/guide/admin/central'},
-                        {text: 'Station', link: '/guide/admin/station'},
+                        {text: 'Introduction', link: '/guide/admin/'},
+                    ]
+                },
+                {
+                    text: 'Central',
+                    items: [
+                        {text: 'Identity Providers', link: '/guide/admin/identity-providers'},
+                        {text: 'Users', link: '/guide/admin/users'},
+                        {text: 'Roles', link: '/guide/admin/roles'},
+                        {text: 'Permissions', link: '/guide/admin/permissions'},
+                        {text: 'Proposal Review', link: '/guide/admin/proposal-review'},
+                        {text: 'Train Review', link: '/guide/admin/train-review'},
+                    ]
+                },
+                {
+                    text: 'Station',
+                    items: [
+                        {text: 'Registration', link: '/guide/admin/registration'},
+                        {text: 'Train Execution', link: '/guide/admin/train-execution'}
                     ]
                 },
             ],
