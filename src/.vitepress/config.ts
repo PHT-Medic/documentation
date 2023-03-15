@@ -71,7 +71,7 @@ export default defineConfig({
                     items: [
                         {text: 'Overview', link: '/guide/admin/admin_overview'},
                         {text: 'Central', link: '/guide/admin/central'},
-                        {text: 'Station Setup', link: '/guide/admin/station_setup'},
+                        {text: 'Station', link: '/guide/admin/station'},
                     ]
                 },
                 {

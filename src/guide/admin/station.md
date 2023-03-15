@@ -1,4 +1,37 @@
-# Usage
+# Station 
+## Station Setup
+Stations must be registered with the Central Instance to be added to proposals and become a repository on the Container Register.
+
+### Add a station to Central
+Click on Admin(1) -> General(2) -> Stations(3) -> +Add(4) to create a new station. 
+[![image](/images/ui_images/add_station_central.png)](/images/ui_images/add_station_central.png)
+
+### Station Configuration
+
+You need to set the name of your station, select the ecosystem, if your station is a PHT-Medic station use default and set the public key of the station. 
+This key is not your personal public key, it is the key of the station, how to generate the key is explained in the [installation guide of the station](/guide/installation/station/installation#i-don-t-have-a-private-key).
+Once you have completed all the fields, you can click Create. The registry credentials for your station will appear below.
+
+## Station Management
+### Station Setup
+Before going deeper into the next steps make sure that your local Station Setup is ready. If it is not, follow the steps
+found [here](/guide/installation/station/installation).
+
+### Registering/Updating a public key
+1. Within the admin area (top left, next to Home), you need to select **Auth -> Realms** within the left navigation.
+2. You can see a list of stations. Choose the station you want and click on the blue "List"-Symbol.
+3. In *Station* the public key can be entered into the field *PublicKey*.
+
+### Updating the Station ID
+1. Follow the steps 1 and 2 of "Registering/Updating a public key"
+2. On the same page you can find **SecureID**, which you can adapt.
+   [![image](/images/ui_images/pk_station.png)](/images/ui_images/pk_station.png)
+
+### Setting/Updating harbor username and password
+1. Within the admin area (top left), you need to select **Realms** within the left navigation.
+2. Select the Station you want to edit
+3. In *Harbor* the credentials, project name and path can be modified - webhooks for API communication can be tested.
+   [![image](/images/ui_images/harbor_station.png)](/images/ui_images/harbor_station.png)
 
 ## Getting started with Airflow
 
