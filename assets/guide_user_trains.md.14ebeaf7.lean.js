@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,N as l}from"./chunks/framework.e2c189b6.js";const C=JSON.parse('{"title":"Trains","description":"","frontmatter":{},"headers":[],"relativePath":"guide/user/trains.md"}'),p={name:"guide/user/trains.md"},o=l("",8),e=[o];function t(r,c,D,F,y,A){return a(),n("div",null,e)}const d=s(p,[["render",t]]);export{C as __pageData,d as default};
