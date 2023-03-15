@@ -1,5 +1,5 @@
 # Train Creation
-Important: Before you can create a new train, you must have an available proposal. If there is none, you have to create a new [Proposal](#train-setup) first.
+Important: Before you can create a new train, you must have an available proposal. If there is none, you have to create a new [Proposal](./proposal.md) first.
 
 ## Train submission
 
@@ -63,7 +63,7 @@ Click on **Next** to continue.
 
 In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
-You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../../introduction/fhir.md)
+You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](fhir.md)
 
 Here we used an example query from the FHIR Query documentation. 
 

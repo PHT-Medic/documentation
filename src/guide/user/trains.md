@@ -1,13 +1,6 @@
-# Trains
-This section will provide explanations and example for writing code and queries for PHT trains, it does not
-cover the organizational aspects (such as what stations participate etc.) but focuses on how to write the code that
-will be executed as a train and how to define queries.
-Information on how to build trains and actually send them on their way can be found in the user guide for the
-[UI](../guide/admin/central.md).
+# Train Definition
 
 This example can be used as `entrypoint.py`, which is namely reference in this documentation.
-
-## Defining Trains
 
 ### Example Train
 

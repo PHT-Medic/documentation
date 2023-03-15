@@ -4,7 +4,6 @@ export default defineConfig({
     title: 'PersonalHealthTrain',
     base: '/',
     themeConfig: {
-
         socialLinks: [
             { icon: 'github', link: 'https://github.com/PHT-Medic/documentation' },
             { icon: 'discord', link: 'https://discord.gg/vEsUaEFBVE' },
@@ -20,20 +19,12 @@ export default defineConfig({
         siteTitle: false,
         nav: [
             {
-                text: 'Home',
-                link: '/',
-                activeMatch: '/',
-
-            },
-            {
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
-                    { text: 'Introduction', link: '/guide/introduction/index' },
-                    { text: 'Analyst', link: '/guide/analyst/setup'},
-                    { text: 'Admin', link: '/guide/admin/admin_overview'},
-                    { text: 'Station Installation', link: '/guide/installation/station/installation'},
-                    { text: 'Central Installation', link: '/guide/deployment/central-introduction'},
+                    { text: 'User', link: '/guide/user/setup'},
+                    { text: 'Admin', link: '/guide/admin/overview'},
+                    { text: 'Deployment', link: '/guide/deployment/index'},
                 ]
             },
             {
@@ -45,43 +36,53 @@ export default defineConfig({
             }
         ],
         sidebar: {
-             '/guide': [
+            '/guide/user': [
                 {
-                    text: 'Introduction',
+                    text: 'Overview',
                     items: [
-                        { text: 'Overview', link: '/guide/introduction/index' },
-                        { text: 'Components', link: '/guide/introduction/components' },
-                        { text: 'Trains', link: '/guide/introduction/trains' },
-                        { text: 'FHIR', link: '/guide/introduction/fhir' },
+                        { text: 'Introduction', link: '/guide/user/' },
+                        { text: 'Components', link: '/guide/user/components' },
+                        { text: 'Trains', link: '/guide/user/trains' },
+                        { text: 'FHIR', link: '/guide/user/fhir' },
 
                     ]
                 },
-                 {
-                    text: 'Analyst',
+                {
+                    text: 'Getting Started',
                     items: [
-                        {text: 'Setup / Configuration', link: '/guide/analyst/setup'},
-                        {text: 'Proposal Creation', link: '/guide/analyst/proposal_analyst'},
-                        {text: 'Train Creation', link: '/guide/analyst/train_analyst'},
-                        {text: 'Result Extraction', link: '/guide/analyst/result'},
-                        {text: 'Train Options ', link: '/guide/analyst/other_features'},
+                        {text: 'Setup / Configuration', link: '/guide/user/setup'},
+                        {text: 'Proposal Creation', link: '/guide/user/proposal'},
+                        {text: 'Train Creation', link: '/guide/user/train-creation'},
+                        {text: 'Result Extraction', link: '/guide/user/result'},
+                        {text: 'Train Options ', link: '/guide/user/other_features'},
                     ]
-                },
-                 {
+                }
+            ],
+            '/guide/admin' : [
+                {
                     text: 'Admin',
                     items: [
-                        {text: 'Overview', link: '/guide/admin/admin_overview'},
+                        {text: 'Overview', link: '/guide/admin/overview'},
                         {text: 'Central', link: '/guide/admin/central'},
-                        {text: 'Station Setup', link: '/guide/admin/station_setup'},
+                        {text: 'Station', link: '/guide/admin/station'},
                     ]
                 },
+            ],
+            '/guide/deployment' : [
                 {
-                    text: 'Station Installation',
+                    text: 'Getting Started',
                     items: [
-                        {text: 'Installation', link: '/guide/installation/station/installation'},
+                        {text: 'Introduction', link: '/guide/deployment/'},
                     ]
                 },
                 {
-                    text: 'Central Installation',
+                    text: 'Station',
+                    items: [
+                        {text: 'Installation', link: '/guide/deployment/station'},
+                    ]
+                },
+                {
+                    text: 'Central',
                     items: [
                         {text: 'Introduction', link: '/guide/deployment/central-introduction'},
                         {text: 'Nginx', link: '/guide/deployment/central-nginx'},
@@ -89,10 +90,7 @@ export default defineConfig({
                         {text: 'App', link: '/guide/deployment/central-app'},
                     ]
                 }
-
-
             ],
-
         }
     }
 });

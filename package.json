@@ -21,17 +21,15 @@
     ],
     "license": "MIT",
     "devDependencies": {
-        "@tada5hi/eslint-config-vue-typescript": "^1.1.0",
+        "@tada5hi/eslint-config-vue-typescript": "^1.2.5",
         "eslint": "^8.32.0",
         "flexsearch": "^0.7.31",
-        "markdown-it": "^13.0.1",
-        "np": "^3.0.4",
         "rimraf": "^4.1.1",
-        "typescript": "^4.9.4",
-        "vitepress-plugin-search": "^1.0.4-alpha.19"
+        "vitepress-plugin-search": "^1.0.4-alpha.19",
+        "typescript": "^4.9.5"
     },
     "dependencies": {
-        "vitepress": "^1.0.0-alpha.38",
+        "vitepress": "^1.0.0-alpha.59",
         "vue": "^3.2.40"
     }
 }

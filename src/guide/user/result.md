@@ -1,11 +1,12 @@
 # Result Extraction
 
-# Download Data
+## Download 
 
 After running through all station, you can click on the **Download**-button on point **4.Result**.
 This will start the download of a tar file. The name of the file is your train ID.
 [![Offline Tool Download Results](/images/offline_tool_images/download_results.png)](/images/offline_tool_images/download_results.png)
-## Decrypt results
+
+## Decrypt
 
 The results file is encrypted with the public key you selected during setup. In order for the Desktop APP to decrypt the results, it is necessary to load the same key pair that you used to set up the train.
 

@@ -1,13 +1,5 @@
-# Overview
-Documentation and User Guide for the Personal Health Train (PHT), an open source, container-based secure distributed analysis platform.
-For more information about the PHT team, projects and collaborations, you can also visit our [website](https://personalhealthtrain.de/).
-
-If you want to deploy our platform productively in a clinical environment,  please e-mail us at: pht(at)medizin.uni-tuebingen.de
-
-We can share operational and technical documentation to get clearance from your local IT-Security and data protection officers.
-
-## Introduction
-The Personal Health Train (PHT) is a paradigm proposed within the [GO:FAIR initiative](https://www.go-fair.org/implementation-networks/overview/personal-health-train/) as one solution for distributed
+# Introduction
+The Personal Health Train (PHT) is, an open source, container-based secure distributed analysis platform, proposed within the [GO:FAIR initiative](https://www.go-fair.org/implementation-networks/overview/personal-health-train/) as one solution for distributed
 analysis of medical data, enhancing their FAIRness. Rather than transferring data to a central analysis site, the
 analysis algorithm (wrapped in a ‘train’), travels between multiple sites (e.g., hospitals – so-called ‘train stations’)
 securely hosting the data.
