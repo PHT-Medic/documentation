@@ -14,7 +14,7 @@ the menu and the overview-list.
 
 [![image](/images/ui_images/proposal.png)](/images/ui_images/proposal.png)
 
-## Creating a new Proposal
+## Proposal Creation
 
 After pressing the **Create**-button, it will take us to a new form. Here you can define principal aspects of the 
 train. You can define ...
@@ -35,7 +35,7 @@ approve or reject the analysis. How the approval process works from the perspect
 
 [![Proposal create](/images/ui_images/proposal_create.png)](/images/ui_images/proposal_create.png)
 
-### Definition of Risk
+
 A train is targeted at specific data from different stations. But data can be quite different depending on 
 combinations of all data. Private medical data in general contains really sensitive information and needs to be handled
 accordingly. For this, you give a risk estimation, so that each station has an idea about the level of data sensitivity 
@@ -49,8 +49,5 @@ age. One param will not be harmful at all, but should still be mentioned when us
 that private information will be figured out about a single person. This can occur when the calculations will be 
 performed on a lot of personal information of only a few participants. Overall this should nevertheless not be an issue
 when the FHIR-Servers provide enough privacy-preserving measurements such as pseudonymization or anonymization.
-
-
-With this you can now finally start creating [trains](./train-creation.md).
 
 
