@@ -63,7 +63,7 @@ Click on **Next** to continue.
 
 In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
-You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../introduction/fhir.md)
+You can find more information about the query in this documentation under the section [User Guide -> FHIR Query](../../introduction/fhir.md)
 
 Here we used an example query from the FHIR Query documentation. 
 
@@ -114,4 +114,4 @@ After a successful build train you can **Run** the train, which starts visiting 
 Each station needs to start the code manually via the Airflow-Control of the station. You can find more information here: [Station](../admin/usage.md)
 
 
-After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](../analyst/train_analyst.md) again.
+After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, you need the [Desktop App](/train.md) again.
