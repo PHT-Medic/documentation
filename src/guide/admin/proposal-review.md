@@ -10,7 +10,7 @@ Moreover, you have the option to switch to the **incoming** section or to create
 
 [![image](/images/ui_images/proposal.png)](/images/ui_images/proposal.png)
 
-### Accepting/Rejecting an incoming proposal
+## Accepting/Rejecting
 Within the incoming section of each station, a station authority can independently decide to comment, approve or reject
 a study proposal for analysis. In order to do such, click on the **list**-icon on the right side of the corresponding proposal and select the preferred action.
 

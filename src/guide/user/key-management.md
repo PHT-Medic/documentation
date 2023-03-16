@@ -1,4 +1,4 @@
-# Requirements
+# Key Management
 As a user of the PHT, the Desktop App is required to perform certain processes in the User Interface.
 The desktop app allows you to sign a train and decrypt 
 results using an existing key pair or with a generated pair in the Desktop App.
@@ -6,7 +6,7 @@ results using an existing key pair or with a generated pair in the Desktop App.
 The desktop app can be downloaded from the following [link](https://github.com/PHT-Medic/desktop-app/releases/latest) for Mac,
 Linux and Windows on GitHub.
 
-### KeyPair Generation
+### Generation
 The first thing you need from the Desktop APP is an *RSA-key-pair*. For this, follow these steps.
 
 1. Start the application.
@@ -24,7 +24,7 @@ The first thing you need from the Desktop APP is an *RSA-key-pair*. For this, fo
 6. Select a passphrase for your private key. (If you press enter, an empty passphrase will be used)
 7. Click on the **Generate**-button.
 
-### KeyPair Loading
+### Load
 If you already have made a key-pair, you can load them into the Desktop APP. For this, follow these steps.
 
 1. Start the application.
@@ -34,7 +34,7 @@ If you already have made a key-pair, you can load them into the Desktop APP. For
 5. Specify the Passphrase for the key.
 6. Click on the **Load**-button.
 
-### PublicKey Upload
+### Upload
 Log into the Central-UI with either the identity provider from your organization or an account that your realm
 admin set up. In the [admin guide](./../admin/identity-providers), you can find how the user management and
 configuration of identity providers is done.

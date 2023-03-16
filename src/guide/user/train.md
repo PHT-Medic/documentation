@@ -1,15 +1,15 @@
-# Train Creation
+# Train
 ::: warning Important
 Before you can create a new train, a proposal must already exist that was created by you or someone
 else in your organization. Otherwise, one must be created first [here](./proposal).
 :::
 
+todo - description: what is a train?
 
-## Train submission
 
-### Create a new train
+## Creation
 In the **Home** section you can choose **Trains** in the menu on the left-hand side. You will lead to the **Outgoing** page where you can switch to the creation form via the **Create** button inbetween the menu and the overview-list.
-####  Define pre-parameters of the new train
+###  Define pre-parameters of the new train
 On this page you can define:
 
 - an *optional* **name** for the given train.
@@ -23,7 +23,7 @@ Click on **create** to continue.
 
 [![Train Creation](/images/ui_images/create_train.png)](/images/ui_images/create_train.png)
 
-#### Define MasterImage and choose Stations
+### MasterImage & Stations
 
 At this point the MasterImage settings are taking from the chosen proposal but can still be changed.
 
@@ -33,7 +33,7 @@ Click on **Next** to continue.
 
 [![Train: MasterImage and Stations](/images/ui_images/train_1.png)](/images/ui_images/train_1.png)
 
-#### Check the Security Settings
+### Security
 
 You need to select one of your registered RSA public keys for encrypting the train.
 
@@ -43,7 +43,7 @@ Click on **Next** to continue.
 
 [![Train: Security Settings](/images/ui_images/train_2.png)](/images/ui_images/train_2.png)
 
-#### Load Code to the train
+#### Files
 
 In the file-section of the train submission you can upload the files containing your code, which the train will execute while visiting the different stations.
 
@@ -63,7 +63,7 @@ Click on **Next** to continue.
 
 [![Train: Load Code](/images/ui_images/train_3_2.png)](/images/ui_images/train_3_2.png)
 
-#### Add a FHIR Query
+### FHIR Query
 
 In the **Extra**-section of the train submission you can add your valid FHIR Query to the train. It can be either the option with parameters or as URL version.
 
@@ -73,13 +73,13 @@ Here we used an example query from the FHIR Query documentation.
 
 [![Train: Add FHIR Query](/images/ui_images/train_4.png)](/images/ui_images/train_4.png)
 
-#### Create Hash and Signature 
+### Hash & Signature 
 
 One of the last steps is to create a hash of the train started by this station. For this, you need to generate the hash value. (This could take some time)
 
 After the hash value was generated, copy the HashKey and perform the signature with your private key. 
 
-The application must know your keypair (private and public key) to perform the signature on a hash value. (See [Create Keys](requirements.md#load-keys) when you have restarted the Desktop APP). 
+The application must know your keypair (private and public key) to perform the signature on a hash value. (See [Create Keys](key-management.md#load-keys) when you have restarted the Desktop APP). 
 
 1. In the Menu, click on **Signature**.
 2. In the **Hash** text field, you should paste the generated HashKey
@@ -93,20 +93,13 @@ Click on **Next** to finish the configuration step.
 
 [![Train: Create Hash and Signature](/images/ui_images/train_5.png)](/images/ui_images/train_5.png)
 
-###  Train Approval 
+##  Approval 
 
-Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. See the [Admin Guide](../admin/identity-providers) for details on how the approval process works.
+Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. 
+See the [Admin Guide](../admin/train-review.md) for details on how the approval process works.
 
-### Finding the Train 
 
-Your train can be found in several ways after it is created.
-
- - In the **Home** section, you can choose **Trains** in the menu on the left-hand side. All your trains and their current status are listed under *Outgoing**.
- - If you have several trains for different proposals, it may be helpful to find them under proposals. To do this, go to the **Home** section and select **Proposals** from the menu on the left. There you will find your list of proposals. Select the one your train is using and select **Trains** from the proposals menu below the proposals name. You will then see a list of all the trains for that proposal.
-
- Selecting the name of the train will take you to the train overview.  Here you can view the status and start the build and run.
-
-### Start the train
+## Execution
 
 At this point, the train is ready to be led loose on the track.
 
@@ -119,3 +112,27 @@ Each station needs to start the code manually via the Airflow-Control of the sta
 
 
 After running through all station, you can click on the **Download**-button on point **4.Result**. To decrypt the results, the Desktop App is required.
+
+## Result
+
+### Download
+
+After running through all station, you can click on the **Download**-button on point **4.Result**.
+This will start the download of a tar file. The name of the file is your train ID.
+[![Offline Tool Download Results](/images/offline_tool_images/download_results.png)](/images/offline_tool_images/download_results.png)
+
+### Decrypt
+
+The results file is encrypted with the public key you selected during setup. In order for the Desktop APP to decrypt the results, it is necessary to load the same key pair that you used to set up the train.
+
+1.  Load the RSA key pair, see [Setup -> Load keys](key-management.md#load-keys)
+
+2.  Click on **results** on the menu.
+
+    You will be directed to an overview where you can click on **Select Result-File(.tar)** button. Chose the downloaded results-file from the UI and press load.
+    [![Offline Tool Load Results](/images/offline_tool_images/load_results.png)](/images/offline_tool_images/load_results.png)
+3. A new view appears where you can chose which files you want to save.
+
+   By clicking on the **x**-buttons, you can delete those files from the working space (you do not delete them from the results_file.tar, only a deletion from the Desktop App!).
+
+   By clicking on the **save**-button you start downloading the remaining files. A new folder will be placed in the same folder where you have selected the result-File.tar.

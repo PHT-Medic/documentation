@@ -19,6 +19,11 @@ export default defineConfig({
         siteTitle: false,
         nav: [
             {
+                text: 'Getting Started',
+                link: '/getting-started/',
+                activeMatch: '/getting-started/'
+            },
+            {
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
@@ -36,28 +41,36 @@ export default defineConfig({
             }
         ],
         sidebar: {
-            '/guide/user': [
+            '/getting-started': [
                 {
                     text: 'Overview',
                     items: [
-                        { text: 'Introduction', link: '/guide/user/' },
-                        { text: 'Architecture', link: '/guide/user/architecture' },
-                        { text: 'Components', link: '/guide/user/components' }
+                        { text: 'Introduction', link: '/getting-started/' },
+                        { text: 'Architecture', link: '/getting-started/architecture' },
+                        { text: 'Components', link: '/getting-started/components' },
+                        { text: 'Guides', link: '/getting-started/guides' },
                     ]
-                },
+                }
+            ],
+            '/guide/user': [
                 {
                     text: 'Getting Started',
                     items: [
-                        {text: 'Requirements', link: '/guide/user/requirements'},
-                        {text: 'Proposal', link: '/guide/user/proposal'},
-                        {text: 'Train Coding', link: '/guide/user/train-coding'},
-                        {text: 'Train Creation', link: '/guide/user/train-creation'},
-                        {text: 'Train Result', link: '/guide/user/train-result'},
+                        { text: 'Introduction', link: '/guide/user/'},
                     ]
                 },
                 {
-                    text: 'Concepts',
+                    text: 'Quickstart',
                     items: [
+                        {text: 'Key Management', link: '/guide/user/key-management'},
+                        {text: 'Proposal', link: '/guide/user/proposal'},
+                        {text: 'Train', link: '/guide/user/train'},
+                    ]
+                },
+                {
+                    text: 'Concepts/Tutorials',
+                    items: [
+                        { text: 'Train Coding', link: '/guide/user/train-coding'},
                         { text: 'FHIR Query', link: '/guide/user/fhir-query' },
                         { text: 'Homomorphic Encryption', link: '/guide/user/homomorphic-encryption' },
                     ]
@@ -65,9 +78,10 @@ export default defineConfig({
             ],
             '/guide/admin' : [
                 {
-                    text: 'Overview',
+                    text: 'Getting Started',
                     items: [
                         {text: 'Introduction', link: '/guide/admin/'},
+                        {text: 'Reviewing', link: '/guide/admin/reviewing'},
                     ]
                 },
                 {
@@ -100,6 +114,7 @@ export default defineConfig({
                     text: 'Station',
                     items: [
                         {text: 'Installation', link: '/guide/deployment/station'},
+                        {text: 'FAQ', link: '/guide/deployment/station-faq'},
                     ]
                 },
                 {

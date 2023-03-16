@@ -14,12 +14,12 @@ OIDC providers can be configured in the admin panel of the central UI under **Au
 
 Clicking on the **Add** button on the left will allow you to configure a new OIDC provider.
 
-#### Keycloak settings
-
 [![image](/images/ui_images/provider_add.png)](/images/ui_images/provider_add.png)
 
+## Example: Keycloak
+
 Any OpenID-provider can be configured to be selected in the login screen to authenticate users belonging to your realm.
-If you dont know how to set up a client in Keycloak, follow the steps below configuration.
+If you don't know how to set up a client in Keycloak, follow the steps below configuration.
 
 The following settings are used in the User Interface with Keycloak as identity provider:
 ```
@@ -35,7 +35,6 @@ DOMAIN and REALM_NAME need to be edited.
 Authorization
 Endpoint: (e.g. https://DOMAIN.de/auth/realms/REALM_NAME/protocol/openid-connect/auth)
 DOMAIN and REALM_NAME need to be edited.
-
 ```
 
 ##### Create a Realm in Keycloak

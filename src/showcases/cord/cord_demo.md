@@ -28,7 +28,7 @@ We suggest to you to follow these steps:
 
 ### Step 2 - Offline Tool and key loading
  Get familiar with its functionalities. Additional information can be found in the
-[DesktopApp documentation](../../guide/user/train-creation.md).
+[DesktopApp documentation](../../guide/user/train.md).
 
 You need to download and use the [keys](https://github.com/PHT-Medic/cord-pht-demo/tree/master/cord-demo-keys) in order 
 to decrypt the analysis results.
@@ -118,7 +118,7 @@ Please follow these steps:
 You can directly access them with the "Show decrypted files" button.
    <br/><br/> ![submission 10](/images/demo/submission_10.png)<br/><br/>
 
-More information regarding result decryption can be read [here](./../../guide/user/train-result.md#decrypt).
+More information regarding result decryption can be read [here](./../../guide/user/train.md#decrypt).
 The decrypted files can be accessed from your explorer or finder locally.
 
 ## FAQ

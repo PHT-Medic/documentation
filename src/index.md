@@ -7,7 +7,7 @@ hero:
   actions:
     - theme: brand
       text: Getting Started
-      link: /guide/user/index
+      link: /getting-started/index
     - theme: alt
       text: View on GitHub
       link: https://github.com/PHT-Medic

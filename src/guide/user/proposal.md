@@ -14,7 +14,7 @@ the menu and the overview-list.
 
 [![image](/images/ui_images/proposal.png)](/images/ui_images/proposal.png)
 
-## Proposal Creation
+## Creation
 
 After pressing the **Create**-button, it will take us to a new form. Here you can define principal aspects of the 
 train. You can define ...
@@ -49,5 +49,9 @@ age. One param will not be harmful at all, but should still be mentioned when us
 that private information will be figured out about a single person. This can occur when the calculations will be 
 performed on a lot of personal information of only a few participants. Overall this should nevertheless not be an issue
 when the FHIR-Servers provide enough privacy-preserving measurements such as pseudonymization or anonymization.
+
+## Approval
+
+ref admin guide
 
 

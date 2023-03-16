@@ -291,5 +291,5 @@ if __name__ == '__main__':
 ````
 
 This train uses the same FHIR query and the example is [here](https://github.com/PHT-Medic/cord-pht-demo/tree/master/Python).
-To decrypt and understand the results, please read the [DesktopApp documentation](../../guide/user/train-result.md#decrypt).
+To decrypt and understand the results, please read the [DesktopApp documentation](../../guide/user/train.md#decrypt).
 
