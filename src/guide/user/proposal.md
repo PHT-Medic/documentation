@@ -50,8 +50,7 @@ that private information will be figured out about a single person. This can occ
 performed on a lot of personal information of only a few participants. Overall this should nevertheless not be an issue
 when the FHIR-Servers provide enough privacy-preserving measurements such as pseudonymization or anonymization.
 
-## Approval
+##  Approval 
 
-ref admin guide
-
-
+Before an analysis can be performed based on your submitted proposal, it must be approved by the stations you selected. 
+See the [Admin Guide](../admin/proposal-review.md) for details on how this process will be handled by the admin.

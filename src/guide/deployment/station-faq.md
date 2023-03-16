@@ -1,21 +1,5 @@
 # F.A.Q.
 
-## How to get a private key?
-
-Generate a new key using [open-ssl](https://www.openssl.org/):
-
-```shell
-openssl genrsa -out key.pem 2048
-```
-
-Generate the associated public key using:
-
-```shell
-openssl rsa -in key.pem -outform PEM -pubout -out public.pem
-```
-
-and then register this key in the UI.
-
 ## How do I run the station on windows?
 
 If you are on a Windows Computer you need to change the line seperator to the **Unix/macOS**-style for the airflow

@@ -11,5 +11,6 @@ The audience that concerns this guide are responsible for the following tasks:
 
 **`Station`**
 - executing trains
+- data management
 
 

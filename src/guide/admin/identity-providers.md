@@ -8,7 +8,7 @@ such we can provide you a realm in which you can manage all your stations, users
 ## Setup
 To allow each participant to control their own distribution of roles, the central UI allows the user to configure an OIDC provider which
 can be used to authenticate users associated with their realm.
-OIDC providers can be configured in the admin panel of the central UI under **Auth -> Realms** in the providers tab.
+OIDC providers can be configured in the admin panel of the central UI under **Auth -> Identity Providers**.
 [![image](/images/ui_images/providers_overview.png)](/images/ui_images/providers_overview.png)
 
 
@@ -16,7 +16,7 @@ Clicking on the **Add** button on the left will allow you to configure a new OID
 
 [![image](/images/ui_images/provider_add.png)](/images/ui_images/provider_add.png)
 
-## Example: Keycloak
+### Example: Keycloak
 
 Any OpenID-provider can be configured to be selected in the login screen to authenticate users belonging to your realm.
 If you don't know how to set up a client in Keycloak, follow the steps below configuration.
@@ -47,3 +47,18 @@ DOMAIN and REALM_NAME need to be edited.
    [![image](/images/keycloak_images/keycloak_3.png)](/images/keycloak_images/keycloak_3.png)
 5. The following two roles must be created in the identity provider
    [![image](/images/keycloak_images/keycloak_4.png)](/images/keycloak_images/keycloak_4.png)
+
+## Management
+1. Within the admin area (top left), you need to select **Identity Providers** within the left navigation.
+   [![image](/images/oidc_images/oidc.png)](/images/oidc_images/oidc.png)
+2. **View** existing roles (Optional: Use the search bar at the top).
+3. **See/Edit details and Permissions** for each role by clicking the blue triple-bar button on the right of the role.
+   Doing so shows the general description of the identity provider configuration.
+   [![image](/images/oidc_images/oidc_details.png)](/images/oidc_images/oidc_details.png)\
+Here you may also change roles automatically assigned to users, that use this identity provider at the bottom, by either
+adding a role with the green plus-button, or deleting it with the red trashcan-button. Individual changes here have to 
+be saved by clicking the respective black save-button.
+4. **Delete** identity providers by clicking the red thrash can button on the right.
+5. **Add** identity providers by clicking the grey plus button on the left of the overview (for details see 
+description at the top).
+6. **Refresh** this list anytime by clicking the black refresh button on the top right.

@@ -4,7 +4,21 @@ Before you can create a new train, a proposal must already exist that was create
 else in your organization. Otherwise, one must be created first [here](./proposal).
 :::
 
-todo - description: what is a train?
+A Train is an analytical unit that will be run on target data requested in a proposal. It is submitted by a
+user, who includes information on its data usage, its analysis pipeline and other related contents. Trains are 
+created and submitted for review within the Central App, then build, encrypted and send on their way to the stations as 
+docker containers. Upon arrival and decryption of the script at a local station it may be reviewed one last time, before
+allowed access to the data for analysis. Afterwards the train will be sent to the next station, ultimately returning it
+to the user, who may decrypt the results of their analysis.
+
+In the **Home** section press **Trains** in the menu on the left-hand side.
+At first, you will lead to the **outgoing**-trains section, where you can see a list of all the trains created by 
+this realm. Via the searchbar you can filter after the name. You have the option to view configuration details of 
+already existing trains via the **List**-icon or to delete the train via the **bin**-icon. You can also view a
+drop-down menu of the train's current state by clicking the **Arrow-down**-icon.
+
+Moreover, you have the option to switch to the **incoming** section or to create a new train on the left side between
+the menu and the overview-list.
 
 
 ## Creation
@@ -96,7 +110,7 @@ Click on **Next** to finish the configuration step.
 ##  Approval 
 
 Before the train can be built and run, it must be approved by the stations you selected at the beginning of the train setup process. 
-See the [Admin Guide](../admin/train-review.md) for details on how the approval process works.
+See the [Admin Guide](../admin/train-review.md) for details on how this process will be handled by the admin.
 
 
 ## Execution
