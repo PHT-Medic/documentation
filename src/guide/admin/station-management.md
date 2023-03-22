@@ -1,4 +1,4 @@
-# Management 
+# Station Management 
 ## Station Setup
 Before going deeper into the next steps make sure that your local Station Setup is ready. If it is not, follow the steps
 found [here](/guide/deployment/station-registration).

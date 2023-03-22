@@ -3,7 +3,10 @@
 ::: info Notice
 In order to manage your identity-providers, stations, ... you need to get an organization. Please contact us,
 such we can provide you a realm in which you can manage all your stations, users and identity providers.
+For more details on realms click [here](/guide/admin/realms).
 :::
+Identity providers allow for an alternative way to login into a realm. They are set up by the administrator 
+with external third-party OIDC providers such as google, Keycloak, and many others. 
 
 ## Setup
 To allow each participant to control their own distribution of roles, the central UI allows the user to configure an OIDC provider which
@@ -13,13 +16,26 @@ OIDC providers can be configured in the admin panel of the central UI under **Au
 
 
 Clicking on the **Add** button on the left will allow you to configure a new OIDC provider.
+The form for adding the identity provider holds the following options:
+* **Configuration**
+  * **Slug**: Readable slug identifier for OIDC provider configuration in the central UI. 
+  May only contain the following characters: [0-9a-z-_]+
+  * **Name**: Visible handle, shown in OIDC provider overview in the central UI
+* **Security**
+  * **Client ID**: Identifier/Username in OIDC provider
+  * **Client Secret**: Password/Secret in OIDC provider
+* **Token**
+  * **Endpoint**: Token endpoint for OIDC provider
+* **Authorization**
+  * **Endpoint**: Authorization endpoint for OIDC provider
 
-[![image](/images/ui_images/provider_add.png)](/images/ui_images/provider_add.png)
+[![image](/images/ui_images/oidc_add.png)](/images/ui_images/oidc_add.png)
+
 
 ### Example: Keycloak
 
 Any OpenID-provider can be configured to be selected in the login screen to authenticate users belonging to your realm.
-If you don't know how to set up a client in Keycloak, follow the steps below configuration.
+If you don't know how to set up a client, follow the steps below for an example configuration of Keycloak.
 
 The following settings are used in the User Interface with Keycloak as identity provider:
 ```
@@ -50,11 +66,11 @@ DOMAIN and REALM_NAME need to be edited.
 
 ## Management
 1. Within the admin area (top left), you need to select **Identity Providers** within the left navigation.
-   [![image](/images/oidc_images/oidc.png)](/images/oidc_images/oidc.png)
-2. **View** existing roles (Optional: Use the search bar at the top).
-3. **See/Edit details and Permissions** for each role by clicking the blue triple-bar button on the right of the role.
+   [![image](/images/ui_images/oidc.png)](/images/ui_images/oidc.png)
+2. **View** existing identity providers (Optional: Use the search bar at the top).
+3. **See/Edit details and roles** for each identity provider by clicking the blue triple-bar button on the right.
    Doing so shows the general description of the identity provider configuration.
-   [![image](/images/oidc_images/oidc_details.png)](/images/oidc_images/oidc_details.png)\
+   [![image](/images/ui_images/oidc_details.png)](/images/ui_images/oidc_details.png)\
 Here you may also change roles automatically assigned to users, that use this identity provider at the bottom, by either
 adding a role with the green plus-button, or deleting it with the red trashcan-button. Individual changes here have to 
 be saved by clicking the respective black save-button.

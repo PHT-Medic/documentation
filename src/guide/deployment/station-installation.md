@@ -2,7 +2,8 @@
 
 ::: info
 This section will provide installation instructions for installing a PHT Station.<br>**It assumes that the station has
-been registered in the UI.**
+been registered in the UI.**\
+For instructions on how to register the station see the instructions [here](/guide/deployment/station-registration).
 :::
 
 ## Requirements

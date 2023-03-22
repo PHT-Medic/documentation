@@ -1,5 +1,9 @@
 # Users
-
+::: info Notice
+In order to manage your identity-providers, stations, ... you need to get an organization. Please contact us,
+such we can provide you a realm in which you can manage all your stations, users and identity providers.
+For more details on realms click [here](/guide/admin/realms).
+:::
 Currently normal realm users cannot register into the PHT by themselves. They must be registered and
 added by a realm administrator. While doing so, the admin may give roles to a specific user.
 

@@ -1,6 +1,6 @@
 # Train
 ::: warning Important
-Before you can create a new train, a proposal must already exist that was created by you or someone
+Before you can create a new train, at least one proposal must already exist created by you or someone
 else in your organization. Otherwise, one must be created first [here](./proposal).
 :::
 

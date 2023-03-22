@@ -87,10 +87,13 @@ export default defineConfig({
                 {
                     text: 'Central',
                     items: [
+                        {text: 'Realms', link: '/guide/admin/realms'},
                         {text: 'Identity Providers', link: '/guide/admin/identity-providers'},
+                        {text: 'Robots', link: '/guide/admin/robots'},
                         {text: 'Users', link: '/guide/admin/users'},
                         {text: 'Roles', link: '/guide/admin/roles'},
                         {text: 'Permissions', link: '/guide/admin/permissions'},
+                        {text: 'Stations', link: '/guide/admin/station-management'},
                         {text: 'Proposal Review', link: '/guide/admin/proposal-review'},
                         {text: 'Train Review', link: '/guide/admin/train-review'},
                     ]
@@ -98,7 +101,6 @@ export default defineConfig({
                 {
                     text: 'Station',
                     items: [
-                        {text: 'Management', link: '/guide/admin/station-management'},
                         {text: 'Train Execution', link: '/guide/admin/train-execution'}
                     ]
                 },
@@ -115,7 +117,7 @@ export default defineConfig({
                     items: [
                         {text: 'Registration', link: '/guide/deployment/station-registration'},
                         {text: 'Installation', link: '/guide/deployment/station-installation'},
-                        {text: 'FAQ', link: '/guide/deployment/station-faq'},
+                        {text: 'Troubleshooting', link: '/guide/deployment/station-troubleshooting'},
                     ]
                 },
                 {
