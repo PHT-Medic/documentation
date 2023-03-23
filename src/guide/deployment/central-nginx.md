@@ -14,7 +14,7 @@ Don't forget to replace the placeholders with the actual values:
 - `[HARBOR_SSL_KEY]`: Path to certificate key file (.key)
 :::
 
-```text
+```txt
 server {
     server_name [HARBOR_DOMAIN];
 
@@ -68,7 +68,7 @@ Don't forget to replace the placeholders with the actual values:
 - `[APP_SSL_KEY]`: Certificate key file (.key)
 :::
 
-```text
+```txt
 map $sent_http_content_type $expires {
     "text/html"                 epoch;
     "text/html; charset=utf-8"  epoch;
