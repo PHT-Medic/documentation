@@ -21,5 +21,6 @@ The following placeholders are used in the following sections:
 - `[APP_DOMAIN]` Domain name (e.g. app.example.com)
 - `[APP_URL]`: Web address (e.g. https://app.example.com/)
 - `[APP_API_URL]`: Web address (e.g. https://app.example.com/api/)
+- `[AUTH_API_URL]`: Web address (e.g. https://app.example.com/auth/)
 - `[APP_SSL_CRT]`: Certificate file (.crt)
 - `[APP_SSL_KEY]`: Certificate key file (.key)

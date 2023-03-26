@@ -75,24 +75,6 @@ map $sent_http_content_type $expires {
     default                     off;
 }
 
-upstream phtUiUpstream {
-    ip_hash;
-
-    server 127.0.0.1:3000;
-}
-
-upstream phtRealtimeUpstream {
-        ip_hash;
-
-        server 127.0.0.1:3001;
-}
-
-upstream phtApiUpstream {
-        ip_hash;
-
-        server 127.0.0.1:3002;
-}
-
 server {
     server_name [APP_DOMAIN];
     listen 443 ssl;
@@ -119,10 +101,9 @@ server {
         proxy_set_header X-Forwarded-Proto  $scheme;
         proxy_read_timeout          1m;
         proxy_connect_timeout       1m;
-        proxy_pass                          http://phtUiUpstream;
+        proxy_pass                          http://127.0.0.1:3000;
     }
-
-
+    
     location /api/ {
         rewrite ^/api(/.*)$ $1 break;
 
@@ -133,7 +114,20 @@ server {
         proxy_set_header X-Forwarded-Proto  $scheme;
         proxy_read_timeout          2m;
         proxy_connect_timeout       2m;
-        proxy_pass                          http://phtApiUpstream;
+        proxy_pass                          http://127.0.0.1:3002;
+    }
+    
+    location /auth/ {
+        rewrite ^/auth(/.*)$ $1 break;
+
+        proxy_redirect                      off;
+        proxy_set_header Host               $host;
+        proxy_set_header X-Real-IP          $remote_addr;
+        proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto  $scheme;
+        proxy_read_timeout          2m;
+        proxy_connect_timeout       2m;
+        proxy_pass                          http://127.0.0.1:3010;
     }
     
     location /socket.io/ {
@@ -142,7 +136,7 @@ server {
         proxy_set_header X-Forwarded-For    $proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto  $scheme;
 
-        proxy_pass                          http://phtRealtimeUpstream;
+        proxy_pass                          http://127.0.0.1:3001;
 
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
