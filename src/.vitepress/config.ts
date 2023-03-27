@@ -5,7 +5,7 @@ export default defineConfig({
     base: '/',
     themeConfig: {
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/PHT-Medic/documentation' },
+            { icon: 'github', link: 'https://github.com/PHT-Medic/' },
             { icon: 'discord', link: 'https://discord.gg/vEsUaEFBVE' },
         ],
         editLink: {
@@ -19,16 +19,17 @@ export default defineConfig({
         siteTitle: false,
         nav: [
             {
-                text: 'Home',
-                link: '/',
-                activeMatch: '/',
+                text: 'Getting Started',
+                link: '/getting-started/',
+                activeMatch: '/getting-started/'
             },
             {
                 text: 'Guide',
                 activeMatch: '/guide/',
                 items: [
-                    { text: 'User', link: '/guide/user/index'},
-                    { text: 'Deployment', link: '/guide/deployment/index'}
+                    { text: 'User', link: '/guide/user/'},
+                    { text: 'Admin', link: '/guide/admin/'},
+                    { text: 'Deployment', link: '/guide/deployment/'},
                 ]
             },
             {
@@ -40,11 +41,83 @@ export default defineConfig({
             }
         ],
         sidebar: {
-            '/guide/deployment': [
+            '/getting-started': [
                 {
-                    text: 'Deployment-Guide',
+                    text: 'Overview',
                     items: [
-                        {text: 'Introduction', link: '/guide/deployment/index'},
+                        { text: 'Introduction', link: '/getting-started/' },
+                        { text: 'Architecture', link: '/getting-started/architecture' },
+                        { text: 'Components', link: '/getting-started/components' },
+                        { text: 'Guides', link: '/getting-started/guides' },
+                    ]
+                }
+            ],
+            '/guide/user': [
+                {
+                    text: 'Getting Started',
+                    items: [
+                        { text: 'Introduction', link: '/guide/user/'},
+                    ]
+                },
+                {
+                    text: 'Quickstart',
+                    items: [
+                        {text: 'Key Management', link: '/guide/user/key-management'},
+                        {text: 'Proposal', link: '/guide/user/proposal'},
+                        {text: 'Train', link: '/guide/user/train'},
+                    ]
+                },
+                {
+                    text: 'Concepts/Tutorials',
+                    items: [
+                        { text: 'Train Coding', link: '/guide/user/train-coding'},
+                        { text: 'FHIR Query', link: '/guide/user/fhir-query' },
+                        { text: 'Homomorphic Encryption', link: '/guide/user/homomorphic-encryption' },
+                    ]
+                }
+            ],
+            '/guide/admin' : [
+                {
+                    text: 'Getting Started',
+                    items: [
+                        {text: 'Introduction', link: '/guide/admin/'},
+                        {text: 'Reviewing', link: '/guide/admin/reviewing'},
+                    ]
+                },
+                {
+                    text: 'Central',
+                    items: [
+                        {text: 'Realms', link: '/guide/admin/realms'},
+                        {text: 'Identity Providers', link: '/guide/admin/identity-providers'},
+                        {text: 'Robots', link: '/guide/admin/robots'},
+                        {text: 'Users', link: '/guide/admin/users'},
+                        {text: 'Roles', link: '/guide/admin/roles'},
+                        {text: 'Permissions', link: '/guide/admin/permissions'},
+                        {text: 'Stations', link: '/guide/admin/station-management'},
+                        {text: 'Proposal Review', link: '/guide/admin/proposal-review'},
+                        {text: 'Train Review', link: '/guide/admin/train-review'},
+                    ]
+                },
+                {
+                    text: 'Station',
+                    items: [
+                        {text: 'Train Execution', link: '/guide/admin/train-execution'}
+                    ]
+                },
+            ],
+            '/guide/deployment' : [
+                {
+                    text: 'Getting Started',
+                    items: [
+                        {text: 'Introduction', link: '/guide/deployment/'},
+                    ]
+                },
+                {
+                    text: 'Station',
+                    items: [
+                        {text: 'Registration', link: '/guide/deployment/station-registration'},
+                        {text: 'Installation', link: '/guide/deployment/station-installation'},
+                        {text: 'Troubleshooting', link: '/guide/deployment/station-troubleshooting'},
                     ]
                 },
                 {
@@ -53,45 +126,10 @@ export default defineConfig({
                         {text: 'Introduction', link: '/guide/deployment/central-introduction'},
                         {text: 'Nginx', link: '/guide/deployment/central-nginx'},
                         {text: 'Harbor', link: '/guide/deployment/central-harbor'},
-                        {text: 'App', link: '/guide/deployment/central-app'}
-                    ]
-                },
-                {
-                    text: 'Station',
-                    items: [
-
+                        {text: 'App', link: '/guide/deployment/central-app'},
                     ]
                 }
             ],
-            '/guide/user/': [
-                {
-                    text: 'User-Guide',
-                    collapsible: false,
-                    items: [
-                        {text: 'Introduction', link: '/guide/user/index'},
-                        {text: 'Components', link: '/guide/user/components'},
-                        {text: 'Trains', link: '/guide/user/trains'},
-                        {text: 'FHIR', link: '/guide/user/fhir'},
-                    ]
-                },
-                {
-                    text: 'Central',
-                    collapsible: false,
-                    items: [
-                        {text: 'UI', link: '/guide/user/central/user_interface'},
-                        {text: 'DesktopApp', link: '/guide/user/central/desktop_app'}
-                    ]
-                },
-                {
-                    text: 'Station',
-                    collapsible: false,
-                    items: [
-                        {text: 'Central UI', link: '/guide/user/station/central_ui'},
-                        {text: 'Installation', link: '/guide/user/station/installation'},
-                        {text: 'Usage', link: '/guide/user/station/usage'},
-                    ]
-                }
-            ]
         }
     }
 });

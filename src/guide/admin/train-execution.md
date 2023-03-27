@@ -1,19 +1,17 @@
-# Usage
-
-## Getting started with Airflow
+# Train Execution
 
 Trains and other station tasks are executed via airflow DAGs. The DAGs can be triggered via the airflow web interface,
 which is available under port ```:8080``` on the station machine. The execution of the DAGs can also be monitored in the
 webinterface.
 
-### Login
+## Login
 
 The first time you access the webinterface you will be prompted to log in. Enter the credentials set in the `.env` file
 to login as admin. Or use the credentials that you have obtained from the station administrator.
 
 [![image](/images/station_images/airflow_login.png)](/images/station_images/airflow_login.png)
 
-### Triggering the test DAG
+## Test DAG
 
 To test the configuration of the station as defined in the `.env` file, trigger the DAG
 named `test_station_configuration`
@@ -35,7 +33,7 @@ harbor as well as a FHIR server.
 
 [![image](/images/station_images/test_config_dag.png)](/images/station_images/test_config_dag.png)
 
-### Accessing logs
+## Logs
 
 The logs stored during the execution of a DAG can be accessed for each individual task by clicking the
 colored,squared/circled - indicator next to the name of the task. In the new pop-up window you can see in the top a list
@@ -48,7 +46,7 @@ stderr)
 
 [![image](/images/station_images/task_log_details.png)](/images/station_images/task_log_details.png)
 
-### Running a train
+## Run Train
 
 To execute a train that is available for your station, trigger the `run_train` DAG, with configuration options
 specifying the train image to be pulled from harbor and executed as well as additional environment variables or volumes.
@@ -123,22 +121,3 @@ configuration options to the DAG configuration:
       "gpus": [0, 1]
     }
     ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

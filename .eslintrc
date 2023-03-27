@@ -12,10 +12,6 @@
         "no-continue": "off",
         "no-underscore-dangle": "off",
         "no-shadow": "off",
-
-        "import/no-cycle": [2, {
-            "maxDepth": 2
-        }],
         "import/no-extraneous-dependencies": ["error", {
             "devDependencies": true,
             "optionalDependencies": false,

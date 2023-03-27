@@ -1,80 +1,27 @@
-# Overview
-Documentation and User Guide for the Personal Health Train (PHT), an open source, container-based secure distributed analysis platform.
-For more information about the PHT team, projects and collaborations, you can also visit our [website](https://personalhealthtrain.de/).
-
-If you want to deploy our platform productively in a clinical environment,  please e-mail us at: pht(at)medizin.uni-tuebingen.de
-
-We can share operational and technical documentation to get clearance from your local IT-Security and data protection officers.
+# User guide
 
 ## Introduction
-The Personal Health Train (PHT) is a paradigm proposed within the [GO:FAIR initiative](https://www.go-fair.org/implementation-networks/overview/personal-health-train/) as one solution for distributed
-analysis of medical data, enhancing their FAIRness. Rather than transferring data to a central analysis site, the
-analysis algorithm (wrapped in a ‘train’), travels between multiple sites (e.g., hospitals – so-called ‘train stations’)
-securely hosting the data.
+We address this guide to analysts and other users. By contacting the administrator of your realm or organization,
+you will receive access to the PHT interface.
 
-The following overview shows all interactions between service components to execute a train iteratively over three stations
-with our PHT-TBI architecture.
-[![Overview](/images/process_images/pht_services.png)](/images/process_images/pht_services.png)
+Users utilize the PHT as a means to safely access medical data. Suppose they intend to analyze using a specific dataset
+or study offered in the PHT. In that case, they may first create a so-called Proposal in which they announce their interest to
+the administrator(s) responsible for the data. Each side will review this ``Proposal``, and if approved, it can be used,
+among others, to configure a Train pipeline. The Stations, which is how the local setups reading the data are called,
+may be placed as stops for the Train. Upon arriving at a Station, the administrator may review the analysis script
+contained in the Train and then execute it on their data. The models or results of the Train pipeline will be returned
+to the analyst without stations requiring to transfer input data outside their organization.
 
-## Mission Statement
-From Machine Learning (ML) healthcare can profit by ‘learning’ models which support clinical practice in treatment decision
-support systems (TDSS). To increase the robustness of an obtained model and produce meaningful results, generally, the
-analysis outcome depends on the number of training samples and data quality.
+## Overview
+Users can use the following resources and documentation of the PHT.
+Additionally, we prepared concepts and tutorials involved in those tasks:
 
-But meaningful data to improve predictions in medical research and healthcare is often distributed across multiple sites
-and is not easily accessible. This data contains highly sensitive patient information, may consist at each site different
-data formats and cannot be shared without explicit consent of the patient. Our goal is to make this data available for trains
-with stations to support privacy-preserving distributed machine learning in healthcare with our open-source implementation of the PHT.
+**``Quickstart``**
+- [Key management](/guide/user/key-management)
+- [Creating proposals](/guide/user/proposal)
+- [Creating trains](/guide/user/train)
 
-Implementing trains as light-weight containers enable even complex data analysis workflows to travel between sites, for
-example, genomics pipelines or deep-learning algorithms – analytics methods that are not easily amenable to established
-distributed queries or simple statistics.
-
-## Architecture
-[![Architecture](/images/process_images/execution_short.png)](/images/process_images/execution_short.png)
-
-### Central Services
-* `RabbitMQ` - Message broker for consuming and publishing commands & events between different services
-* `Harbor` - Docker registry to manage (train-) images
-* `Vault` - Secret storage to securely store sensitive information
-
-
-* `User Interface (UI)` - Frontend application for proposal and train management, downloading of results and much more
-* `API` - Backend application to manage resources and trigger commands & events through the message broker
-* `Train Manager` - Microservice serving different components:
-    * `Train Building` - Build and distribute train images to a registry
-    * `Train Routing` - Move trains between projects & registries accordingly to the route of the train
-    * `Result Extracting` - Download, extract & serve encrypted results from the registry
-
-
-### Local/Station Services
-* `Airflow` - Open-Source-Tool to create and schedule workflows and enables persistent access to data, execution and monitoring of trains
-* `Keycloak` - Identity and Access Management (IAM) to manage users and roles
-
-
-[comment]: <> (* Station UI - Self developed service, only from local network accessible to trigger train execution and resource monitoring.)
-* `Desktop App` - GUI to manage key pairs and decrypt results locally
-
-
-## Security
-
-### Security Protocol
-The following flow chart depicts the security protocol used for protecting participating stations against malicious code,
-as well as encrypting any stored results using envelope encryption.   
-This ensures that only approved algorithms 
-are executed and that only previously registered participants in an analysis can access the results. 
-[![Security Protocol](/images/process_images/security_protocol.png)](/images/process_images/security_protocol.png)
-
-## Languages
-
-### JavaScript 
-Wikipedia: *JavaScript ([https://developer.mozilla.org/en/docs/Web/JavaScript](https://developer.mozilla.org/en/docs/Web/JavaScript)) often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS.*
-
-### TypeScript
-Wikipedia: *TypeScript ([https://www.typescriptlang.org/](https://www.typescriptlang.org/)) is a programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language. 
-It is designed for the development of large applications and transpiles to JavaScript.*
-
-### Python
-Wikipedia: *Python ([https://python.org](https://python.org/)) is an interpreted high-level general-purpose programming language. Python's design philosophy emphasizes
-code readability with its notable use of significant indentation. Its language constructs as well as its object-oriented
-approach aim to help programmers write clear, logical code for small and large-scale projects.*
+**`Concepts/Tutorials`**
+- [Train coding](/guide/user/train-coding)
+- [FHIR queries](/guide/user/fhir-query)
+- [Homomorphic encryption](/guide/user/homomorphic-encryption)

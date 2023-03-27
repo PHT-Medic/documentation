@@ -52,10 +52,10 @@ const members = [
     ]
   },
   { 
-    avatar: 'https://www.github.com/Strothi97.png',
-    name: 'Felix Strotmann',
+    avatar: 'https://www.github.com/Nightknight3000.png',
+    name: 'Alexander Röhl',
     links: [
-      { icon: 'github', link: 'https://github.com/Strothi97' }
+      { icon: 'github', link: 'https://github.com/Nightknight3000' }
     ]
   },
 ]

@@ -23,8 +23,9 @@
     "devDependencies": {
         "@tada5hi/eslint-config-vue-typescript": "^1.2.5",
         "eslint": "^8.32.0",
-        "np": "^7.6.3",
+        "flexsearch": "^0.7.31",
         "rimraf": "^4.1.1",
+        "vitepress-plugin-search": "^1.0.4-alpha.19",
         "typescript": "^4.9.5"
     },
     "dependencies": {

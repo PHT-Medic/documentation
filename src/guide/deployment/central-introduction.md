@@ -1,5 +1,7 @@
 # Introduction 
-
+::: warning Info
+This section is only required if you want to use the PHT-meDIC software completely independently of the PHT infrastructure provided by  https://app.personalhealthtrain.de/
+:::
 ## Requirements
 The following guide is based on some shared assumptions:
 
@@ -19,5 +21,6 @@ The following placeholders are used in the following sections:
 - `[APP_DOMAIN]` Domain name (e.g. app.example.com)
 - `[APP_URL]`: Web address (e.g. https://app.example.com/)
 - `[APP_API_URL]`: Web address (e.g. https://app.example.com/api/)
+- `[AUTHUP_API_URL]`: Web address of the authup service (e.g. https://app.example.com/auth/)
 - `[APP_SSL_CRT]`: Certificate file (.crt)
 - `[APP_SSL_KEY]`: Certificate key file (.key)
