@@ -5,7 +5,7 @@ export default defineConfig({
     base: '/',
     themeConfig: {
         socialLinks: [
-            { icon: 'github', link: 'https://github.com/PHT-Medic/documentation' },
+            { icon: 'github', link: 'https://github.com/PHT-Medic/' },
             { icon: 'discord', link: 'https://discord.gg/vEsUaEFBVE' },
         ],
         editLink: {

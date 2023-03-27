@@ -1,3 +1,12 @@
+<script setup>
+import VPImage from '../components/VPImage.vue';
+const image = {
+    light: '/images/process_images/security_light.png',
+    dark: '/images/process_images/security_dark.png'
+}
+</script>
+
+
 # Introduction
 The Personal Health Train (PHT) is, an open source, container-based secure distributed analysis platform, proposed within the [GO:FAIR initiative](https://www.go-fair.org/implementation-networks/overview/personal-health-train/) as one solution for distributed
 analysis of medical data, enhancing their FAIRness. Rather than transferring data to a central analysis site, the
@@ -5,7 +14,7 @@ analysis algorithm (wrapped in a ‘train’), travels between multiple sites (e
 securely hosting the data.
 
 The following overview shows all interactions between service components to execute a train iteratively over three stations
-with our PHT-TBI architecture.
+with our PHT-meDIC architecture.
 [![Overview](/images/process_images/pht_services.png)](/images/process_images/pht_services.png)
 
 ## Mission Statement
@@ -29,8 +38,8 @@ distributed queries or simple statistics.
 The following flow chart depicts the security protocol used for protecting participating stations against malicious code,
 as well as encrypting any stored results using envelope encryption.   
 This ensures that only approved algorithms 
-are executed and that only previously registered participants in an analysis can access the results. 
-[![Security Protocol](/images/process_images/security_protocol.png)](/images/process_images/security_protocol.png)
+are executed and that only previously registered participants in an analysis can access the results.
+<VPImage :image="image"></VPImage>
 
 
 ## Terms of Use
