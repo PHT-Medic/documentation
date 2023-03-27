@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,U as o}from"./chunks/framework.7eb5ee76.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"showcases/cord/cord_r.md"}'),l={name:"showcases/cord/cord_r.md"},p=o("",15),e=[p];function t(r,c,D,F,y,i){return a(),n("div",null,e)}const A=s(l,[["render",t]]);export{u as __pageData,A as default};

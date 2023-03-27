@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t}from"./chunks/framework.7eb5ee76.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/admin/role-management.md"}'),n={name:"guide/admin/role-management.md"};function r(o,s,c,m,d,i){return a(),t("div")}const l=e(n,[["render",r]]);export{_ as __pageData,l as default};
