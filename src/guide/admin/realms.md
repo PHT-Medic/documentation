@@ -1,10 +1,10 @@
 # Realms
-Realms can be created freely by normal administrators after they were assigned an initial realm. These are provided by the developers. Please contact us,
-so we can provide you a realm in which you can manage all your identity providers, robots, users, roles, and stations.\
-Realms are areas where those things are registered. By activating a realm you have access to, you may view and manage 
-all of the registered items within it.\
-Normally you should only have access to the initial realm assigned to you, and all other realms you created afterwards.
-
+Normal administrators can create realms freely after being assigned an initial realm. The developers of the PHT central
+interface provide these. Please contact us, such we can provide you with a realm in which you can manage all your
+identity providers, robots, users, roles, and stations.\
+Realms are areas where those things are registered for one organization. You can access, view and manage all registered
+items by activating a realm.\
+Usually, you should only have access to the initial realm assigned to you and all other realms you created afterward.
 1. Within the admin area (top left), you need to select **Realms** within the left navigation.
    [![image](/images/ui_images/realms.png)](/images/ui_images/realms.png)
 2. **View** existing realms (Optional: Use the search bar at the top).
