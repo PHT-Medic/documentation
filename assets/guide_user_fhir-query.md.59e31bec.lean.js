@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,U as o}from"./chunks/framework.6703aa7d.js";const u=JSON.parse('{"title":"FHIR Query","description":"","frontmatter":{},"headers":[],"relativePath":"guide/user/fhir-query.md"}'),l={name:"guide/user/fhir-query.md"},e=o("",29),p=[e];function t(r,c,D,F,y,i){return a(),n("div",null,p)}const A=s(l,[["render",t]]);export{u as __pageData,A as default};

@@ -1,0 +1,1 @@
+import{_ as a,o as s,c as e,U as n}from"./chunks/framework.6703aa7d.js";const A=JSON.parse('{"title":"App","description":"","frontmatter":{},"headers":[],"relativePath":"guide/deployment/central-app.md"}'),l={name:"guide/deployment/central-app.md"},t=n("",35),p=[t];function o(i,c,r,d,h,u){return s(),e("div",null,p)}const C=a(l,[["render",o]]);export{A as __pageData,C as default};
