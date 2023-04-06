@@ -25,7 +25,7 @@
         "eslint": "^8.37.0",
         "flexsearch": "^0.7.31",
         "rimraf": "^4.4.1",
-        "vitepress-plugin-search": "^1.0.4-alpha.19",
+        "vitepress-plugin-search": "^1.0.4-alpha.20",
         "typescript": "^5.0.2"
     },
     "dependencies": {
