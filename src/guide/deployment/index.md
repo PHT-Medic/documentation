@@ -12,6 +12,7 @@ For setting up either a local station or the central App/API the following instr
 
 **``Station``**
 - [registration](/guide/deployment/station-registration)
+- [configuration](/guide/deployment/station-configuration)
 - [installation](/guide/deployment/station-installation)
 - optional [troubleshooting](/guide/deployment/station-troubleshooting)
 

@@ -101,7 +101,8 @@ export default defineConfig({
                 {
                     text: 'Station',
                     items: [
-                        {text: 'Train Execution', link: '/guide/admin/train-execution'}
+                        {text: 'Train Execution', link: '/guide/admin/train-execution'},
+                        {text: 'Station CTL', link: '/guide/admin/station-ctl'}
                     ]
                 },
             ],
@@ -116,6 +117,7 @@ export default defineConfig({
                     text: 'Station',
                     items: [
                         {text: 'Registration', link: '/guide/deployment/station-registration'},
+                        {text: 'Configuration', link: '/guide/deployment/station-configuration'},
                         {text: 'Installation', link: '/guide/deployment/station-installation'},
                         {text: 'Troubleshooting', link: '/guide/deployment/station-troubleshooting'},
                     ]
