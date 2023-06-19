@@ -22,7 +22,7 @@
     "license": "MIT",
     "devDependencies": {
         "@tada5hi/eslint-config-vue-typescript": "^1.2.6",
-        "eslint": "^8.37.0",
+        "eslint": "^8.43.0",
         "flexsearch": "^0.7.31",
         "rimraf": "^4.4.1",
         "vitepress-plugin-search": "^1.0.4-alpha.19",
