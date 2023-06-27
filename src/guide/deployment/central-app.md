@@ -40,7 +40,8 @@ Change the values to your needs.
 ::: warning Info
 Don't forget to replace the placeholders with the actual values:
 - `[APP_URL]`: Web address (e.g. https://app.example.com/)
-- `[APP_API_URL]`: Web address (e.g. https://app.example.com/api/)
+- `[REALTIME_URL]`: Web address (e.g. https://app.example.com/)
+- `[API_URL]`: Web address (e.g. https://app.example.com/api/)
 - `[AUTHUP_API_URL]`: Web address of the authup service (e.g. https://app.example.com/auth/)
 :::
 
@@ -71,9 +72,9 @@ AUTHUP_API_URL=[AUTHUP_API_URL]
 
 **`config/ui/.env`**
 ```dotenv
-API_URL=[API_URL]
-APP_URL=[APP_URL]
-AUTHUP_API_URL=[AUTHUP_API_URL]
+NUXT_PUBLIC_API_URL=[API_URL]
+NUXT_PUBLIC_AUTHUP_API_URL=[AUTHUP_API_URL]
+NUXT_PUBLIC_REALTIME_URL=[REALTIME_URL]
 ```
 
 ## Setup
