@@ -19,13 +19,12 @@ const members = [
       { icon: 'linkedin', link: 'https://www.linkedin.com/in/peter-placzek-047a74210/' },
     ]
   },
-  {
-    avatar: 'https://www.github.com/migraf.png',
-    name: 'Michael Graf',
+  { 
+    avatar: 'https://www.github.com/antidodo.png',
+    name: 'David Hieber',
     title: 'Station Lead',
     links: [
-      { icon: 'github', link: 'https://github.com/migraf' },
-      { icon: 'linkedin', link: 'https://www.linkedin.com/in/michael-m-graf/' },
+      { icon: 'github', link: 'https://github.com/antidodo' }
     ]
   },
   {
@@ -34,16 +33,10 @@ const members = [
     title: 'Project Lead',
     links: [
       { icon: 'github', link: 'https://github.com/SirHerr' },
-      { icon: 'linkedin', link: 'https://de.linkedin.com/in/marius-de-arruda-botelho-herr-60b89b18b' },
+      { icon: 'linkedin', link: 'https://www.linkedin.com/in/marius-de-arruda-botelho-herr' },
     ]
   },
-  { 
-    avatar: 'https://www.github.com/antidodo.png',
-    name: 'David Hieber',
-    links: [
-      { icon: 'github', link: 'https://github.com/antidodo' }
-    ]
-  },
+
   { 
     avatar: 'https://www.github.com/Felix6464.png',
     name: 'Felix Bötte',
