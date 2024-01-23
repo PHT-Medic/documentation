@@ -3,8 +3,8 @@ Several Git repositories contain the components of the PHT.
 Third party components can be found on the respective manufacturer's site.
 These components can be roughly separated into the following categories:
 
-* central
-* local
+* Central
+* Local
 
 All **public** repositories can be found on [GitHub](https://github.com/PHT-Medic).
 
